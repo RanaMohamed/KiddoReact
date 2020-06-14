@@ -1,0 +1,19 @@
+@font-face {
+	font-family: 'Tajawal';
+	src: url(../fonts/Tajawal/Tajawal-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'PermanentMarker';
+	src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf)
+		format('truetype');
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: $primary-font;
+}
