@@ -1,0 +1,97 @@
+.post-card {
+	background-color: $light-color;
+	border-radius: $border-radius-lg;
+	position: relative;
+	font-size: $font-size-sm;
+	&__img {
+		img {
+			width: 100%;
+		}
+	}
+	&__body {
+		padding: $spacing-sm;
+	}
+	&__title {
+		color: $primary-color;
+		font-size: $font-size-md;
+		margin-bottom: $spacing-xs;
+	}
+	&__info {
+		display: flex;
+		align-items: flex-start;
+		margin-top: $spacing-xs;
+		.post-card__avatar {
+			margin-right: $spacing-xs;
+		}
+		.like-icon {
+			color: $color-1;
+			margin: $spacing-xs;
+			margin-left: 0;
+		}
+		.comment-icon {
+			color: $primary-color;
+			margin: $spacing-xs;
+		}
+	}
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba($dark-color, 0.5);
+		opacity: 0;
+		transition: 0.5s;
+		pointer-events: none;
+		.button:not(:last-of-type) {
+			margin-right: $spacing-xs;
+		}
+	}
+	&:hover {
+		.post-card__overlay {
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+
+	&--bg {
+		&::before {
+			content: '';
+			position: absolute;
+			width: 130%;
+			height: 130%;
+			top: -15%;
+			left: -15%;
+			z-index: -1;
+			background-size: contain !important;
+		}
+		&--primary {
+			&::before {
+				background: url('#{bg-shape($primary-color)}') center no-repeat;
+			}
+		}
+		&--1 {
+			&::before {
+				background: url('#{bg-shape($color-1)}') center no-repeat;
+			}
+		}
+		&--2 {
+			&::before {
+				background: url('#{bg-shape($color-2)}') center no-repeat;
+			}
+		}
+		&--3 {
+			&::before {
+				background: url('#{bg-shape($color-3)}') center no-repeat;
+			}
+		}
+		&--4 {
+			&::before {
+				background: url('#{bg-shape($color-4)}') center no-repeat;
+			}
+		}
+	}
+}
