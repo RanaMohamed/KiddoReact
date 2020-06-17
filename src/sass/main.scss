@@ -5,3 +5,18 @@
 @import 'pages/module';
 @import 'themes/module';
 @import 'vendors/module';
+
+.App {
+	box-shadow: $box-shadow;
+	font-family: $secondary-font;
+	font-size: $font-size-xl;
+	border-radius: $border-radius-lg;
+	background-color: $color-1;
+	color: $color-2;
+	margin: 50px auto;
+	width: 370px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

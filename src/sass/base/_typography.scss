@@ -1,6 +1,19 @@
 @font-face {
 	font-family: 'Tajawal';
 	src: url(../fonts/Tajawal/Tajawal-Regular.ttf) format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Tajawal';
+	src: url(../fonts/Tajawal/Tajawal-Medium.ttf) format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Tajawal';
+	src: url(../fonts/Tajawal/Tajawal-Bold.ttf) format('truetype');
+	font-weight: 700;
 }
 
 @font-face {
@@ -16,4 +29,26 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: $primary-font;
+}
+
+h1,
+.h1 {
+	font-family: $secondary-font;
+	font-size: $font-size-xl;
+}
+
+h2,
+.h2 {
+	font-family: $secondary-font;
+	font-size: $font-size-lg;
+}
+
+h3,
+.h3 {
+	font-family: $secondary-font;
+	font-size: $font-size-md;
+}
+
+b {
+	font-weight: $font-weight-bold;
 }
