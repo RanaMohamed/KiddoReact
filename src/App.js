@@ -42,6 +42,12 @@ function App() {
       </header>
 
       <div className="App">Kiddo</div>
+      {/* Number Card */}
+      <section className="number-card">
+        <h3>interested categories</h3>
+        <img src="./img/008-create.svg" alt="c"></img>
+        <p>4</p>
+      </section>
 
       {/* -------------- Inputs--------------- */}
       <div style={{ margin: "2rem auto", width: "50%" }}>

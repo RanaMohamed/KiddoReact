@@ -168,12 +168,6 @@ h2,
   font-size: 4rem;
   margin-bottom: 3rem; }
 
-h3,
-.h3 {
-  font-family: "PermanentMarker";
-  font-size: 2rem;
-  margin-bottom: 1.5rem; }
-
 b {
   font-weight: 700; }
 
@@ -361,6 +355,14 @@ b {
     right: 3rem;
     bottom: 1.5rem;
     color: #106d74; }
+
+.number-card {
+  text-align: center; }
+  .number-card h3 {
+    font-family: "Tajawal";
+    margin-bottom: 1.5rem; }
+  .number-card img {
+    margin-bottom: 1.5rem; }
 
 nav {
   display: flex;
