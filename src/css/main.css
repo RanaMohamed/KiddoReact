@@ -386,6 +386,28 @@ b {
   .filter .filter-item {
     margin: 1.5rem; }
 
+nav {
+  display: flex;
+  padding: 1.5rem;
+  color: #53bcc0;
+  font-family: "Tajawal";
+  font-weight: 700;
+  align-items: center;
+  justify-content: space-around; }
+  nav h1 {
+    padding-top: 3rem;
+    font-size: 4rem; }
+
+.nav-ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .nav-ul li {
+    padding: 3rem; }
+  .nav-ul a:hover {
+    color: #fdd343; }
+
 .container {
   width: 85%;
   max-width: 1640px;
