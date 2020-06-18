@@ -246,6 +246,71 @@ function App() {
 					</div>
 				</div>
 			</div>
+
+			{/* -------------- Post Card--------------- */}
+			{/* -------------- Inputs--------------- */}
+			<div style={{ margin: '2rem auto', width: '50%' }}>
+				<div
+					style={{ backgroundColor: '#fdd343', width: '100%', padding: '1rem' }}
+				>
+					<input
+						type='text'
+						className='input --text-color-primary input--padding-sm input--border-radius-md'
+						placeholder='user name'
+					/>
+				</div>
+				<br></br>
+				<input
+					type='text'
+					className='input input--text-color-primary input--border-primary input--padding-xs input--border-radius-md'
+					placeholder='Email Address'
+				/>
+				<br></br>
+				<input
+					type='text'
+					className='input input--text-color-secondary input--border-secondary input--bg-primary input--padding-xs input--border-radius-md'
+					placeholder='Email Address'
+				/>
+				<br></br>
+				<input
+					type='search'
+					className='input input--text-color-primary input--border-primary input--padding-xs input--border-radius-md input--bg-info'
+					placeholder='search ...'
+				/>
+
+				<br></br>
+				<div
+					style={{ backgroundColor: '#e55658', width: '100%', padding: '1rem' }}
+				>
+					<input
+						type='text'
+						className='input input--text-color-primary input--bg-secondary input--padding-sm input--border-radius-md'
+						placeholder='Email'
+					/>
+					<br></br>
+					<br></br>
+					<textarea
+						type='text'
+						className='input input--text-color-primary input--bg-secondary input--padding-xs input--border-radius-md'
+						placeholder='write your message here...'
+					/>
+				</div>
+				<br></br>
+				<input
+					type='text'
+					className='input input--text-color-info input--padding-sm input--border-radius-md input--border-info'
+					placeholder='post title'
+				/>
+				<br></br>
+				<br></br>
+				<input
+					type='text'
+					className='input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl'
+					placeholder='Add a comment....'
+				/>
+			</div>
+
+			{/* --------------------------- */}
 		</React.Fragment>
 	);
 }

@@ -172,7 +172,7 @@ h3,
 .h3 {
   font-family: "PermanentMarker";
   font-size: 2rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 
 b {
   font-weight: 700; }
@@ -191,7 +191,7 @@ b {
     .post-card__img img {
       width: 100%; }
   .post-card__body {
-    padding: 2rem; }
+    padding: 1.5rem; }
   .post-card__title {
     color: #106d74;
     font-size: 2rem;
@@ -258,7 +258,7 @@ b {
     background-color: #fbfbfa;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     padding: 1rem; }
     .comment__user img {
       width: 6rem;
@@ -273,9 +273,41 @@ b {
     min-height: 8rem; }
 
 .comments {
-  padding: 2rem; }
+  padding: 1.5rem; }
   .comments .comment {
-    margin-bottom: 2rem; }
+    margin-bottom: 1.5rem; }
+
+.input {
+  border: 0;
+  width: 100%; }
+  .input--border-radius-md {
+    border-radius: 0.7rem; }
+  .input--border-radius-xl {
+    border-radius: 2rem; }
+  .input--text-color-primary {
+    color: #106d74; }
+  .input--text-color-secondary {
+    color: white; }
+  .input--text-color-info {
+    color: #53bcc0; }
+  .input--border-primary {
+    border: 1px solid #106d74; }
+  .input--border-secondary {
+    border: 1px solid white; }
+  .input--border-dark {
+    border: 1px solid #707070; }
+  .input--border-info {
+    border: 1px solid #53bcc0; }
+  .input--padding-sm {
+    padding: 1.5rem; }
+  .input--padding-xs {
+    padding: 1rem; }
+  .input--bg-primary {
+    background-color: #106d74; }
+  .input--bg-secondary {
+    background-color: #fbfbfa; }
+  .input--bg-info {
+    background-color: #edf8f9; }
 
 .container {
   width: 85%;
