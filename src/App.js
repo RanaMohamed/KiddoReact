@@ -161,7 +161,7 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#e55658",
+                  color: "#e55658"
                 }}
               ></i>
               <i
@@ -169,7 +169,7 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#53bcc0",
+                  color: "#53bcc0"
                 }}
               ></i>
               <i
@@ -177,19 +177,19 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#106d74",
+                  color: "#106d74"
                 }}
               ></i>
             </div>
             <div
               style={{
-                marginTop: "6rem",
+                marginTop: "6rem"
               }}
             >
               <button
                 style={{
                   backgroundColor: "#e55658",
-                  color: "weith",
+                  color: "weith"
                 }}
               >
                 <i class="far fa-edit"></i> Write New Post{" "}
@@ -197,7 +197,7 @@ function App() {
               <button
                 style={{
                   backgroundColor: "#e55658",
-                  color: "weith",
+                  color: "weith"
                 }}
               >
                 {" "}
@@ -239,6 +239,27 @@ function App() {
             <i class="fas fa-pen"></i>
           </div>
         </div>
+      </div>
+
+      {/* Filter*/}
+      <div style={{ margin: "3rem" }}>
+        <ul className="filter">
+          <li className="filter-item">All Categories</li>
+          <li className="filter-item filter-item--selected filter-item--before ">
+            Gardening
+          </li>
+          <li className="filter-item ">Arts & Crafts</li>
+          <li className="filter-item ">Cooking</li>
+          <li className="filter-item  filter-item--selected filter-item--before ">
+            Writing
+          </li>
+          <li className="filter-item  filter-item--selected filter-item--before ">
+            Drawing
+          </li>
+          <li className="filter-item ">Photography</li>
+          <li className="filter-item ">Singing</li>
+          <li className="filter-item ">Knitting</li>
+        </ul>
       </div>
     </React.Fragment>
   );

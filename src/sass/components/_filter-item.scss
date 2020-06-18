@@ -1,0 +1,24 @@
+.filter-item {
+  color: $primary-color;
+  cursor: pointer;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  position: relative;
+  &--selected {
+    color: $color-1;
+  }
+  &--before {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3rem;
+      height: 3rem;
+      top: -12%;
+      left: -3%;
+      z-index: -1;
+      background-size: 1.8rem 1.8rem, 2.7rem 2.7rem !important;
+      background: url("#{bg-shape($color-1)}") right center no-repeat,
+        url("#{bg-shape($color-2)}") left top no-repeat;
+    }
+  }
+}
