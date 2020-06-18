@@ -356,7 +356,42 @@ b {
     bottom: 1.5rem;
     color: #106d74; }
 
-<<<<<<< HEAD
+.profile-pic section {
+  position: absolute;
+  top: 75%;
+  left: 80%; }
+
+.profile-pic img {
+  position: absolute;
+  width: 8em;
+  height: 8em; }
+
+.profile-pic div {
+  background-color: #e55658;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 2px 3px 8px #5d5d5d; }
+
+.profile-pic_inner {
+  background-color: #fbfbfa;
+  border: 4px solid #fdd343;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  position: relative; }
+  .profile-pic_inner img {
+    position: absolute;
+    width: 1em;
+    height: 1em; }
+
 .number-card {
   text-align: center; }
   .number-card h3 {
@@ -364,7 +399,7 @@ b {
     margin-bottom: 1.5rem; }
   .number-card img {
     margin-bottom: 1.5rem; }
-=======
+
 .filter-item {
   color: #106d74;
   cursor: pointer;
@@ -388,7 +423,6 @@ b {
   padding: 1.5rem; }
   .filter .filter-item {
     margin: 1.5rem; }
->>>>>>> aca49c0a6a273ed20aebbd3d86f6b8d0403085a8
 
 nav {
   display: flex;

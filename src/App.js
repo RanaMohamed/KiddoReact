@@ -49,6 +49,16 @@ function App() {
         <p>4</p>
       </section>
 
+      {/* Profile pic */}
+      <section className="profile-pic">
+        <div>
+          <img id="pic" src="./img/kid.svg" alt="kid"></img>
+          <section className="profile-pic_inner">
+            <img src="./img/Icon awesome-camera.svg" alt=""></img>
+          </section>
+        </div>
+      </section>
+
       {/* -------------- Inputs--------------- */}
       <div style={{ margin: "2rem auto", width: "50%" }}>
         <div
@@ -161,7 +171,7 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#e55658"
+                  color: "#e55658",
                 }}
               ></i>
               <i
@@ -169,7 +179,7 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#53bcc0"
+                  color: "#53bcc0",
                 }}
               ></i>
               <i
@@ -177,19 +187,19 @@ function App() {
                 style={{
                   margin: ".5rem",
                   fontSize: "3rem",
-                  color: "#106d74"
+                  color: "#106d74",
                 }}
               ></i>
             </div>
             <div
               style={{
-                marginTop: "6rem"
+                marginTop: "6rem",
               }}
             >
               <button
                 style={{
                   backgroundColor: "#e55658",
-                  color: "weith"
+                  color: "weith",
                 }}
               >
                 <i class="far fa-edit"></i> Write New Post{" "}
@@ -197,7 +207,7 @@ function App() {
               <button
                 style={{
                   backgroundColor: "#e55658",
-                  color: "weith"
+                  color: "weith",
                 }}
               >
                 {" "}
