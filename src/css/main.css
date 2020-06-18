@@ -159,17 +159,20 @@ body {
 h1,
 .h1 {
   font-family: "PermanentMarker";
-  font-size: 5rem; }
+  font-size: 5rem;
+  margin-bottom: 5rem; }
 
 h2,
 .h2 {
   font-family: "PermanentMarker";
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-bottom: 3rem; }
 
 h3,
 .h3 {
   font-family: "PermanentMarker";
-  font-size: 2rem; }
+  font-size: 2rem;
+  margin-bottom: 2rem; }
 
 b {
   font-weight: 700; }
@@ -182,8 +185,11 @@ b {
   border-radius: 1rem;
   position: relative;
   font-size: 1.8rem; }
-  .post-card__img img {
-    width: 100%; }
+  .post-card__img {
+    max-height: 250px;
+    overflow: hidden; }
+    .post-card__img img {
+      width: 100%; }
   .post-card__body {
     padding: 2rem; }
   .post-card__title {
@@ -240,6 +246,36 @@ b {
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%2353bcc0' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat; }
   .post-card--bg--4::before {
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%23fbfbfa' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat; }
+  .post-card--md {
+    display: flex; }
+  .post-card__post {
+    position: relative; }
+
+.comment {
+  display: flex;
+  align-items: flex-start; }
+  .comment__user {
+    background-color: #fbfbfa;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    margin-right: 2rem;
+    padding: 1rem; }
+    .comment__user img {
+      width: 6rem;
+      height: 6rem; }
+  .comment__text {
+    background-color: #fbfbfa;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+    padding: 1rem;
+    font-size: 2rem;
+    min-height: 8rem; }
+
+.comments {
+  padding: 2rem; }
+  .comments .comment {
+    margin-bottom: 2rem; }
 
 .container {
   width: 85%;

@@ -4,6 +4,8 @@
 	position: relative;
 	font-size: $font-size-sm;
 	&__img {
+		max-height: 250px;
+		overflow: hidden;
 		img {
 			width: 100%;
 		}
@@ -93,5 +95,13 @@
 				background: url('#{bg-shape($color-4)}') center no-repeat;
 			}
 		}
+	}
+
+	&--md {
+		display: flex;
+	}
+
+	&__post {
+		position: relative;
 	}
 }

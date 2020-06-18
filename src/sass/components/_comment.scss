@@ -1,0 +1,31 @@
+.comment {
+	display: flex;
+	align-items: flex-start;
+	&__user {
+		background-color: $color-4;
+		border-radius: $border-radius-lg;
+		box-shadow: $box-shadow;
+		margin-right: $spacing-sm;
+		padding: $spacing-xs;
+		img {
+			width: 6rem;
+			height: 6rem;
+		}
+	}
+	&__text {
+		background-color: $color-4;
+		border-radius: $border-radius-lg;
+		border-top-left-radius: 0;
+		box-shadow: $box-shadow;
+		padding: $spacing-xs;
+		font-size: $font-size-md;
+		min-height: 8rem;
+	}
+}
+
+.comments {
+	padding: $spacing-sm;
+	.comment {
+		margin-bottom: $spacing-sm;
+	}
+}
