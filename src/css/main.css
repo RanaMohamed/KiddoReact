@@ -245,9 +245,10 @@ b {
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%23fbfbfa' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat; }
   .post-card--md {
     display: flex; }
+    .post-card--md .post-card__overlay {
+      border-radius: 1rem 0 0 1rem; }
   .post-card--lg .post-card__post {
-    display: flex;
-    background-color: #fbfbfa; }
+    display: flex; }
   .post-card--lg .post-card__img {
     max-height: none;
     width: 50%; }
@@ -256,7 +257,8 @@ b {
   .post-card--lg .post-card__description {
     font-size: 2rem; }
   .post-card__post {
-    position: relative; }
+    position: relative;
+    background-color: #fbfbfa; }
 
 .input {
   border: 0;

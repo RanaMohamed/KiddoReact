@@ -102,12 +102,14 @@
 
 	&--md {
 		display: flex;
+		.post-card__overlay {
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
+		}
 	}
 
 	&--lg {
 		.post-card__post {
 			display: flex;
-			background-color: $color-4;
 		}
 		.post-card__img {
 			max-height: none;
@@ -123,5 +125,6 @@
 
 	&__post {
 		position: relative;
+		background-color: $color-4;
 	}
 }
