@@ -1,11 +1,17 @@
 .number-card {
-  text-align: center;
-
-  h3 {
-    font-family: $primary-font;
-    margin-bottom: $spacing-sm;
-  }
-  img {
-    margin-bottom: $spacing-sm;
-  }
+	text-align: center;
+	font-size: $font-size-md;
+	font-weight: $font-weight-bold;
+	img {
+		max-width: $spacing-xl;
+	}
+	&__title {
+		margin-bottom: $spacing-sm;
+		text-transform: capitalize;
+		word-spacing: 30rem;
+	}
+	&__number {
+		font-size: 3rem;
+		color: $primary-color;
+	}
 }
