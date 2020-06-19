@@ -665,6 +665,19 @@ function App() {
         </div>
       </div>
 
+      <h1>categories</h1>
+      <div
+        className="container"
+        style={{ display: "flex", justifyContent: "center", margin: "20px" }}
+      >
+        <div className="category-card">
+          <div className=" category-card--image">
+            <img src="./img/avatar.svg" alt="kid" />
+          </div>
+          <div className="category-card--title">Arts & Crafts</div>
+        </div>
+      </div>
+
       {/* --------------------------- */}
     </React.Fragment>
   );

@@ -565,6 +565,40 @@ b {
   visibility: visible;
   transition: all 0.8s ease-in-out; }
 
+.category-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfbfa;
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative; }
+  .category-card--title {
+    margin-top: 1rem; }
+  .category-card:hover {
+    background-color: transparent;
+    transition: 0.8s; }
+  .category-card:hover::before {
+    cursor: pointer;
+    transition: 0.8s;
+    height: 100%; }
+  .category-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #fdd343;
+    z-index: -1;
+    transition: 0.8s;
+    border-radius: 30% 30% 0.7rem 0.7rem;
+    bottom: 0; }
+  .category-card--primary {
+    background-color: #106d74;
+    color: #fbfbfa; }
+
 nav {
   display: flex;
   padding: 1.5rem;
