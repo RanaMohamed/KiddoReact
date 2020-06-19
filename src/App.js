@@ -882,6 +882,51 @@ function App() {
         </button>
       </div>
 
+      <div
+        className="container"
+        style={{ display: "flex", justifyContent: "center", margin: "20px" }}
+      >
+        <div className="dropdown dropdown--active">
+          <a href="#" className="dropdown--image">
+            <img src="./img/avatar.svg" alt="kid" />
+          </a>
+          <div className="dropdown--menu">
+            <div className="dropdown--arrowup"></div>
+            <ul className="dropdown dropdown--list">
+              <li className="dropdown dropdown--item">
+                <a href="">
+                  <i className="fa fa-heart"></i> My Profile
+                </a>
+              </li>
+              <li className="dropdown dropdown--item">
+                <a href="">
+                  <i className="fa fa-heart"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <h1>categories</h1>
+      <div
+        className="container"
+        style={{ display: "flex", justifyContent: "center", margin: "20px" }}
+      >
+        <div className="category-card category-card--sm">
+          <div className=" category-card--image">
+            <img src="./img/avatar.svg" alt="kid" />
+          </div>
+          <div className="category-card--title">Arts & Crafts</div>
+        </div>
+        <div className="category-card category-card--sm category-card--primary">
+          <div className=" category-card--image">
+            <img src="./img/avatar.svg" alt="kid" />
+          </div>
+          <div className="category-card--title">Arts & Crafts</div>
+        </div>
+      </div>
+
       {/* --------------------------- */}
     </React.Fragment>
   );
