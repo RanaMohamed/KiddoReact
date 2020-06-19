@@ -8,6 +8,11 @@
   opacity: 1;
   box-sizing: content-box;
 
+  &--xs {
+    font-size: $font-size-xs;
+    padding: $spacing-xs;
+    margin: $spacing-xs;
+  }
   &--circle {
     border: 3px solid $color-2;
     border-radius: 50%;
