@@ -1,0 +1,41 @@
+.profile-pic {
+  section {
+    position: absolute;
+    top: 75%;
+    left: 80%;
+  }
+  img {
+    position: absolute;
+    width: 8em;
+    height: 8em;
+  }
+  div {
+    background-color: $color-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+    position: relative;
+
+    @include shadow;
+  }
+}
+
+.profile-pic_inner {
+  background-color: $color-4;
+  border: 4px solid $color-2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  position: relative;
+  img {
+    position: absolute;
+    width: 1em;
+    height: 1em;
+  }
+}

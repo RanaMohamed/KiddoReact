@@ -12,6 +12,7 @@
 	}
 	&__body {
 		padding: $spacing-sm;
+		flex: 1;
 	}
 	&__title {
 		color: $primary-color;
@@ -24,6 +25,7 @@
 		margin-top: $spacing-xs;
 		.post-card__avatar {
 			margin-right: $spacing-xs;
+			height: $spacing-lg;
 		}
 		.like-icon {
 			color: $color-1;
@@ -44,6 +46,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border-radius: $border-radius-lg;
 		background-color: rgba($dark-color, 0.5);
 		opacity: 0;
 		transition: 0.5s;
@@ -99,9 +102,29 @@
 
 	&--md {
 		display: flex;
+		.post-card__overlay {
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
+		}
+	}
+
+	&--lg {
+		.post-card__post {
+			display: flex;
+		}
+		.post-card__img {
+			max-height: none;
+			width: 50%;
+		}
+		.post-card__title {
+			font-size: $font-size-lg;
+		}
+		.post-card__description {
+			font-size: $font-size-md;
+		}
 	}
 
 	&__post {
 		position: relative;
+		background-color: $color-4;
 	}
 }
