@@ -1,51 +1,52 @@
 .input {
-  border: 0;
-  width: 100%;
-  // border-radius
-  &--border-radius-md {
-    border-radius: $border-radius-md;
-  }
-  &--border-radius-xl {
-    border-radius: $border-radius-xl;
-  }
-  // text-color
-  &--text-color-primary {
-    color: $primary-color;
-  }
-  &--text-color-secondary {
-    color: white;
-  }
-  &--text-color-info {
-    color: $color-3;
-  }
-  //border
-  &--border-primary {
-    border: 1px solid $primary-color;
-  }
-  &--border-secondary {
-    border: 1px solid white;
-  }
-  &--border-dark {
-    border: 1px solid $color-5;
-  }
-  &--border-info {
-    border: 1px solid $color-3;
-  }
-  //padding
-  &--padding-sm {
-    padding: $spacing-sm;
-  }
-  &--padding-xs {
-    padding: $spacing-xs;
-  }
-  //background
-  &--bg-primary {
-    background-color: $primary-color;
-  }
-  &--bg-secondary {
-    background-color: $color-4;
-  }
-  &--bg-info {
-    background-color: $color-6;
-  }
+	border: 0;
+	width: 100%;
+	font-family: $primary-font;
+	// border-radius
+	&--border-radius-md {
+		border-radius: $border-radius-md;
+	}
+	&--border-radius-xl {
+		border-radius: $border-radius-xl;
+	}
+	// text-color
+	&--text-color-primary {
+		color: $primary-color;
+	}
+	&--text-color-secondary {
+		color: white;
+	}
+	&--text-color-info {
+		color: $color-3;
+	}
+	//border
+	&--border-primary {
+		border: 1px solid $primary-color;
+	}
+	&--border-secondary {
+		border: 1px solid white;
+	}
+	&--border-dark {
+		border: 1px solid $color-5;
+	}
+	&--border-info {
+		border: 1px solid $color-3;
+	}
+	//padding
+	&--padding-sm {
+		padding: $spacing-sm;
+	}
+	&--padding-xs {
+		padding: $spacing-xs;
+	}
+	//background
+	&--bg-primary {
+		background-color: $primary-color;
+	}
+	&--bg-secondary {
+		background-color: $color-4;
+	}
+	&--bg-info {
+		background-color: $color-6;
+	}
 }

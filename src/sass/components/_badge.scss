@@ -1,0 +1,11 @@
+.badge {
+	margin: 0.5rem;
+	font-size: 3rem;
+	color: $primary-color;
+	&--1 {
+		color: $color-1;
+	}
+	&--2 {
+		color: $color-2;
+	}
+}
