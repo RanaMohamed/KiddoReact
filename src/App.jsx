@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import Test from './pages/test';
 import Error404 from './pages/error404';
-import TestRedux from './pages/testredux';
+import TestRedux from './pages/testRedux';
 
 function App() {
 	return (
