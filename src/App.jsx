@@ -326,8 +326,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
@@ -359,8 +359,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
@@ -392,8 +392,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
@@ -425,8 +425,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
@@ -458,8 +458,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
@@ -495,8 +495,8 @@ function App() {
 								</div>
 							</div>
 							<div className='post-card__overlay'>
-								<button>View Details</button>
-								<button>Button2</button>
+								<button className='btn btn--1 btn--rect'>View Details</button>
+								<button className='btn btn--1 btn--rect'>Button2</button>
 							</div>
 						</div>
 					</div>
