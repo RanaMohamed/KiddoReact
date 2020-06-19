@@ -292,6 +292,73 @@ b {
   .input--bg-info {
     background-color: #edf8f9; }
 
+.btn {
+  text-decoration: none;
+  border: none;
+  position: relative;
+  font-size: 1.8rem;
+  padding: 1.5rem 1.6rem;
+  margin: 1.5rem;
+  opacity: 1;
+  box-sizing: content-box; }
+  .btn--circle {
+    border: 3px solid #fdd343;
+    border-radius: 50%;
+    color: #e55658; }
+    .btn--circle:hover {
+      background-color: transparent;
+      transition: 0.8s; }
+    .btn--circle:hover::before {
+      cursor: pointer;
+      transition: 0.8s;
+      height: 100%; }
+    .btn--circle::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #fdd343;
+      z-index: -1;
+      transition: 0.8s;
+      border-radius: 50%;
+      bottom: 0; }
+  .btn--rect {
+    border-radius: 0.7rem; }
+    .btn--rect:hover {
+      background-color: transparent;
+      transition: 0.8s; }
+    .btn--rect:hover::before {
+      cursor: pointer;
+      transition: 0.8s;
+      height: 100%; }
+    .btn--rect::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #fdd343;
+      z-index: -1;
+      transition: 0.8s;
+      border-radius: 50% 50% 0.7rem 0.7rem;
+      bottom: 0; }
+  .btn--primary {
+    background-color: #106d74;
+    color: #fbfbfa; }
+  .btn--light {
+    background-color: #ececec;
+    color: #e55658; }
+  .btn--1 {
+    background-color: #e55658;
+    color: #fbfbfa; }
+  .btn--2 {
+    background-color: #fdd343;
+    color: #e55658; }
+  .btn--4 {
+    background-color: #fbfbfa;
+    color: #106d74; }
+
 .comment {
   display: flex;
   align-items: flex-start; }
