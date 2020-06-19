@@ -292,6 +292,10 @@ b {
     background-color: #fbfbfa; }
   .input--bg-info {
     background-color: #edf8f9; }
+  .input:focus {
+    outline: 0;
+    border-color: #53bcc0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
 
 .btn {
   text-decoration: none;
@@ -302,6 +306,10 @@ b {
   margin: 1.5rem;
   opacity: 1;
   box-sizing: content-box; }
+  .btn--xs {
+    font-size: 1.4rem;
+    padding: 1rem;
+    margin: 1rem; }
   .btn--circle {
     border: 3px solid #fdd343;
     border-radius: 50%;
@@ -420,7 +428,7 @@ b {
   .profile-card__part-lg {
     width: 70%; }
     .profile-card__part-lg--after::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 0.3rem;
       height: 100%;
@@ -435,8 +443,8 @@ b {
     margin-bottom: 3rem; }
   .profile-card__edit {
     position: absolute;
-    right: 3rem;
-    bottom: 1.5rem;
+    right: 2rem;
+    bottom: -3.5rem;
     color: #106d74; }
 
 .profile-pic section {
