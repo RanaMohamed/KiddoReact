@@ -1,6 +1,6 @@
 .page {
 	color: $color-2;
-	background: url('#{bg-shape($primary-color)}') center no-repeat;
+	background: url('#{bg-shape($color-3)}') center no-repeat;
 	margin: $spacing-xs;
 	font-size: $font-size-md;
 	min-width: $spacing-lg;
@@ -19,6 +19,7 @@
 
 .arrow {
 	background: -webkit-linear-gradient($color-1, $color-2);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-size: $font-size-lg;

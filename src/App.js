@@ -24,12 +24,12 @@ function App() {
 						</li>
 						<li>
 							<a href='#f'>
-								<i class='fas fa-search'></i>
+								<i className='fas fa-search'></i>
 							</a>
 						</li>
 						<li>
 							<a href='#noto'>
-								<i class='far fa-bell'></i>
+								<i className='far fa-bell'></i>
 							</a>
 						</li>
 						<li>
@@ -138,13 +138,13 @@ function App() {
 						<p className='profile-card__title'>categories</p>
 					</div>
 					<div className='profile-card__part-sm'>
-						<i class='fas fa-briefcase  profile-card__icon-lg'></i>
+						<i className='fas fa-briefcase  profile-card__icon-lg'></i>
 						<p className='profile-card__text-secondary'>math teacher</p>
-						<i class='fas fa-envelope profile-card__icon-lg'></i>
+						<i className='fas fa-envelope profile-card__icon-lg'></i>
 						<p className='profile-card__text-secondary'>amal@gmail.com</p>
 					</div>
 					<div className='profile-card__edit '>
-						<i class='fas fa-pen'></i>
+						<i className='fas fa-pen'></i>
 					</div>
 				</div>
 				<br></br>
@@ -167,7 +167,7 @@ function App() {
 						{/* Badges for test */}
 						<div>
 							<i
-								class='fas fa-certificate'
+								className='fas fa-certificate'
 								style={{
 									margin: '.5rem',
 									fontSize: '3rem',
@@ -175,7 +175,7 @@ function App() {
 								}}
 							></i>
 							<i
-								class='fas fa-certificate'
+								className='fas fa-certificate'
 								style={{
 									margin: '.5rem',
 									fontSize: '3rem',
@@ -183,7 +183,7 @@ function App() {
 								}}
 							></i>
 							<i
-								class='fas fa-certificate'
+								className='fas fa-certificate'
 								style={{
 									margin: '.5rem',
 									fontSize: '3rem',
@@ -202,7 +202,7 @@ function App() {
 									color: 'weith',
 								}}
 							>
-								<i class='far fa-edit'></i> Write New Post{' '}
+								<i className='far fa-edit'></i> Write New Post{' '}
 							</button>
 							<button
 								style={{
@@ -211,12 +211,12 @@ function App() {
 								}}
 							>
 								{' '}
-								<i class='fas fa-coins'></i> Buy Coins{' '}
+								<i className='fas fa-coins'></i> Buy Coins{' '}
 							</button>
 						</div>
 					</div>
 					<div className='profile-card__edit '>
-						<i class='fas fa-pen'></i>
+						<i className='fas fa-pen'></i>
 					</div>
 				</div>
 				<br></br>
@@ -225,28 +225,26 @@ function App() {
 				<div className='profile-card'>
 					<div className='profile-card--display-flex'>
 						<span className='profile-card__title'>
-							{' '}
-							<i class='fas fa-envelope profile-card__icon-sm '></i>Email
+							<i className='fas fa-envelope profile-card__icon-sm '></i>Email
 						</span>
 						<p className='profile-card__text-primary--1'>buyer@gmail.com</p>
 					</div>
 					<div className='profile-card--display-flex'>
 						<span className='profile-card__title'>
-							{' '}
-							<i class='fas fa-map-marker profile-card__icon-sm '></i>Address
+							<i className='fas fa-map-marker profile-card__icon-sm '></i>
+							Address
 						</span>
 						<p className='profile-card__text-primary--2'>6 October</p>
 					</div>
 					<div className='profile-card--display-flex'>
 						<span className='profile-card__title'>
-							{' '}
-							<i class='fas fa-phone-alt  profile-card__icon-sm '></i>phone
+							<i className='fas fa-phone-alt  profile-card__icon-sm '></i>phone
 						</span>
 						<p className='profile-card__text-primary--1'>01020304050</p>
 					</div>
 
 					<div className='profile-card__edit '>
-						<i class='fas fa-pen'></i>
+						<i className='fas fa-pen'></i>
 					</div>
 				</div>
 			</div>
@@ -480,6 +478,82 @@ function App() {
 							<div className='post-card__overlay'>
 								<button>View Details</button>
 								<button>Button2</button>
+							</div>
+						</div>
+					</div>
+					<div className='comments'>
+						<h2>Comments</h2>
+						<div className='comment'>
+							<div className='comment__user'>
+								<img alt='Avatar' src='../img/avatar.svg' />
+							</div>
+							<p className='comment__text'>
+								Lorem ipsum dolor sit amet, vel id nusquam repudiandae
+								interpretaris, eam an quem pericula. Mei te aliquid
+								mediocritatem. Sint rebum repudiandae vel ei. In mollis fuisset
+								fierent pro, habemus dolores tincidunt ad nam. Vis laudem
+								nostrud ex, augue errem indoctum ea eam.
+							</p>
+						</div>
+						<div className='comment'>
+							<div className='comment__user'>
+								<img alt='Avatar' src='../img/avatar.svg' />
+							</div>
+							<p className='comment__text'>
+								Lorem ipsum dolor sit amet, vel id nusquam repudiandae
+								interpretaris, eam an quem pericula. Mei te aliquid
+								mediocritatem. Sint rebum repudiandae vel ei. In mollis fuisset
+								fierent pro, habemus dolores tincidunt ad nam. Vis laudem
+								nostrud ex, augue errem indoctum ea eam.
+							</p>
+						</div>
+						<div>
+							<input
+								type='text'
+								className='input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl'
+								placeholder='Add a comment....'
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className='container' style={{ margin: '2rem auto' }}>
+				<div className='post-card post-card--lg'>
+					<div className='post-card__post'>
+						<div className='post-card__img'>
+							<img alt='Post' src='../img/post1.png' />
+						</div>
+						<div className='post-card__body'>
+							<p className='post-card__title'>Post 1</p>
+							<p className='post-card__description'>
+								Lorem ipsum dolor sit amet, vel id nusquam repudiandae
+								interpretaris, eam an quem pericula. Mei te aliquid
+								mediocritatem. Sint rebum repudiandae vel ei. In mollis fuisset
+								fierent pro, habemus dolores tincidunt ad nam. Vis laudem
+								nostrud ex, augue errem indoctum ea eam. Lorem ipsum dolor sit
+								amet, vel id nusquam repudiandae interpretaris, eam an quem
+								pericula. Mei te aliquid mediocritatem. Sint rebum repudiandae
+								vel ei. In mollis fuisset fierent pro, habemus dolores tincidunt
+								ad nam. Vis laudem nostrud ex, augue errem indoctum ea eam.
+								Lorem ipsum dolor sit amet, vel id nusquam repudiandae
+								interpretaris, eam an quem pericula. Mei te aliquid
+								mediocritatem. Sint rebum repudiandae vel ei. In mollis fuisset
+								fierent pro, habemus dolores tincidunt ad nam. Vis laudem
+								nostrud ex, augue errem indoctum ea eam.
+							</p>
+							<div className='post-card__info'>
+								<img
+									className='post-card__avatar'
+									alt='Avatar'
+									src='../img/avatar.svg'
+								/>
+								<div>
+									<p>Full name</p>
+									<i className='fa fa-heart like-icon'></i>
+									<span>20</span>
+									<i className='fa fa-comment comment-icon'></i>
+									<span>10</span>
+								</div>
 							</div>
 						</div>
 					</div>

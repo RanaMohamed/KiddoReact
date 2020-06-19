@@ -185,7 +185,8 @@ b {
     .post-card__img img {
       width: 100%; }
   .post-card__body {
-    padding: 1.5rem; }
+    padding: 1.5rem;
+    flex: 1; }
   .post-card__title {
     color: #106d74;
     font-size: 2rem;
@@ -213,6 +214,7 @@ b {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1rem;
     background-color: rgba(51, 49, 44, 0.5);
     opacity: 0;
     transition: 0.5s;
@@ -243,6 +245,16 @@ b {
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%23fbfbfa' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat; }
   .post-card--md {
     display: flex; }
+  .post-card--lg .post-card__post {
+    display: flex;
+    background-color: #fbfbfa; }
+  .post-card--lg .post-card__img {
+    max-height: none;
+    width: 50%; }
+  .post-card--lg .post-card__title {
+    font-size: 4rem; }
+  .post-card--lg .post-card__description {
+    font-size: 2rem; }
   .post-card__post {
     position: relative; }
 
@@ -427,7 +439,7 @@ b {
 
 .page {
   color: #fdd343;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%23106d74' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%2353bcc0' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat;
   margin: 1rem;
   font-size: 2rem;
   min-width: 5rem;
@@ -444,6 +456,7 @@ b {
 
 .arrow {
   background: -webkit-linear-gradient(#e55658, #fdd343);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 4rem; }
