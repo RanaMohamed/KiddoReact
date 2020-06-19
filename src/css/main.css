@@ -569,11 +569,9 @@ b {
   display: flex;
   flex-direction: column;
   background-color: #fbfbfa;
-  border-radius: 0.7rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
   position: relative; }
   .category-card--title {
     margin-top: 1rem; }
@@ -598,6 +596,18 @@ b {
   .category-card--primary {
     background-color: #106d74;
     color: #fbfbfa; }
+  .category-card--sm {
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 0.7rem; }
+  .category-card--md {
+    padding: 3rem;
+    margin: 3rem;
+    border-radius: 0.7rem; }
+  .category-card--lg {
+    padding: 5rem;
+    margin: 5rem;
+    border-radius: 1rem; }
 
 nav {
   display: flex;

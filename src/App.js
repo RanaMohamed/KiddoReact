@@ -670,7 +670,13 @@ function App() {
         className="container"
         style={{ display: "flex", justifyContent: "center", margin: "20px" }}
       >
-        <div className="category-card">
+        <div className="category-card category-card--sm">
+          <div className=" category-card--image">
+            <img src="./img/avatar.svg" alt="kid" />
+          </div>
+          <div className="category-card--title">Arts & Crafts</div>
+        </div>
+        <div className="category-card category-card--sm category-card--primary">
           <div className=" category-card--image">
             <img src="./img/avatar.svg" alt="kid" />
           </div>
