@@ -1,0 +1,39 @@
+.dropdown {
+  &--image {
+    margin-left: 72.5%;
+  }
+  &--menu {
+    visibility: hidden;
+  }
+  &--arrowup {
+    width: 0;
+    height: 0;
+    margin-left: 80%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $primary-color;
+  }
+  &--list {
+    background-color: $primary-color;
+    border-radius: $border-radius-md;
+    min-width: 500px;
+    box-shadow: $box-shadow;
+  }
+  &--item {
+    padding: $spacing-xs;
+    & > a {
+      font-size: $font-size-sm;
+      color: $color-4;
+    }
+    &:hover {
+      cursor: pointer;
+      border-radius: $border-radius-md;
+      background-color: $color-3;
+      transition: 0.8s;
+    }
+  }
+  &:active {
+    visibility: visible;
+    transition: all 0.8s ease-in-out;
+  }
+}
