@@ -1,0 +1,25 @@
+.page {
+	color: $color-2;
+	background: url('#{bg-shape($primary-color)}') center no-repeat;
+	margin: $spacing-xs;
+	font-size: $font-size-md;
+	min-width: $spacing-lg;
+	min-height: $spacing-lg;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: contain;
+	font-weight: $font-weight-bold;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+}
+
+.arrow {
+	background: -webkit-linear-gradient($color-1, $color-2);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: $font-size-lg;
+}
