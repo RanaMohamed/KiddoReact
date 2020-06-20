@@ -1,6 +1,6 @@
 import React from 'react';
 
-const KidDashboard = () => {
+const KidDashboard = ({ profile }) => {
 	return (
 		<>
 			<section className='d-flex justify-content-between my-lg'>
@@ -12,7 +12,7 @@ const KidDashboard = () => {
 				<div className='number-card'>
 					<h3 className='number-card__title'>Interested Categories</h3>
 					<img src='./img/008-create.svg' alt='c'></img>
-					<p className='number-card__number'>4</p>
+					<p className='number-card__number'>{profile?.categories?.length}</p>
 				</div>
 				<div className='number-card'>
 					<h3 className='number-card__title'>Your Points</h3>
