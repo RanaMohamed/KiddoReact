@@ -15,13 +15,7 @@ const productReducer = (state = initialState, action) => {
         products: action.payload.products,
         totalNum: action.payload.totalNumOfProducts,
       };
-    //ADD
-    case TYPES.ADD_POST_SUCCESS:
-      return {
-        ...state,
-        product: action.payload.product,
-        errors: {},
-      };
+
     case TYPES.GET_PRODUCT_FAILURE:
       return {
         ...state,
