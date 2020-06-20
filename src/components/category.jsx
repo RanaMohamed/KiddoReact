@@ -15,16 +15,16 @@ const Category = () => {
   return (
     <>
       <div>
-        {categories?.map((category) => (
-          <section className="category-section">
+        <section className="category-section">
+          {categories?.map((category) => (
             <div className="category-card category-card--sm" key={category._id}>
               <div className=" category-card--image">
                 <img src={category.image} alt="Category Image" />
               </div>
               <div className="category-card--title">{category.title}</div>
             </div>
-          </section>
-        ))}
+          ))}
+        </section>
         <section className="post-section"></section>
       </div>
       <section className="pagination">
