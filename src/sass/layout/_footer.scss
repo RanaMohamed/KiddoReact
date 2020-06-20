@@ -15,11 +15,13 @@
     float: left;
     height: 100%;
     display: block;
+    padding-left: $spacing-lg;
   }
   &__Logo {
     font-family: $secondary-font;
     font-size: $font-size-lg;
     color: $color-1;
+    padding-bottom: $spacing-sm;
   }
   &__license {
     font-family: $primary-font;
@@ -32,6 +34,7 @@
     &:last-child() {
       margin-right: 0;
     }
+
     & > a {
       display: block;
       width: 100%;

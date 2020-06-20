@@ -684,11 +684,13 @@ b {
     width: 35%;
     float: left;
     height: 100%;
-    display: block; }
+    display: block;
+    padding-left: 5rem; }
   .footer__Logo {
     font-family: "PermanentMarker";
     font-size: 4rem;
-    color: #e55658; }
+    color: #e55658;
+    padding-bottom: 1.5rem; }
   .footer__license {
     font-family: "Tajawal"; }
   .footer__third {
