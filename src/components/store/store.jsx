@@ -17,6 +17,19 @@ const Store = () => {
 
 	return (
 		<>
+			<div
+				className='store'
+				style={{
+					margin: '2rem auto',
+				}}
+			>
+				<h2>Store</h2>
+				<input
+					type='search'
+					className='input input--text-color-primary input--border-primary input--padding-xs input--border-radius-md input--bg-info'
+					placeholder='search ...'
+				/>
+			</div>
 			<div className='container'>
 				<div
 					style={{
@@ -29,8 +42,11 @@ const Store = () => {
 						<Product key={prod._id} product={prod}></Product>
 					))}
 				</div>
-				<Pagination reducer='product'></Pagination>
 			</div>
+
+			<section className='pagination'>
+				<Pagination reducer='product'></Pagination>
+			</section>
 		</>
 	);
 };

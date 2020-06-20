@@ -869,6 +869,25 @@ body {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
 
+.store {
+  display: flex;
+  justify-content: space-between; }
+  .store h2 {
+    color: #e55658;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10rem; }
+  .store input {
+    align-items: center;
+    width: 15%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 3rem; }
+
+.pagination {
+  padding: 2%;
+  margin: auto; }
+
 .App {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
   font-family: "PermanentMarker";

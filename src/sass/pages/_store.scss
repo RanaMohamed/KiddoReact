@@ -1,0 +1,22 @@
+.store {
+  display: flex;
+  justify-content: space-between;
+  h2 {
+    color: $color-1;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: $spacing-xl;
+  }
+  input {
+    align-items: center;
+    width: 15%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: $spacing-md;
+  }
+}
+
+.pagination {
+  padding: 2%;
+  margin: auto;
+}
