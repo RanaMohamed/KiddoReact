@@ -28,32 +28,28 @@ const password = Joi.string()
     "any.required": `Password is required`
   });
 
-<<<<<<< HEAD
-const datee = Joi.string()
+const date = Joi.string()
   .required()
   .messages({
     "string.empty": "Date should not be empty",
     "any.required": `Date is required`
   });
-=======
-const date = Joi.string().required().messages({
-	'string.empty': 'Date should not be empty',
-	'any.required': `Date is required`,
-});
->>>>>>> 1c8f4104675d0557678ffac2cd7ffe20094abc6a
 
-const experience = Joi.string().required().messages({
-	'string.empty': 'Experience Field should not be empty',
-	'any.required': `Experience Field is required`,
-});
+const experience = Joi.string()
+  .required()
+  .messages({
+    "string.empty": "Experience Field should not be empty",
+    "any.required": `Experience Field is required`
+  });
 
-const phone = Joi.string().required().messages({
-	'string.empty': 'Phone should not be empty',
-	'any.required': `Phone is required`,
-});
+const phone = Joi.string()
+  .required()
+  .messages({
+    "string.empty": "Phone should not be empty",
+    "any.required": `Phone is required`
+  });
 
 export const loginSchema = Joi.object({
-<<<<<<< HEAD
   email,
   password
 });
@@ -62,7 +58,7 @@ export const kidSignupSchema = Joi.object({
   username,
   parentEmail: email,
   password,
-  dateOfBirth: datee
+  dateOfBirth: date
 });
 
 export const postSchema = Joi.object({
@@ -81,34 +77,21 @@ export const postSchema = Joi.object({
     }),
   attachedFiles: Joi.array(),
   price: Joi.number(),
-  category: Joi.string(),
-  isProduct: Joi.boolean()
-=======
-	username,
-	password,
+  category: Joi.string()
 });
-
-export const kidSignupSchema = Joi.object({
-	username,
-	parentEmail: email,
-	password,
-	dateOfBirth: date,
-});
-
 export const supporterSignupSchema = Joi.object({
-	username,
-	email,
-	password,
-	dateOfBirth: date,
-	experience,
+  username,
+  email,
+  password,
+  dateOfBirth: date,
+  experience
 });
 
 export const buyerSignupSchema = Joi.object({
-	username,
-	email,
-	password,
-	dateOfBirth: date,
-	phone,
-	address: Joi.any(),
->>>>>>> 1c8f4104675d0557678ffac2cd7ffe20094abc6a
+  username,
+  email,
+  password,
+  dateOfBirth: date,
+  phone,
+  address: Joi.any()
 });
