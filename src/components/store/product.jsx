@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Product = () => {
+const Product = ({ product }) => {
   return (
     <>
       <div className="post-card post-card--bg post-card--bg--primary">
@@ -8,14 +8,8 @@ const Product = () => {
           <img alt="Post" src="../img/post1.png" />
         </div>
         <div className="post-card__body">
-          <p className="post-card__title">post 1</p>
-          <p>
-            Lorem ipsum dolor sit amet, vel id nusquam repudiandae
-            interpretaris, eam an quem pericula. Mei te aliquid mediocritatem.
-            Sint rebum repudiandae vel ei. In mollis fuisset fierent pro,
-            habemus dolores tincidunt ad nam. Vis laudem nostrud ex, augue errem
-            indoctum ea eam.
-          </p>
+          <p className="post-card__title">{product.post.title}</p>
+          <p>{product.post.body}</p>
           <div className="post-card__info">
             <img
               className="post-card__avatar"

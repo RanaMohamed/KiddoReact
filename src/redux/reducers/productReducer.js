@@ -3,7 +3,6 @@ import TYPES from "./types";
 const initialState = {
   products: [],
   totalNum: 0,
-  product: null,
   errors: {},
 };
 const productReducer = (state = initialState, action) => {
@@ -13,7 +12,7 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         products: action.payload.products,
-        totalNum: action.payload.totalNumOfProducts,
+        totalNum: action.payload.totalNum,
       };
 
     case TYPES.GET_PRODUCT_FAILURE:

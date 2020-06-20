@@ -1,14 +1,16 @@
 import axios from "../../axios";
 import TYPES from "../reducers/types";
 
-export const getProduct = (products) => {
+export const getProducts = () => {
   return async (dispatch) => {
-    dispatch({ type: TYPES.GET_PRODUCT_SUCCESS });
     try {
-      const data = await axios.get("product/", products);
+      const data = await axios.get("/product/");
       dispatch({
-        type: TYPES.ADD_POST_SUCCESS,
-        payload: data.products,
+        type: TYPES.GET_PRODUCT_SUCCESS,
+        payload: {
+          products: data.products,
+          totalNum: data.totalNumOfProducts,
+        },
       });
     } catch (errors) {
       dispatch({
