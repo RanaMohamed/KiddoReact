@@ -2,8 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getComments } from '../../redux/actions/commentActions';
+import Comment from './comment';
 
-const Comments = ({ postId, limit }) => {
+const Comments = ({ postId }) => {
 	const comments = useSelector((state) => state.comment.comments);
 	const dispatch = useDispatch();
 
@@ -13,12 +14,7 @@ const Comments = ({ postId, limit }) => {
 	return (
 		<>
 			{comments?.map((comment) => (
-				<div key={comment._id} className='comment'>
-					<div className='comment__user'>
-						<img alt='Avatar' src='../img/avatar.svg' />
-					</div>
-					<p className='comment__text'>{comment.text}</p>
-				</div>
+				<Comment key={comment._id} comment={comment}></Comment>
 			))}
 		</>
 	);
