@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [active, setactive] = useState({ active: false });
@@ -11,19 +11,19 @@ const Header = () => {
           <h1>Kiddo</h1>
           <ul className="nav-ul">
             <li>
-              <a href="/">Home</a>
+              <Link to="/"> Home</Link>
             </li>
             <li>
-              <a href="/categories">Categories</a>
+              <Link to="/categories">Categories</Link>
             </li>
             <li>
-              <a href="/store">Store</a>
+              <Link to="/store">Store</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
             <li>
               <a href="#f">
@@ -38,7 +38,7 @@ const Header = () => {
             <li>
               {/*  */}
               <div className="dropdown dropdown--active">
-                <a href="#s" className="nav__img">
+                <a href="#profile" className="nav__img">
                   <img
                     src="./img/avatar.svg"
                     alt="kid"
@@ -56,9 +56,9 @@ const Header = () => {
                     <div className="dropdown__arrowup"></div>
                     <ul className="dropdown dropdown__list">
                       <li className="dropdown dropdown__item">
-                        <a href="/">
+                        <Link to="/kid">
                           <i className="fa fa-heart"></i> My Profile
-                        </a>
+                        </Link>
                       </li>
                       <li className="dropdown dropdown__item">
                         <a href="/">

@@ -14,3 +14,17 @@ export const getComments = (id) => {
 		}
 	};
 };
+
+export const addComment = (postId, comment) => {
+	return async (dispatch) => {
+		try {
+			const data = await axios.post(`/comment/${postId}`, { text: comment });
+			dispatch({
+				type: TYPES.ADD_COMMENT,
+				payload: { comment: data.comment, postId },
+			});
+		} catch (errors) {
+			return errors;
+		}
+	};
+};
