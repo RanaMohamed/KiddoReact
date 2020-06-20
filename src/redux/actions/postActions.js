@@ -3,10 +3,9 @@ import TYPES from "../reducers/types";
 
 export const addPost = post => {
   return async dispatch => {
-    const postData = convertToFormData(post);
     dispatch({ type: TYPES.ADD_POST });
     try {
-      const data = await axios.post("post/", postData);
+      const data = await axios.post("post/", post);
       dispatch({
         type: TYPES.ADD_POST_SUCCESS,
         payload: data.post
