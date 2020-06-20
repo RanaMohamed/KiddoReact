@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getCategories } from "./../redux/actions/categoryActions";
+import Pagination from "./pagination";
 
 const Category = () => {
   const categories = useSelector((state) => state.categories.categories);
@@ -14,12 +15,21 @@ const Category = () => {
   return (
     <>
       <div>
-        hello
         {categories.map((category) => (
-          <li key={category._id}>{category.title}</li>
+          <section className="category-section">
+            <div className="category-card category-card--sm" key={category._id}>
+              <div className=" category-card--image">
+                <img src={category.image} alt="Category Image" />
+              </div>
+              <div className="category-card--title">{category.title}</div>
+            </div>
+          </section>
         ))}
-        after
+        <section className="post-section"></section>
       </div>
+      <section className="pagination">
+        <Pagination reducer="product"></Pagination>
+      </section>
     </>
   );
 };
