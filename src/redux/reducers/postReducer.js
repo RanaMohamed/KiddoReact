@@ -3,7 +3,7 @@ import TYPES from "./types";
 const initialState = {
   posts: [],
   totalNum: 0,
-  post: null,
+  post: { title: "", body: "", attachedFiles: [] },
   errors: {}
 };
 const postReducer = (state = initialState, action) => {
