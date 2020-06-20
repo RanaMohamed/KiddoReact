@@ -32,12 +32,21 @@
     margin-top: $spacing-xs;
   }
   &__btn {
-    margin-left: 92%;
+    margin-left: 90%;
+  }
+  &__window-body--bg-info {
+    background-color: $color-3 !important;
+    padding: $spacing-lg;
+    .form-container {
+      width: 50%;
+      margin: auto;
+    }
   }
 }
 
 .form-container {
   border-radius: $border-radius-md;
+  padding: $spacing-sm;
   box-shadow: $box-shadow;
   background-color: $color-4;
 }

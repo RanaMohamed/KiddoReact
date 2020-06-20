@@ -28,6 +28,19 @@ const login = (type, user) => async (dispatch) => {
 	}
 };
 
+const getProfile = (type, id) => async (dispatch) => {
+	try {
+		const data = await axios.get(`/${type}/${id}`);
+		dispatch({
+			type: TYPES.GET_PROFILE,
+			payload: { profile: data.user },
+		});
+	} catch (errors) {
+		console.log(errors);
+		return errors;
+	}
+};
+
 export const signupKid = (user) => {
 	return signup('kid', user);
 };
@@ -50,6 +63,10 @@ export const signupBuyer = (user) => {
 
 export const loginBuyer = (user) => {
 	return login('buyer', user);
+};
+
+export const getKidProfile = (id) => {
+	return getProfile('kid', id);
 };
 
 export const changeNameAction = (name) => {

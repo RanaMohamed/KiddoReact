@@ -4,6 +4,7 @@ import Test from "./pages/test";
 import Error404 from "./pages/error404";
 import TestRedux from "./pages/testRedux";
 import Home from "./pages/home";
+import postForm from "./pages/postForm";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import KidLogin from "./pages/kidLogin";
@@ -11,17 +12,20 @@ import SupporterLogin from "./pages/supporterLogin";
 import BuyerLogin from "./pages/buyerLogin";
 import Kid from "./pages/kid";
 import Categories from "./pages/categories";
+import Product from "./components/store/product";
+import Store from "./components/store/store";
 
 function App() {
   return (
     <React.Fragment>
       <Header></Header>
       <Switch>
+        <Route path="/postForm" component={postForm}></Route>
         <Route path="/kid/login" component={KidLogin}></Route>
         <Route path="/supporter/login" component={SupporterLogin}></Route>
         <Route path="/buyer/login" component={BuyerLogin}></Route>
-        <Route path="/buyer/login" component={BuyerLogin}></Route>
         <Route path="/kid" component={Kid}></Route>
+        <Route path="/store" component={Store}></Route>
         <Route path="/testRedux" component={TestRedux}></Route>
         <Route path="/test" component={Test}></Route>
         <Route path="/categories" component={Categories}></Route>
@@ -32,5 +36,4 @@ function App() {
     </React.Fragment>
   );
 }
-
 export default App;

@@ -3,7 +3,9 @@ import TYPES from "./types";
 const initialState = {
   posts: [],
   totalNum: 0,
+  currentPage: 1,
   post: null,
+  perPage: 6,
   errors: {}
 };
 const postReducer = (state = initialState, action) => {
@@ -26,6 +28,11 @@ const postReducer = (state = initialState, action) => {
       return {
         ...state,
         errors: action.payload
+      };
+    case TYPES.CHANGE_PAGE_POST:
+      return {
+        ...state,
+        currentPage: action.payload.page
       };
     default:
       return state;

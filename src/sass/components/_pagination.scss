@@ -8,13 +8,19 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-size: contain;
+	background-size: contain !important;
 	font-weight: $font-weight-bold;
+	cursor: pointer;
+	&.active {
+		background: url('#{bg-shape($color-1)}') center no-repeat;
+	}
 }
 
 .pagination {
 	display: flex;
 	align-items: center;
+	margin: $spacing-sm auto;
+	width: fit-content;
 }
 
 .arrow {
@@ -23,4 +29,5 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-size: $font-size-lg;
+	cursor: pointer;
 }
