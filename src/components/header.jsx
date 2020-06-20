@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
 const Header = () => {
+  const [active, setactive] = useState({ active: false });
+
   return (
     <>
       <header>
@@ -35,24 +38,36 @@ const Header = () => {
             <li>
               {/*  */}
               <div className="dropdown dropdown--active">
-                <a href="/" className="nav__img">
-                  <img src="./img/avatar.svg" alt="kid" />
+                <a href="#s" className="nav__img">
+                  <img
+                    src="./img/avatar.svg"
+                    alt="kid"
+                    onClick={() =>
+                      setactive({
+                        active: active.active === true ? false : true,
+                      })
+                    }
+                  />
                 </a>
-                <div className="dropdown__menu">
-                  <div className="dropdown__arrowup"></div>
-                  <ul className="dropdown dropdown__list">
-                    <li className="dropdown dropdown__item">
-                      <a href="/">
-                        <i className="fa fa-heart"></i> My Profile
-                      </a>
-                    </li>
-                    <li className="dropdown dropdown__item">
-                      <a href="/">
-                        <i className="fa fa-heart"></i> Logout
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                {/* dropdown */}
+
+                {active.active && (
+                  <div className="dropdown__menu">
+                    <div className="dropdown__arrowup"></div>
+                    <ul className="dropdown dropdown__list">
+                      <li className="dropdown dropdown__item">
+                        <a href="/">
+                          <i className="fa fa-heart"></i> My Profile
+                        </a>
+                      </li>
+                      <li className="dropdown dropdown__item">
+                        <a href="/">
+                          <i className="fa fa-heart"></i> Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </li>
             <li>
