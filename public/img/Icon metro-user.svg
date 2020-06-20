@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.992" height="25.064" viewBox="0 0 26.992 25.064">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fdd343;
+      }
+    </style>
+  </defs>
+  <path id="Icon_metro-user" data-name="Icon metro-user" class="cls-1" d="M19.923,23.215v-1.59a8.611,8.611,0,0,0,3.856-7.165c0-4.792,0-8.676-5.784-8.676s-5.784,3.884-5.784,8.676a8.611,8.611,0,0,0,3.856,7.165v1.59C9.527,23.75,4.5,26.963,4.5,30.849H31.491c0-3.885-5.028-7.1-11.568-7.633Z" transform="translate(-4.499 -5.784)"/>
+</svg>
