@@ -19,6 +19,9 @@
 		font-size: $font-size-md;
 		margin-bottom: $spacing-xs;
 	}
+	&__description {
+		word-break: break-word;
+	}
 	&__info {
 		display: flex;
 		align-items: flex-start;
