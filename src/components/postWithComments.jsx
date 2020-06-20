@@ -1,22 +1,17 @@
 import React from 'react';
+import Comments from './kid/comments';
 
-const PostWithComments = () => {
+const PostWithComments = ({ post }) => {
 	return (
 		<>
-			<div className='post-card post-card--md'>
-				<div className='post-card__post'>
+			<div className='post-card post-card--md my-md'>
+				<div className='post-card__post w-50'>
 					<div className='post-card__img'>
 						<img alt='Post' src='../img/post1.png' />
 					</div>
 					<div className='post-card__body'>
-						<p className='post-card__title'>Post 1</p>
-						<p>
-							Lorem ipsum dolor sit amet, vel id nusquam repudiandae
-							interpretaris, eam an quem pericula. Mei te aliquid mediocritatem.
-							Sint rebum repudiandae vel ei. In mollis fuisset fierent pro,
-							habemus dolores tincidunt ad nam. Vis laudem nostrud ex, augue
-							errem indoctum ea eam.
-						</p>
+						<p className='post-card__title'>{post.title}</p>
+						<p>{post.body}</p>
 						<div className='post-card__info'>
 							<img
 								className='post-card__avatar'
@@ -24,11 +19,11 @@ const PostWithComments = () => {
 								src='../img/avatar.svg'
 							/>
 							<div>
-								<p>Full name</p>
+								<p>{post.authorKid?.username}</p>
 								<i className='fa fa-heart like-icon'></i>
-								<span>20</span>
+								<span>{post.likes?.length}</span>
 								<i className='fa fa-comment comment-icon'></i>
-								<span>10</span>
+								<span>{post.comments?.length}</span>
 							</div>
 						</div>
 						<div className='post-card__overlay'>
@@ -37,32 +32,9 @@ const PostWithComments = () => {
 						</div>
 					</div>
 				</div>
-				<div className='comments'>
+				<div className='comments w-50'>
 					<h2>Comments</h2>
-					<div className='comment'>
-						<div className='comment__user'>
-							<img alt='Avatar' src='../img/avatar.svg' />
-						</div>
-						<p className='comment__text'>
-							Lorem ipsum dolor sit amet, vel id nusquam repudiandae
-							interpretaris, eam an quem pericula. Mei te aliquid mediocritatem.
-							Sint rebum repudiandae vel ei. In mollis fuisset fierent pro,
-							habemus dolores tincidunt ad nam. Vis laudem nostrud ex, augue
-							errem indoctum ea eam.
-						</p>
-					</div>
-					<div className='comment'>
-						<div className='comment__user'>
-							<img alt='Avatar' src='../img/avatar.svg' />
-						</div>
-						<p className='comment__text'>
-							Lorem ipsum dolor sit amet, vel id nusquam repudiandae
-							interpretaris, eam an quem pericula. Mei te aliquid mediocritatem.
-							Sint rebum repudiandae vel ei. In mollis fuisset fierent pro,
-							habemus dolores tincidunt ad nam. Vis laudem nostrud ex, augue
-							errem indoctum ea eam.
-						</p>
-					</div>
+					<Comments postId={post._id}></Comments>
 					<div>
 						<input
 							type='text'

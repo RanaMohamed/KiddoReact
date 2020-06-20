@@ -414,7 +414,6 @@ body {
 .profile-card {
   border-radius: 2rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-  width: 40%;
   color: #33312c;
   padding: 3rem 0 3rem 3rem;
   background-color: #fbfbfa;
@@ -445,7 +444,7 @@ body {
   .profile-card__part-lg {
     width: 70%; }
     .profile-card__part-lg--after::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 0.3rem;
       height: 100%;
@@ -548,54 +547,59 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: contain;
-  font-weight: 700; }
+  background-size: contain !important;
+  font-weight: 700;
+  cursor: pointer; }
+  .page.active {
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='399.774' height='386.666' viewBox='0 0 399.774 386.666'> <path fill='%23e55658' d='M1232.443,7777.276c-1.4-80.9,172.7-213.173,241.495-211.888s32.158,67.342,57.177,120.314,101.479-8.591,100.075,81.3-118.992,160.2-200.778,181.069-99.687-71.914-126.364-97.6S1233.847,7858.18,1232.443,7777.276Z' transform='translate(-1231.934 -7564.879)' /></svg>") center no-repeat; }
 
 .pagination {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin: 1.5rem auto;
+  width: fit-content; }
 
 .arrow {
   background: -webkit-linear-gradient(#e55658, #fdd343);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 4rem; }
+  font-size: 4rem;
+  cursor: pointer; }
 
-.dropdown__image {
-  margin-left: 72.5%; }
-
-.dropdown__menu {
-  visibility: hidden; }
-
-.dropdown__arrowup {
-  width: 0;
-  height: 0;
-  margin-left: 80%;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #106d74; }
-
-.dropdown__list {
-  background-color: #106d74;
-  border-radius: 0.7rem;
-  min-width: 500px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
-
-.dropdown__item {
-  padding: 1rem; }
-  .dropdown__item > a {
-    font-size: 1.8rem;
-    color: #fbfbfa; }
-  .dropdown__item:hover {
-    cursor: pointer;
+.dropdown {
+  position: relative; }
+  .dropdown__image {
+    margin-left: 72.5%; }
+  .dropdown__menu {
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-75%, 0); }
+  .dropdown__arrowup {
+    width: 0;
+    height: 0;
+    margin-left: 80%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #106d74; }
+  .dropdown__list {
+    background-color: #106d74;
     border-radius: 0.7rem;
-    background-color: #53bcc0;
-    transition: 0.8s; }
-
-.dropdown--active .dropdown__menu {
-  visibility: visible;
-  transition: all 0.8s ease-in-out; }
+    min-width: 30rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
+  .dropdown__item {
+    padding: 1rem; }
+    .dropdown__item > a {
+      font-size: 1.8rem;
+      color: #fbfbfa; }
+    .dropdown__item:hover {
+      cursor: pointer;
+      border-radius: 0.7rem;
+      background-color: #53bcc0;
+      transition: 0.8s; }
+  .dropdown--active .dropdown__menu {
+    visibility: visible;
+    transition: all 0.8s ease-in-out; }
 
 .category-card {
   display: flex;
@@ -736,7 +740,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  .nav-ul li {
+  .nav-ul > li {
     padding: 3rem; }
   .nav-ul a:hover {
     color: #fdd343; }
@@ -852,13 +856,44 @@ body {
   justify-content: space-between; }
 
 .h-100-vh {
-  height: 100vh; }
+  min-height: 100vh; }
 
 .align-items-center {
   align-items: center; }
 
 .p-xl {
   padding: 10rem; }
+
+.my-lg {
+  margin-top: 5rem;
+  margin-bottom: 5rem; }
+
+.my-md {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+
+.my-sm {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.store {
+  display: flex;
+  justify-content: space-between; }
+  .store h2 {
+    color: #e55658;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-left: 10rem; }
+  .store input {
+    align-items: center;
+    width: 15%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-right: 3rem; }
+
+.pagination {
+  padding: 2%;
+  margin: auto; }
 
 .App {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;

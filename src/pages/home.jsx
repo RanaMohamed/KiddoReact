@@ -1,10 +1,10 @@
 import React from "react";
-import Footer from "../components/footer";
+import Category from "../components/category";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <Footer></Footer>
+      <Category></Category>
     </React.Fragment>
   );
 };

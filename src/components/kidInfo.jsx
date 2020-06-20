@@ -1,6 +1,6 @@
 import React from 'react';
 
-const KidInfo = () => {
+const KidInfo = ({ profile }) => {
 	return (
 		<div className='profile-card profile-card--display-flex'>
 			<div className='profile-card__part-lg '>
@@ -14,16 +14,13 @@ const KidInfo = () => {
 				</p>
 				<p className='profile-card__title'>interests</p>
 				<div className='categories' style={{ display: 'flex' }}>
-					<div className='category-card category-card--xs'>
-						<div className=' category-card--image'>
-							<img src='./img/avatar.svg' alt='kid' />
+					{profile?.categories?.map((cat) => (
+						<div key={cat._id} className='category-card category-card--xs'>
+							<div className=' category-card--image'>
+								<img src='./img/avatar.svg' alt='kid' />
+							</div>
 						</div>
-					</div>
-					<div className='category-card category-card--xs'>
-						<div className=' category-card--image'>
-							<img src='./img/avatar.svg' alt='kid' />
-						</div>
-					</div>
+					))}
 				</div>
 			</div>
 			<div className='profile-card__part-sm'>
