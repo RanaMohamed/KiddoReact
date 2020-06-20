@@ -5,7 +5,7 @@ import Pagination from "./pagination";
 
 const Category = () => {
   const categories = useSelector((state) => state.categories.categories);
-  const posts = useSelector((state) => state.posts.posts);
+  const posts = useSelector((state) => state.post.post);
   const dispatch = useDispatch();
 
   useEffect(() => {
