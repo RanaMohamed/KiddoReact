@@ -31,7 +31,6 @@ const login = (type, user) => async (dispatch) => {
 const getProfile = (type, id) => async (dispatch) => {
 	try {
 		const data = await axios.get(`/${type}/${id}`);
-		console.log(data);
 		dispatch({
 			type: TYPES.GET_PROFILE,
 			payload: { profile: data.user },
