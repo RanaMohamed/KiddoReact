@@ -44,6 +44,14 @@ export const loginSupporter = (user) => {
 	return login('supporter', user);
 };
 
+export const signupBuyer = (user) => {
+	return signup('buyer', user);
+};
+
+export const loginBuyer = (user) => {
+	return login('buyer', user);
+};
+
 export const changeNameAction = (name) => {
 	return async (dispatch) => {
 		// const data = await axios.get('')

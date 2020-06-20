@@ -562,40 +562,39 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 4rem; }
 
-.dropdown__image {
-  margin-left: 72.5%; }
-
-.dropdown__menu {
-  visibility: hidden; }
-
-.dropdown__arrowup {
-  width: 0;
-  height: 0;
-  margin-left: 80%;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid #106d74; }
-
-.dropdown__list {
-  background-color: #106d74;
-  border-radius: 0.7rem;
-  min-width: 500px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
-
-.dropdown__item {
-  padding: 1rem; }
-  .dropdown__item > a {
-    font-size: 1.8rem;
-    color: #fbfbfa; }
-  .dropdown__item:hover {
-    cursor: pointer;
+.dropdown {
+  position: relative; }
+  .dropdown__image {
+    margin-left: 72.5%; }
+  .dropdown__menu {
+    visibility: hidden;
+    position: absolute;
+    transform: translate(-75%, 0); }
+  .dropdown__arrowup {
+    width: 0;
+    height: 0;
+    margin-left: 80%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #106d74; }
+  .dropdown__list {
+    background-color: #106d74;
     border-radius: 0.7rem;
-    background-color: #53bcc0;
-    transition: 0.8s; }
-
-.dropdown--active .dropdown__menu {
-  visibility: visible;
-  transition: all 0.8s ease-in-out; }
+    min-width: 30rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
+  .dropdown__item {
+    padding: 1rem; }
+    .dropdown__item > a {
+      font-size: 1.8rem;
+      color: #fbfbfa; }
+    .dropdown__item:hover {
+      cursor: pointer;
+      border-radius: 0.7rem;
+      background-color: #53bcc0;
+      transition: 0.8s; }
+  .dropdown--active .dropdown__menu {
+    visibility: visible;
+    transition: all 0.8s ease-in-out; }
 
 .category-card {
   display: flex;
@@ -736,7 +735,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  .nav-ul li {
+  .nav-ul > li {
     padding: 3rem; }
   .nav-ul a:hover {
     color: #fdd343; }
@@ -845,7 +844,7 @@ body {
   justify-content: space-between; }
 
 .h-100-vh {
-  height: 100vh; }
+  min-height: 100vh; }
 
 .align-items-center {
   align-items: center; }

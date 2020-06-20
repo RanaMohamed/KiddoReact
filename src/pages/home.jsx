@@ -1,12 +1,8 @@
-import React from "react";
-import Footer from "../components/footer";
+import React from 'react';
+import Footer from '../components/footer';
 
 const Home = () => {
-  return (
-    <React.Fragment>
-      <Footer></Footer>
-    </React.Fragment>
-  );
+	return <React.Fragment></React.Fragment>;
 };
 
 export default Home;

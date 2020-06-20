@@ -30,6 +30,11 @@ const experience = Joi.string().required().messages({
 	'any.required': `Experience Field is required`,
 });
 
+const phone = Joi.string().required().messages({
+	'string.empty': 'Phone should not be empty',
+	'any.required': `Phone is required`,
+});
+
 export const loginSchema = Joi.object({
 	username,
 	password,
@@ -48,4 +53,13 @@ export const supporterSignupSchema = Joi.object({
 	password,
 	dateOfBirth: date,
 	experience,
+});
+
+export const buyerSignupSchema = Joi.object({
+	username,
+	email,
+	password,
+	dateOfBirth: date,
+	phone,
+	address: Joi.any(),
 });

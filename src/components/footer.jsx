@@ -12,25 +12,25 @@ const Footer = () => {
 					</div>
 
 					<div className='footer__third'>
-						<a href='#'> About Us</a>
-						<a href='#'> Contact</a>
-					</div>
-					<div className='footer__third'>
-						<a href='#'>
-							<i className='fa fa-facebook'></i> Facebook
-						</a>
-						<a href='#'>
-							<i className='fa fa-twitter'></i> Twitter
-						</a>
-						<a href='#'>
-							<i className='fa fa-instagram'></i> Instgram
-						</a>
-					</div>
-					<div className='footer__third'>
 						<Link to='/supporter/signup'>Join as Supporter</Link>
-						<a href='#'> Privacy Policy</a>
-						<a href='#'> Terms &amp; condition</a>
-						<a href='#'> FAQs</a>
+						<a href='/'> About Us</a>
+						<a href='/'> Contact</a>
+					</div>
+					<div className='footer__third'>
+						<a href='/'>
+							<i className='fab fa-facebook'></i> Facebook
+						</a>
+						<a href='/'>
+							<i className='fab fa-twitter'></i> Twitter
+						</a>
+						<a href='/'>
+							<i className='fab fa-instagram'></i> Instgram
+						</a>
+					</div>
+					<div className='footer__third'>
+						<a href='/'> Privacy Policy</a>
+						<a href='/'> Terms &amp; condition</a>
+						<a href='/'> FAQs</a>
 					</div>
 					<div className='footer__third'>
 						<span>Subscribe to our newsletter</span>
