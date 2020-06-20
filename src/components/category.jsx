@@ -5,7 +5,7 @@ import Pagination from "./pagination";
 
 const Category = () => {
   const categories = useSelector((state) => state.categories.categories);
-  console.log(categories);
+  const posts = useSelector((state) => state.posts.posts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Category = () => {
   return (
     <>
       <div>
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <section className="category-section">
             <div className="category-card category-card--sm" key={category._id}>
               <div className=" category-card--image">
