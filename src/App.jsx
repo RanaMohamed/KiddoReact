@@ -9,9 +9,9 @@ function App() {
   return (
     <React.Fragment>
       <Switch>
-        <Route path="/" component={Home}></Route>
         <Route path="/testRedux" component={TestRedux}></Route>
         <Route path="/test" component={Test}></Route>
+        <Route path="/" component={Home}></Route>
         <Route component={Error404}></Route>
       </Switch>
     </React.Fragment>

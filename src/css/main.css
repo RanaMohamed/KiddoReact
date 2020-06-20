@@ -727,6 +727,31 @@ b {
   max-width: 1640px;
   margin: 0 auto; }
 
+.form {
+  padding: 1rem; }
+  .form__title {
+    font-family: "PermanentMarker";
+    font-size: 2rem;
+    color: #fdd343;
+    margin-bottom: 1.5rem; }
+  .form__subtitle {
+    font-family: "PermanentMarker";
+    font-size: 1.8rem;
+    color: #53bcc0; }
+  .form__input-1 {
+    margin-bottom: 3rem;
+    margin-top: 1.5rem; }
+  .form__input-2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem; }
+  .form__btn {
+    margin-left: 92%; }
+
+.form-container {
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+  background-color: #fbfbfa; }
+
 .App {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
   font-family: "PermanentMarker";
