@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Product from "./product";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../../redux/actions/productAction";
+import Pagination from "../pagination";
 
 const Store = () => {
   const products = useSelector((state) => state.product.products);
@@ -13,6 +14,19 @@ const Store = () => {
 
   return (
     <>
+      <div
+        className="store"
+        style={{
+          margin: "2rem auto",
+        }}
+      >
+        <h2>Store</h2>
+        <input
+          type="search"
+          className="input input--text-color-primary input--border-primary input--padding-xs input--border-radius-md input--bg-info"
+          placeholder="search ..."
+        />
+      </div>
       <div className="container">
         <div
           style={{
@@ -26,6 +40,10 @@ const Store = () => {
           ))}
         </div>
       </div>
+
+      <section className="pagination">
+        <Pagination></Pagination>
+      </section>
     </>
   );
 };
