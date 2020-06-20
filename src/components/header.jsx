@@ -11,19 +11,19 @@ const Header = () => {
           <h1>Kiddo</h1>
           <ul className="nav-ul">
             <li>
-              <a href="#a"> Home</a>
+              <a href="/"> Home</a>
             </li>
             <li>
-              <a href="#a">Categories</a>
+              <a href="/categories">Categories</a>
             </li>
             <li>
               <a href="/store">Store</a>
             </li>
             <li>
-              <a href="#a">About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href="#a">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
             <li>
               <a href="#f">
