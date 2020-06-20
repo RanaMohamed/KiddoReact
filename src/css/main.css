@@ -866,6 +866,10 @@ body {
 .p-xl {
   padding: 10rem; }
 
+.my-xl {
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
 .my-lg {
   margin-top: 5rem;
   margin-bottom: 5rem; }

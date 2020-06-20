@@ -11,6 +11,7 @@ import KidLogin from "./pages/kidLogin";
 import SupporterLogin from "./pages/supporterLogin";
 import BuyerLogin from "./pages/buyerLogin";
 import Kid from "./pages/kid";
+import Supporter from "./pages/supporter";
 import Categories from "./pages/categories";
 import Product from "./components/store/product";
 import Store from "./components/store/store";
@@ -21,6 +22,7 @@ function App() {
       <Header></Header>
       <Switch>
         <Route path="/postForm" component={postForm}></Route>
+        <Route path="/supporter" component={Supporter}></Route>
         <Route path="/kid/login" component={KidLogin}></Route>
         <Route path="/supporter/login" component={SupporterLogin}></Route>
         <Route path="/buyer/login" component={BuyerLogin}></Route>
