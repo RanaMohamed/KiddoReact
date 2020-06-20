@@ -3,7 +3,7 @@ import React from 'react';
 const PostWithComments = () => {
 	return (
 		<>
-			<div className='post-card post-card--md'>
+			<div className='post-card post-card--md my-md'>
 				<div className='post-card__post'>
 					<div className='post-card__img'>
 						<img alt='Post' src='../img/post1.png' />

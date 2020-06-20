@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import LoginSupporter from '../components/supporter/login';
-import SignupSupporter from '../components/supporter/signup';
+import LoginKid from '../components/kid/login';
+import SignupKid from '../components/kid/signup';
 
-const Supporter = () => {
+const KidLogin = () => {
 	const [login, setLogin] = useState(true);
 
 	return (
@@ -30,15 +30,11 @@ const Supporter = () => {
 					</h1>
 				</div>
 				<div className='w-50 bg--2'>
-					{login ? (
-						<LoginSupporter></LoginSupporter>
-					) : (
-						<SignupSupporter></SignupSupporter>
-					)}
+					{login ? <LoginKid></LoginKid> : <SignupKid></SignupKid>}
 				</div>
 			</div>
 		</>
 	);
 };
 
-export default Supporter;
+export default KidLogin;

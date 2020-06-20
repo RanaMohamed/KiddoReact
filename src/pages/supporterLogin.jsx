@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginBuyer from '../components/buyer/login';
-import SignupBuyer from '../components/buyer/signup';
 import { useState } from 'react';
+import LoginSupporter from '../components/supporter/login';
+import SignupSupporter from '../components/supporter/signup';
 
-const Buyer = () => {
+const SupporterLogin = () => {
 	const [login, setLogin] = useState(true);
 
 	return (
@@ -30,11 +30,15 @@ const Buyer = () => {
 					</h1>
 				</div>
 				<div className='w-50 bg--2'>
-					{login ? <LoginBuyer></LoginBuyer> : <SignupBuyer></SignupBuyer>}
+					{login ? (
+						<LoginSupporter></LoginSupporter>
+					) : (
+						<SignupSupporter></SignupSupporter>
+					)}
 				</div>
 			</div>
 		</>
 	);
 };
 
-export default Buyer;
+export default SupporterLogin;

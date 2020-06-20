@@ -1,37 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
-import LoginKid from '../components/kid/login';
-import SignupKid from '../components/kid/signup';
+import KidInfo from '../components/kidInfo';
+import ProfilePicture from '../components/profilePicture';
+import KidDashboard from '../components/kid/dashboard';
+import PostWithComments from '../components/postWithComments';
 
 const Kid = () => {
-	const [login, setLogin] = useState(true);
-
 	return (
 		<>
-			<div className='container d-flex h-100-vh align-items-center'>
-				<div className='w-50'>
-					<button
-						className={'btn btn--rect' + (login ? ' btn--light' : ' btn--1')}
-						onClick={() => setLogin(false)}
-					>
-						Signup
-					</button>
-					<button
-						className={'btn btn--rect' + (!login ? ' btn--light' : ' btn--1')}
-						onClick={() => setLogin(false)}
-					>
-						Login
-					</button>
-
-					<h1 className='w-70'>
-						{login
-							? 'Fill Your Info to enter'
-							: 'Fill the form to be part of the community'}
-					</h1>
+			<div className='container'>
+				<div className='d-flex justify-content-between'>
+					<ProfilePicture></ProfilePicture>
+					<KidInfo></KidInfo>
 				</div>
-				<div className='w-50 bg--2'>
-					{login ? <LoginKid></LoginKid> : <SignupKid></SignupKid>}
-				</div>
+				<KidDashboard></KidDashboard>
+				<section className='my-lg'>
+					<h2>My Posts</h2>
+					<PostWithComments></PostWithComments>
+					<PostWithComments></PostWithComments>
+					<PostWithComments></PostWithComments>
+				</section>
 			</div>
 		</>
 	);
