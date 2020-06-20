@@ -6,7 +6,7 @@ const initialState = {
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
     //GET
-    case TYPES.GET_CATEGORIES:
+    case TYPES.GET_CATEGORIES_SUCCESS:
       return {
         ...state,
         categories: action.payload.categories,
