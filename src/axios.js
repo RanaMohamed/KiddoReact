@@ -38,7 +38,7 @@ instance.interceptors.response.use(
 			const errors = error.response.data.errors.errors;
 
 			return Promise.reject(
-				objectMap(errors, (v) => ({ ...v, message: v.properties.message }))
+				objectMap(errors, (v) => ({ ...v, message: v.properties?.message }))
 			);
 		}
 

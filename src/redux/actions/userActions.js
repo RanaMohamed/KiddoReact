@@ -1,35 +1,47 @@
 import TYPES from '../reducers/types';
 import axios from '../../axios';
 
+const signup = (type, user) => async (dispatch) => {
+	try {
+		const data = await axios.post(`/${type}/register`, user);
+		axios.defaults.headers.common['authorization'] = data.token;
+		dispatch({
+			type: TYPES.SIGNUP_KID,
+			payload: { user: data[type], token: data.token },
+		});
+	} catch (errors) {
+		return errors;
+	}
+};
+
+const login = (type, user) => async (dispatch) => {
+	try {
+		const data = await axios.post(`/${type}/login`, user);
+		axios.defaults.headers.common['authorization'] = data.token;
+		dispatch({
+			type: TYPES.LOGIN_USER,
+			payload: { user: data.user, token: data.token, type: data.type },
+		});
+	} catch (errors) {
+		console.log(errors);
+		return errors;
+	}
+};
+
 export const signupKid = (user) => {
-	return async (dispatch) => {
-		try {
-			const data = await axios.post('/kid/register', user);
-			console.log(data);
-			axios.defaults.headers.common['authorization'] = data.token;
-			dispatch({
-				type: TYPES.SIGNUP_KID,
-				payload: { user: data.kid, token: data.token },
-			});
-		} catch (errors) {
-			return errors;
-		}
-	};
+	return signup('kid', user);
 };
 
 export const loginKid = (user) => {
-	return async (dispatch) => {
-		try {
-			const data = await axios.post('/kid/login', user);
-			axios.defaults.headers.common['authorization'] = data.token;
-			dispatch({
-				type: TYPES.LOGIN_USER,
-				payload: { user: data.user, token: data.token, type: data.type },
-			});
-		} catch (errors) {
-			return errors;
-		}
-	};
+	return loginKid('kid', user);
+};
+
+export const signupSupporter = (user) => {
+	return signup('supporter', user);
+};
+
+export const loginSupporter = (user) => {
+	return login('supporter', user);
 };
 
 export const changeNameAction = (name) => {

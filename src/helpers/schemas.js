@@ -20,9 +20,14 @@ const password = Joi.string().min(8).required().messages({
 	'any.required': `Password is required`,
 });
 
-const datee = Joi.string().required().messages({
+const date = Joi.string().required().messages({
 	'string.empty': 'Date should not be empty',
 	'any.required': `Date is required`,
+});
+
+const experience = Joi.string().required().messages({
+	'string.empty': 'Experience Field should not be empty',
+	'any.required': `Experience Field is required`,
 });
 
 export const loginSchema = Joi.object({
@@ -34,5 +39,13 @@ export const kidSignupSchema = Joi.object({
 	username,
 	parentEmail: email,
 	password,
-	dateOfBirth: datee,
+	dateOfBirth: date,
+});
+
+export const supporterSignupSchema = Joi.object({
+	username,
+	email,
+	password,
+	dateOfBirth: date,
+	experience,
 });
