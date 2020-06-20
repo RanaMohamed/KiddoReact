@@ -7,9 +7,6 @@ import Pagination from "../pagination";
 const Store = () => {
   const products = useSelector((state) => state.product.products);
 
-  const [myProducts, setProducts] = useState(products);
-  console.log(myProducts);
-
   const currentPage = useSelector((state) => state.product.currentPage);
   const perPage = useSelector((state) => state.product.perPage);
   const [searchText, setsearchText] = useState({ searchText: "" });

@@ -131,22 +131,22 @@ a {
   color: inherit; }
 
 @font-face {
-  font-family: 'Tajawal';
+  font-family: "Tajawal";
   src: url(../fonts/Tajawal/Tajawal-Regular.ttf) format("truetype");
   font-weight: 400; }
 
 @font-face {
-  font-family: 'Tajawal';
+  font-family: "Tajawal";
   src: url(../fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
   font-weight: 500; }
 
 @font-face {
-  font-family: 'Tajawal';
+  font-family: "Tajawal";
   src: url(../fonts/Tajawal/Tajawal-Bold.ttf) format("truetype");
   font-weight: 700; }
 
 @font-face {
-  font-family: 'PermanentMarker';
+  font-family: "PermanentMarker";
   src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf) format("truetype"); }
 
 html {
@@ -207,6 +207,8 @@ body {
     color: #106d74;
     font-size: 2rem;
     margin-bottom: 1rem; }
+  .post-card__description {
+    word-break: break-word; }
   .post-card__info {
     display: flex;
     align-items: flex-start;
@@ -829,10 +831,17 @@ body {
     margin-bottom: 1rem;
     margin-top: 1rem; }
   .form__btn {
-    margin-left: 92%; }
+    margin-left: 90%; }
+  .form__window-body--bg-info {
+    background-color: #53bcc0 !important;
+    padding: 5rem; }
+    .form__window-body--bg-info .form-container {
+      width: 50%;
+      margin: auto; }
 
 .form-container {
   border-radius: 0.7rem;
+  padding: 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
   background-color: #fbfbfa; }
 

@@ -34,6 +34,22 @@ const postReducer = (state = initialState, action) => {
 				...state,
 				currentPage: action.payload.page,
 			};
+		case TYPES.ADD_COMMENT:
+			return {
+				...state,
+				posts: state.posts.map((post) =>
+					post._id === action.payload.postId
+						? {
+								...post,
+								comments: [action.payload.comment, ...post.comments].slice(
+									0,
+									2
+								),
+								commentsTotal: post.commentsTotal + 1,
+						  }
+						: post
+				),
+			};
 		default:
 			return state;
 	}

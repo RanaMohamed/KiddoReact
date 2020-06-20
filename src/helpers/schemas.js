@@ -36,7 +36,7 @@ const phone = Joi.string().required().messages({
 });
 
 export const loginSchema = Joi.object({
-	username,
+	email,
 	password,
 });
 
@@ -47,6 +47,21 @@ export const kidSignupSchema = Joi.object({
 	dateOfBirth: date,
 });
 
+export const postSchema = Joi.object({
+	_id: Joi.string(),
+	title: Joi.string().required().messages({
+		'string.empty': 'title should not be empty',
+		'any.required': `title is required`,
+	}),
+	body: Joi.string().required().messages({
+		'string.empty': 'body should not be empty',
+		'any.required': `body is required`,
+	}),
+	attachedFiles: Joi.array(),
+	price: Joi.number(),
+	category: Joi.string(),
+	isProduct: Joi.boolean(),
+});
 export const supporterSignupSchema = Joi.object({
 	username,
 	email,
