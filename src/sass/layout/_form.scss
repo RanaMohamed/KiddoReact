@@ -1,4 +1,15 @@
 .form {
+	label {
+		margin-bottom: $spacing-xs;
+		display: block;
+	}
+	.input {
+		margin-bottom: $spacing-xs;
+	}
+	.error-message {
+		margin-bottom: $spacing-sm;
+		display: block;
+	}
   padding: $spacing-xs;
   &__title {
     font-family: $secondary-font;

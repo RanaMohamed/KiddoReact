@@ -1,12 +1,13 @@
 import TYPES from './types';
 
 const initialState = {
-	user: { name: 'Hamada' },
+	user: null,
 	token: '',
 };
 const userReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case TYPES.LOGIN_USER:
+		case TYPES.SIGNUP_KID: {
 			localStorage.setItem('token', action.payload.token);
 			return {
 				...state,
@@ -14,6 +15,7 @@ const userReducer = (state = initialState, action) => {
 				token: action.payload.token,
 				errors: {},
 			};
+		}
 		case TYPES.CHANGE_NAME:
 			return {
 				...state,
