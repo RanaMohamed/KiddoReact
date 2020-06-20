@@ -16,24 +16,20 @@ import Store from "./components/store/store";
 function App() {
   return (
     <React.Fragment>
-      {/* <Header></Header> */}
+      <Header></Header>
       <Switch>
         <Route path="/kid/login" component={KidLogin}></Route>
         <Route path="/supporter/login" component={SupporterLogin}></Route>
         <Route path="/buyer/login" component={BuyerLogin}></Route>
         <Route path="/buyer/login" component={BuyerLogin}></Route>
         <Route path="/kid" component={Kid}></Route>
-
-        {/* <Product></Product> */}
-        <Store></Store>
-        {/* <Route path="/product" component={Kid}></Route> */}
-
+        <Route path="/store" component={Store}></Route>
         <Route path="/testRedux" component={TestRedux}></Route>
         <Route path="/test" component={Test}></Route>
         <Route path="/" component={Home}></Route>
         <Route component={Error404}></Route>
       </Switch>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </React.Fragment>
   );
 }
