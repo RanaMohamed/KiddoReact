@@ -12,6 +12,7 @@ import SupporterLogin from "./pages/supporterLogin";
 import BuyerLogin from "./pages/buyerLogin";
 import Kid from "./pages/kid";
 import Supporter from "./pages/supporter";
+import Categories from "./pages/categories";
 import Product from "./components/store/product";
 import Store from "./components/store/store";
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/store" component={Store}></Route>
         <Route path="/testRedux" component={TestRedux}></Route>
         <Route path="/test" component={Test}></Route>
+        <Route path="/categories" component={Categories}></Route>
         <Route path="/" component={Home}></Route>
         <Route component={Error404}></Route>
       </Switch>

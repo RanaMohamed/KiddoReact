@@ -3,9 +3,11 @@ import Category from "../components/category";
 
 const Home = () => {
   return (
-    <React.Fragment>
-      <Category></Category>
-    </React.Fragment>
+    <>
+      <div>
+        <Category></Category>
+      </div>
+    </>
   );
 };
 

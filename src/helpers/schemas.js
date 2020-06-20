@@ -1,97 +1,80 @@
-import Joi from "@hapi/joi";
+import Joi from '@hapi/joi';
 
 // eslint-disable-next-line no-useless-escape
 export const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const username = Joi.string()
-  .required()
-  .messages({
-    "string.empty": "Username should not be empty",
-    "any.required": `Username is required`
-  });
+const username = Joi.string().required().messages({
+	'string.empty': 'Username should not be empty',
+	'any.required': `Username is required`,
+});
 
-const email = Joi.string()
-  .required()
-  .pattern(emailRegex)
-  .messages({
-    "string.pattern.base": "Email is invalid",
-    "string.empty": "Email should not be empty",
-    "any.required": `Email is required`
-  });
+const email = Joi.string().required().pattern(emailRegex).messages({
+	'string.pattern.base': 'Email is invalid',
+	'string.empty': 'Email should not be empty',
+	'any.required': `Email is required`,
+});
 
-const password = Joi.string()
-  .min(8)
-  .required()
-  .messages({
-    "string.empty": "Password should not be empty",
-    "string.min": `Password should have a minimum length of {#limit}`,
-    "any.required": `Password is required`
-  });
+const password = Joi.string().min(8).required().messages({
+	'string.empty': 'Password should not be empty',
+	'string.min': `Password should have a minimum length of {#limit}`,
+	'any.required': `Password is required`,
+});
 
-const date = Joi.string()
-  .required()
-  .messages({
-    "string.empty": "Date should not be empty",
-    "any.required": `Date is required`
-  });
+const date = Joi.string().required().messages({
+	'string.empty': 'Date should not be empty',
+	'any.required': `Date is required`,
+});
 
-const experience = Joi.string()
-  .required()
-  .messages({
-    "string.empty": "Experience Field should not be empty",
-    "any.required": `Experience Field is required`
-  });
+const experience = Joi.string().required().messages({
+	'string.empty': 'Experience Field should not be empty',
+	'any.required': `Experience Field is required`,
+});
 
-const phone = Joi.string()
-  .required()
-  .messages({
-    "string.empty": "Phone should not be empty",
-    "any.required": `Phone is required`
-  });
+const phone = Joi.string().required().messages({
+	'string.empty': 'Phone should not be empty',
+	'any.required': `Phone is required`,
+});
 
 export const loginSchema = Joi.object({
-  email,
-  password
+	email,
+	password,
 });
 
 export const kidSignupSchema = Joi.object({
-  username,
-  parentEmail: email,
-  password,
-  dateOfBirth: date
+	username,
+	parentEmail: email,
+	password,
+	dateOfBirth: date,
 });
 
 export const postSchema = Joi.object({
-  _id: Joi.string(),
-  title: Joi.string()
-    .required()
-    .messages({
-      "string.empty": "title should not be empty",
-      "any.required": `title is required`
-    }),
-  body: Joi.string()
-    .required()
-    .messages({
-      "string.empty": "body should not be empty",
-      "any.required": `body is required`
-    }),
-  attachedFiles: Joi.array(),
-  price: Joi.number(),
-  category: Joi.string()
+	_id: Joi.string(),
+	title: Joi.string().required().messages({
+		'string.empty': 'title should not be empty',
+		'any.required': `title is required`,
+	}),
+	body: Joi.string().required().messages({
+		'string.empty': 'body should not be empty',
+		'any.required': `body is required`,
+	}),
+	attachedFiles: Joi.array(),
+	price: Joi.number(),
+	category: Joi.string(),
+	isProduct: Joi.boolean(),
 });
 export const supporterSignupSchema = Joi.object({
-  username,
-  email,
-  password,
-  dateOfBirth: date,
-  experience
+	username,
+	email,
+	password,
+	dateOfBirth: date,
+	experience,
 });
 
 export const buyerSignupSchema = Joi.object({
-  username,
-  email,
-  password,
-  dateOfBirth: date,
-  phone,
-  address: Joi.any()
+	username,
+	email,
+	password,
+	dateOfBirth: date,
+	phone,
+	address: Joi.any(),
 });
