@@ -1,0 +1,13 @@
+.form {
+	label {
+		margin-bottom: $spacing-xs;
+		display: block;
+	}
+	.input {
+		margin-bottom: $spacing-xs;
+	}
+	.error-message {
+		margin-bottom: $spacing-sm;
+		display: block;
+	}
+}
