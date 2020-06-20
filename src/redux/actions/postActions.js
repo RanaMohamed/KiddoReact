@@ -19,11 +19,12 @@ export const addPost = (post) => {
 	};
 };
 
-export const getKidPosts = (id) => {
+export const getKidPosts = (id, page, size) => {
 	return async (dispatch) => {
 		try {
-			const data = await axios.get(`/post/kid/${id}`);
-			console.log(data);
+			const data = await axios.get(`/post/kid/${id}`, {
+				params: { pageNum: page, size },
+			});
 			dispatch({
 				type: TYPES.GET_POSTS_SUCCESS,
 				payload: { posts: data.kidPosts, total: data.totalNumOfPosts },
