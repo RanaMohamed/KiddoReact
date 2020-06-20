@@ -669,6 +669,59 @@ b {
   .nav-ul a:hover {
     color: #fdd343; }
 
+.footer {
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  padding: 5rem 0;
+  box-sizing: border-box; }
+  .footer__inner {
+    display: block;
+    margin: 0 auto;
+    width: 1100;
+    height: 100%; }
+  .footer__signature {
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+    padding-left: 5rem; }
+  .footer__Logo {
+    font-family: "PermanentMarker";
+    font-size: 4rem;
+    color: #e55658;
+    padding-bottom: 1.5rem; }
+  .footer__license {
+    font-family: "Tajawal"; }
+  .footer__third {
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%; }
+    .footer__third:last-child() {
+      margin-right: 0; }
+    .footer__third > a {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 5px; }
+  .footer--light {
+    background-color: #ececec;
+    color: #106d74; }
+  .footer--primary {
+    background-color: #106d74;
+    color: #ececec; }
+
+@media (max-width: 600px) {
+  .footer__inner {
+    width: 90%; }
+  .footer__signature {
+    width: 100%;
+    margin-bottom: 30px; }
+  .footer__third {
+    width: 100%;
+    margin-bottom: 30px; } }
+
 .container {
   width: 85%;
   max-width: 1640px;
