@@ -12,7 +12,7 @@ const Footer = () => {
 					</div>
 
 					<div className='footer__third'>
-						<Link to='/supporter/signup'>Join as Supporter</Link>
+						<Link to='/supporter/login'>Join as Supporter</Link>
 						<a href='/'> About Us</a>
 						<a href='/'> Contact</a>
 					</div>
