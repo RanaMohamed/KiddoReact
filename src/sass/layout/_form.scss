@@ -1,0 +1,43 @@
+.form {
+	label {
+		margin-bottom: $spacing-xs;
+		display: block;
+	}
+	.input {
+		margin-bottom: $spacing-xs;
+	}
+	.error-message {
+		margin-bottom: $spacing-sm;
+		display: block;
+	}
+  padding: $spacing-xs;
+  &__title {
+    font-family: $secondary-font;
+    font-size: $font-size-md;
+    color: $color-2;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__subtitle {
+    font-family: $secondary-font;
+    font-size: $font-size-sm;
+    color: $color-3;
+  }
+  &__input-1 {
+    margin-bottom: $spacing-md;
+    margin-top: $spacing-sm;
+  }
+  &__input-2 {
+    margin-bottom: $spacing-xs;
+    margin-top: $spacing-xs;
+  }
+  &__btn {
+    margin-left: 92%;
+  }
+}
+
+.form-container {
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow;
+  background-color: $color-4;
+}

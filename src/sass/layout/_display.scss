@@ -1,0 +1,42 @@
+.d-flex {
+	display: flex;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-70 {
+	width: 70%;
+}
+
+.justify-content-between {
+	justify-content: space-between;
+}
+
+.h-100-vh {
+	min-height: 100vh;
+}
+
+.align-items-center {
+	align-items: center;
+}
+
+.p-xl {
+	padding: $spacing-xl;
+}
+
+.my-lg {
+	margin-top: $spacing-lg;
+	margin-bottom: $spacing-lg;
+}
+
+.my-md {
+	margin-top: $spacing-md;
+	margin-bottom: $spacing-md;
+}
+
+.my-sm {
+	margin-top: $spacing-sm;
+	margin-bottom: $spacing-sm;
+}

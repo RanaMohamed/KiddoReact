@@ -1,0 +1,69 @@
+.footer {
+  width: 100vw;
+  display: block;
+  overflow: hidden;
+  padding: $spacing-lg 0;
+  box-sizing: border-box;
+  &__inner {
+    display: block;
+    margin: 0 auto;
+    width: 1100;
+    height: 100%;
+  }
+  &__signature {
+    width: 35%;
+    float: left;
+    height: 100%;
+    display: block;
+    padding-left: $spacing-lg;
+  }
+  &__Logo {
+    font-family: $secondary-font;
+    font-size: $font-size-lg;
+    color: $color-1;
+    padding-bottom: $spacing-sm;
+  }
+  &__license {
+    font-family: $primary-font;
+  }
+  &__third {
+    width: calc(21.6666666667% - 20px);
+    margin-right: 10px;
+    float: left;
+    height: 100%;
+    &:last-child() {
+      margin-right: 0;
+    }
+
+    & > a {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding-bottom: 5px;
+    }
+  }
+  &--light {
+    background-color: $light-color;
+    color: $primary-color;
+  }
+  &--primary {
+    background-color: $primary-color;
+    color: $light-color;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    &__inner {
+      width: 90%;
+    }
+    &__signature {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__third {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,3 +1,19 @@
 .shape--primary {
 	fill: $primary-color;
 }
+
+.bg--2 {
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: 120%;
+		width: 120%;
+		top: -10%;
+		left: -10%;
+		z-index: -1;
+		background: url('#{bg-shape($color-2)}') center no-repeat;
+		background-size: cover;
+	}
+}
