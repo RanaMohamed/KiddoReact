@@ -3,6 +3,7 @@ import TYPES from './types';
 const initialState = {
 	user: null,
 	token: '',
+	type: '',
 };
 const userReducer = (state = initialState, action) => {
 	switch (action.type) {
@@ -13,6 +14,7 @@ const userReducer = (state = initialState, action) => {
 				...state,
 				user: action.payload.user,
 				token: action.payload.token,
+				type: action.payload.type,
 				errors: {},
 			};
 		}

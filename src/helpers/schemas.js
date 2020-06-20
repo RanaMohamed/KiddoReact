@@ -26,7 +26,7 @@ const datee = Joi.string().required().messages({
 });
 
 export const loginSchema = Joi.object({
-	email,
+	username,
 	password,
 });
 

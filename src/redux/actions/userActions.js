@@ -17,14 +17,14 @@ export const signupKid = (user) => {
 	};
 };
 
-export const loginUser = (user) => {
+export const loginKid = (user) => {
 	return async (dispatch) => {
 		try {
-			const data = await axios.post('/users/login', user);
+			const data = await axios.post('/kid/login', user);
 			axios.defaults.headers.common['authorization'] = data.token;
 			dispatch({
 				type: TYPES.LOGIN_USER,
-				payload: { user: data.user, token: data.token },
+				payload: { user: data.user, token: data.token, type: data.type },
 			});
 		} catch (errors) {
 			return errors;
