@@ -10,6 +10,7 @@ import KidLogin from "./pages/kidLogin";
 import SupporterLogin from "./pages/supporterLogin";
 import BuyerLogin from "./pages/buyerLogin";
 import Kid from "./pages/kid";
+import Categories from "./pages/categories";
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
         <Route path="/buyer/login" component={BuyerLogin}></Route>
         <Route path="/buyer/login" component={BuyerLogin}></Route>
         <Route path="/kid" component={Kid}></Route>
-
         <Route path="/testRedux" component={TestRedux}></Route>
         <Route path="/test" component={Test}></Route>
+        <Route path="/categories" component={Categories}></Route>
         <Route path="/" component={Home}></Route>
         <Route component={Error404}></Route>
       </Switch>
