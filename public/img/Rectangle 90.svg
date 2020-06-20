@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1406" viewBox="0 0 1920 1406">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #707070;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.506" y1="1.829" x2="0.506" y2="0.807" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fdd343"/>
+      <stop offset="1" stop-color="#e55658"/>
+    </linearGradient>
+  </defs>
+  <g id="Rectangle_90" data-name="Rectangle 90" class="cls-1">
+    <rect class="cls-2" width="1920" height="1406"/>
+    <rect class="cls-3" x="0.5" y="0.5" width="1919" height="1405"/>
+  </g>
+</svg>
