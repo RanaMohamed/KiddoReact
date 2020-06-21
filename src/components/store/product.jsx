@@ -50,21 +50,23 @@ const Product = ({ product }) => {
 							src="../img/avatar.svg"
 						/>
 						<div>
-							<p>Full name</p>
+							<p>{product?.post?.authorKid?.username}</p>
 							<i className="fa fa-heart like-icon"></i>
-							<span>20</span>
+							<span>{product?.post?.likes?.length}</span>
 							<i className="fa fa-comment comment-icon"></i>
-							<span>10</span>
+							<span>{product?.post?.commentsTotal}</span>
 						</div>
 					</div>
 					<div className="post-card__overlay">
 						<button className="btn btn--1 btn--rect">View Details</button>
-						<button
-							onClick={() => setShowModal(true)}
-							className="btn btn--1 btn--rect"
-						>
-							Rate
-						</button>
+						{product?.buyer?.indexOf(user?._id) !== -1 && (
+							<button
+								onClick={() => setShowModal(true)}
+								className="btn btn--1 btn--rect"
+							>
+								Rate
+							</button>
+						)}
 						{product?.buyer?.indexOf(user?._id) === -1 && (
 							<button
 								onClick={() => setShowModalBuy(true)}
