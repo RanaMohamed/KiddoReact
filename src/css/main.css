@@ -730,7 +730,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000000; }
+  z-index: 1000; }
   .modal__body {
     min-width: 40vw;
     background-color: #fbfbfa;
@@ -902,6 +902,9 @@ body {
 .my-sm {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem; }
+
+.text-center {
+  text-align: center; }
 
 .store {
   display: flex;

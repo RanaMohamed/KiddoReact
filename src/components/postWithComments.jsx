@@ -22,7 +22,7 @@ const PostWithComments = ({ post }) => {
 
   const addLikeHandler = async (e) => {
     e.preventDefault();
-    if (post.likes.some((like) => like.user === user?._id)) {
+    if (post.likes?.some((like) => like.user === user?._id)) {
       dispatch(removeLike(post._id));
     } else {
       dispatch(addLike(post._id));
