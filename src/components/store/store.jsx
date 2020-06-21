@@ -7,6 +7,8 @@ import Pagination from "../pagination";
 const Store = () => {
 	const products = useSelector((state) => state.product.products);
 
+	const loading = useSelector((state) => state.request.pending);
+
 	const currentPage = useSelector((state) => state.product.currentPage);
 	const perPage = useSelector((state) => state.product.perPage);
 	const [searchText, setsearchText] = useState({ searchText: "" });
@@ -40,6 +42,12 @@ const Store = () => {
 					onChange={handleChange}
 				/>
 			</div>
+			{loading && (
+				<div className="text-center">
+					<span className="btn btn--1 btn--rect loading"></span>
+				</div>
+			)}
+
 			<div className="container">
 				<div
 					style={{

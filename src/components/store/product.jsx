@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import Rating from "react-rating";
 import { rateProduct } from "../../redux/actions/productAction";
 import PaymentForm from "../paymentForm";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-	// console.log(product);
 	const [showModal, setShowModal] = useState(false);
 	const [showModalBuy, setShowModalBuy] = useState(false);
 	const [textReview, setTextReview] = useState("");
@@ -58,7 +58,12 @@ const Product = ({ product }) => {
 						</div>
 					</div>
 					<div className="post-card__overlay">
-						<button className="btn btn--1 btn--rect">View Details</button>
+						<Link
+							to={`/PostDetails/${product?.post?._id}`}
+							className="btn btn--1 btn--rect"
+						>
+							View Details
+						</Link>
 						{product?.buyer?.indexOf(user?._id) !== -1 && (
 							<button
 								onClick={() => setShowModal(true)}
@@ -99,7 +104,13 @@ const Product = ({ product }) => {
 							onChange={(rate) => handleRating(rate)}
 						/>
 						<button onClick={handleSubmit} className="btn btn--1 btn--rect">
-							ok
+							Ok
+						</button>
+						<button
+							onClick={() => setShowModal(false)}
+							className="btn btn--2 btn--rect"
+						>
+							Cancel
 						</button>
 					</div>
 				</div>
