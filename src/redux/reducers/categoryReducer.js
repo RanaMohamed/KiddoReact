@@ -2,6 +2,7 @@ import TYPES from "./types";
 
 const initialState = {
   categories: [],
+  selectedCategory: [],
 };
 const categoryReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,6 +11,11 @@ const categoryReducer = (state = initialState, action) => {
       return {
         ...state,
         categories: action.payload.categories,
+      };
+    case TYPES.SELECT_CATEGORY:
+      return {
+        ...state,
+        selectedCategory: [action.payload.id],
       };
     default:
       return state;
