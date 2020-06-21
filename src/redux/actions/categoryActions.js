@@ -18,3 +18,12 @@ export const getCategories = () => {
     }
   };
 };
+
+export const selectCategory = (id) => {
+  return (dispatch) => {
+    dispatch({
+      type: TYPES.SELECT_CATEGORY,
+      payload: { id },
+    });
+  };
+};
