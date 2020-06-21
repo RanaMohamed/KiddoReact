@@ -7,16 +7,20 @@ import { getBuyerProfile } from "../redux/actions/userActions";
 import { getBoughtProducts } from "../redux/actions/productAction";
 import Post from "../components/post";
 import Pagination from "../components/pagination";
+import { useParams } from "react-router";
 
 const Buyer = () => {
   const profile = useSelector(state => state.user.profile);
   const products = useSelector(state => state.product.products);
+  const currentPage = useSelector(state => state.post.currentPage);
+  const perPage = useSelector(state => state.post.perPage);
   const dispatch = useDispatch();
+  const params = useParams();
 
   useEffect(() => {
-    dispatch(getBuyerProfile("5eee60664f9e0a6270074eaa"));
-    dispatch(getBoughtProducts("5eee60664f9e0a6270074eaa", 1, 4));
-  }, []);
+    dispatch(getBuyerProfile(params.id));
+    dispatch(getBoughtProducts(params.id, currentPage, perPage));
+  }, [params.id, currentPage]);
   return (
     <>
       {profile && (

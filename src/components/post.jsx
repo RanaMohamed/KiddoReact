@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Post = ({ post }) => {
   return (
     <>
@@ -25,7 +25,12 @@ const Post = ({ post }) => {
             </div>
           </div>
           <div className="post-card__overlay">
-            <button className="btn btn--1 btn--rect">View Details</button>
+            <Link
+              to={`/PostDetails/${post._id}`}
+              className="btn btn--1 btn--rect"
+            >
+              View Details
+            </Link>
             <button className="btn btn--1 btn--rect">Button2</button>
           </div>
         </div>
