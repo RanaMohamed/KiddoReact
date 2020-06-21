@@ -4,7 +4,7 @@ import Test from './pages/test';
 import Error404 from './pages/error404';
 import TestRedux from './pages/testRedux';
 import Home from './pages/home';
-import postForm from './pages/postForm';
+import PostForm from './pages/postForm';
 import Header from './components/header';
 import Footer from './components/footer';
 import KidLogin from './pages/kidLogin';
@@ -19,6 +19,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { loadUser } from './redux/actions/userActions';
+import PaymentForm from './components/paymentForm';
 
 function App() {
 	const token = useSelector((state) => state.user.token);
@@ -30,7 +31,8 @@ function App() {
 		<React.Fragment>
 			<Header></Header>
 			<Switch>
-				<Route path='/postForm' component={postForm}></Route>
+				<Route path='/paymentForm' component={PaymentForm}></Route>
+				<Route path='/postForm' component={PostForm}></Route>
 				<Route path='/kid/login' component={KidLogin}></Route>
 				<Route path='/kid/:id' component={Kid}></Route>
 				<Route path='/supporter/login' component={SupporterLogin}></Route>
