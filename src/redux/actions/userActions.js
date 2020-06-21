@@ -90,6 +90,14 @@ export const getBuyerProfile = (id) => {
 	return getProfile('buyer', id);
 };
 
+export const logout = () => {
+	return (dispatch) => {
+		dispatch({
+			type: TYPES.LOGOUT,
+		});
+	};
+};
+
 export const changeNameAction = (name) => {
 	return async (dispatch) => {
 		// const data = await axios.get('')

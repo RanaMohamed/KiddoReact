@@ -26,6 +26,14 @@ const userReducer = (state = initialState, action) => {
 				type: action.payload.type,
 				errors: {},
 			};
+		case TYPES.LOGOUT:
+			return {
+				...state,
+				user: null,
+				type: '',
+				token: null,
+				errors: {},
+			};
 
 		case TYPES.GET_PROFILE:
 			return {

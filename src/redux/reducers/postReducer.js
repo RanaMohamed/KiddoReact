@@ -50,6 +50,32 @@ const postReducer = (state = initialState, action) => {
 						: post
 				),
 			};
+		case TYPES.ADD_LIKE:
+			return {
+				...state,
+				posts: state.posts.map((post) =>
+					post._id === action.payload.postId
+						? {
+								...post,
+								likes: post.likes.concat(action.payload.like),
+						  }
+						: post
+				),
+			};
+		case TYPES.REMOVE_LIKE:
+			return {
+				...state,
+				posts: state.posts.map((post) =>
+					post._id === action.payload.postId
+						? {
+								...post,
+								likes: post.likes.filter(
+									(like) => like._id !== action.payload.like._id
+								),
+						  }
+						: post
+				),
+			};
 		default:
 			return state;
 	}

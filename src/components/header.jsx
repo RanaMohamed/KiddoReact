@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../redux/actions/userActions';
 
 const Header = () => {
 	const [active, setactive] = useState({ active: false });
 	const user = useSelector((state) => state.user.user);
 	const type = useSelector((state) => state.user.type);
+
+	const dispatch = useDispatch();
+
+	const logoutHandler = (e) => {
+		e.preventDefault();
+		dispatch(logout());
+	};
 
 	return (
 		<>
@@ -72,7 +80,7 @@ const Header = () => {
 													</Link>
 												</li>
 												<li className='dropdown dropdown__item'>
-													<a href='/'>
+													<a href='/' onClick={logoutHandler}>
 														<i className='fas fa-sign-out-alt'></i> Logout
 													</a>
 												</li>

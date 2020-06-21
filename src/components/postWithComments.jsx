@@ -1,12 +1,14 @@
 import React from 'react';
-import Comments from './kid/comments';
 import { useState } from 'react';
 import { isEmpty } from 'lodash';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addComment } from '../redux/actions/commentActions';
 import Comment from './kid/comment';
+import { Link } from 'react-router-dom';
+import { addLike, removeLike } from '../redux/actions/postActions';
 
 const PostWithComments = ({ post }) => {
+	const user = useSelector((state) => state.user.user);
 	const [comment, setComment] = useState('');
 	const dispatch = useDispatch();
 	const addCommentHandler = async (e) => {
@@ -16,6 +18,15 @@ const PostWithComments = ({ post }) => {
 		if (!isEmpty(error)) return;
 
 		setComment('');
+	};
+
+	const addLikeHandler = async (e) => {
+		e.preventDefault();
+		if (post.likes.some((like) => like.user === user?._id)) {
+			dispatch(removeLike(post._id));
+		} else {
+			dispatch(addLike(post._id));
+		}
 	};
 	return (
 		<>
@@ -42,14 +53,20 @@ const PostWithComments = ({ post }) => {
 							</div>
 						</div>
 						<div className='post-card__overlay'>
-							<button className='btn btn--1 btn--rect'>View Details</button>
-							<button className='btn btn--1 btn--rect'>Button2</button>
+							<Link to={`/post${post._id}`} className='btn btn--1 btn--rect'>
+								View Details
+							</Link>
+							<button onClick={addLikeHandler} className='btn btn--1 btn--rect'>
+								{!post.likes.some((like) => like.user === user?._id)
+									? 'Like'
+									: 'Unlike'}
+							</button>
 						</div>
 					</div>
 				</div>
 				<div className='comments w-50'>
 					<h2>Comments</h2>
-					{post.comments.map((comment) => (
+					{post.comments?.map((comment) => (
 						<Comment key={comment._id} comment={comment}></Comment>
 					))}
 					<form onSubmit={addCommentHandler}>
