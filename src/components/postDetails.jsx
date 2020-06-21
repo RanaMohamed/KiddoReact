@@ -6,7 +6,8 @@ import { isEmpty } from "lodash";
 import Comment from "./kid/comment";
 import { getPostById } from "../redux/actions/postActions";
 import { addComment } from "../redux/actions/commentActions";
-import { addLike, removeLike } from "../redux/actions/postActions";
+import { addLike, removeLike, approvePost } from "../redux/actions/postActions";
+
 const PostDetails = () => {
   const user = useSelector(state => state.user.user);
   const post = useSelector(state => state.post.post);
@@ -15,7 +16,7 @@ const PostDetails = () => {
   const [comment, setComment] = useState("");
   useEffect(() => {
     if (params.id) dispatch(getPostById(params.id));
-  }, [params.id, comment, post?.likes]);
+  }, [params.id, comment, post?.likes, post?.isApproved]);
   const addCommentHandler = async e => {
     e.preventDefault();
     const error = await dispatch(addComment(post._id, comment));
@@ -30,6 +31,12 @@ const PostDetails = () => {
     } else {
       dispatch(addLike(post._id));
     }
+  };
+
+  const approvePostHandler = async e => {
+    e.preventDefault();
+    const error = await dispatch(approvePost(post._id));
+    if (!isEmpty(error)) return;
   };
 
   return (
@@ -67,7 +74,10 @@ const PostDetails = () => {
               <div style={{ textAlign: "end" }}>
                 {!post.isApproved && (
                   <>
-                    <button className="btn btn--circle btn--4">
+                    <button
+                      onClick={approvePostHandler}
+                      className="btn btn--circle btn--4"
+                    >
                       {/* Approve button */}
                       <i className="fas fa-times"></i>
                     </button>

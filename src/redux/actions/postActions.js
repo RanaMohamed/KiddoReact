@@ -111,3 +111,17 @@ export const removeLike = postId => {
     }
   };
 };
+
+export const approvePost = postId => {
+  return async dispatch => {
+    try {
+      const data = await axios.post(`/post/approvePost/${postId}`);
+      dispatch({
+        type: TYPES.APPROVE_POST,
+        payload: { post: data.post }
+      });
+    } catch (errors) {
+      return errors;
+    }
+  };
+};
