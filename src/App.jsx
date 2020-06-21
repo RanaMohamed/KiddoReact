@@ -13,7 +13,6 @@ import BuyerLogin from "./pages/buyerLogin";
 import Kid from "./pages/kid";
 import Supporter from "./pages/supporter";
 import Categories from "./pages/categories";
-import Product from "./components/store/product";
 import Store from "./components/store/store";
 import Buyer from "./pages/buyer";
 

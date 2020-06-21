@@ -1,21 +1,21 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import SupporterInfo from "../components/supporterInfo";
+import BuyerInfo from "../components/buyerInfo";
 import ProfilePicture from "../components/profilePicture";
-import { getSupporterProfile } from "../redux/actions/userActions";
-import { getUnapprovedPosts } from "../redux/actions/postActions";
+import { getBuyerProfile } from "../redux/actions/userActions";
+import { getBoughtProducts } from "../redux/actions/productAction";
 import Post from "../components/post";
 import Pagination from "../components/pagination";
 
 const Buyer = () => {
   const profile = useSelector(state => state.user.profile);
-  const Posts = useSelector(state => state.post.posts);
+  const products = useSelector(state => state.product.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getSupporterProfile("5eee59114f9e0a6270074ea8"));
-    dispatch(getUnapprovedPosts(1, 4));
+    dispatch(getBuyerProfile("5eee60664f9e0a6270074eaa"));
+    dispatch(getBoughtProducts("5eee60664f9e0a6270074eaa", 1, 4));
   }, []);
   return (
     <>
@@ -25,11 +25,11 @@ const Buyer = () => {
             <ProfilePicture></ProfilePicture>
             <div className="w-70">
               <h1>{profile.username}</h1>
-              <SupporterInfo profile={profile}></SupporterInfo>
+              <BuyerInfo profile={profile}></BuyerInfo>
             </div>
           </div>
           <section className="my-lg">
-            <h2>Latest Posts To approve</h2>
+            <h2>Latest purchases</h2>
             <div className="container my-xl">
               <div
                 style={{
@@ -38,8 +38,8 @@ const Buyer = () => {
                   gap: "12rem"
                 }}
               >
-                {Posts?.map(post => (
-                  <Post key={post._id} post={post}></Post>
+                {products?.map(p => (
+                  <Post key={p._id} post={p}></Post>
                 ))}
               </div>
             </div>

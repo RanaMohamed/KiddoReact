@@ -72,6 +72,11 @@ export const getKidProfile = id => {
 export const getSupporterProfile = id => {
   return getProfile("Supporter", id);
 };
+
+export const getBuyerProfile = id => {
+  return getProfile("buyer", id);
+};
+
 export const changeNameAction = name => {
   return async dispatch => {
     // const data = await axios.get('')
