@@ -7,16 +7,21 @@ import { getSupporterProfile } from "../redux/actions/userActions";
 import { getUnapprovedPosts } from "../redux/actions/postActions";
 import Post from "../components/post";
 import Pagination from "../components/pagination";
+import { useParams } from "react-router";
 
 const Supporter = () => {
   const profile = useSelector(state => state.user.profile);
   const Posts = useSelector(state => state.post.posts);
+  const currentPage = useSelector(state => state.post.currentPage);
+  const perPage = useSelector(state => state.post.perPage);
   const dispatch = useDispatch();
+  const params = useParams();
 
   useEffect(() => {
-    dispatch(getSupporterProfile("5eee59114f9e0a6270074ea8"));
-    dispatch(getUnapprovedPosts(1, 4));
-  }, []);
+    dispatch(getSupporterProfile(params.id));
+    dispatch(getUnapprovedPosts(currentPage, perPage));
+  }, [params.id, currentPage]);
+
   return (
     <>
       {profile && (

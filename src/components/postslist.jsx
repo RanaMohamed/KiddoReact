@@ -6,12 +6,15 @@ import { getApprovedPosts } from "../redux/actions/postActions";
 import Post from "./../components/post";
 
 const PostsList = () => {
-  const Posts = useSelector((state) => state.post.posts);
+  const posts = useSelector((state) => state.post.posts);
+  const [selectedCategory] = useSelector(
+    (state) => state.categories.selectedCategory
+  );
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getApprovedPosts(1, 9));
-  }, []);
+    dispatch(getApprovedPosts(1, 9, selectedCategory));
+  }, [selectedCategory]);
 
   return (
     <>
@@ -25,9 +28,7 @@ const PostsList = () => {
               gap: "12rem",
             }}
           >
-            {Posts?.filter(
-              (post) => post.category.title === "Arts & Crafts"
-            ).map((post) => (
+            {posts?.map((post) => (
               <Post key={post._id} post={post}></Post>
             ))}
           </div>

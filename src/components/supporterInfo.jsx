@@ -15,11 +15,11 @@ const SupporterInfo = ({ profile }) => {
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
           </p>
           <p className="profile-card__title">categories</p>
-          <div className="categories" style={{ display: "flex" }}>
+          <div className="categories d-flex ">
             {profile?.categories?.map(c => (
               <div key={c._id} className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="category" />
+                  <img src="../img/avatar.svg" alt="category" />
                 </div>
               </div>
             ))}

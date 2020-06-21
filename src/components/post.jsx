@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { selectCategory } from "../redux/actions/categoryActions";
 const Post = ({ post }) => {
   return (
     <>
@@ -19,14 +20,19 @@ const Post = ({ post }) => {
             <div>
               <p>{post?.authorKid?.username}</p>
               <i className="fa fa-heart like-icon"></i>
-              <span>0</span>
+              <span>{post?.likes?.length}</span>
               <i className="fa fa-comment comment-icon"></i>
-              <span>0</span>
+              <span>{post?.commentsTotal}</span>
             </div>
           </div>
           <div className="post-card__overlay">
-            <button className="btn btn--1 btn--rect">View Details</button>
-            <button className="btn btn--1 btn--rect">Button2</button>
+            <Link
+              to={`/PostDetails/${post._id}`}
+              className="btn btn--1 btn--rect"
+            >
+              View Details
+            </Link>
+            <button className="btn btn--1 btn--rect">Like</button>
           </div>
         </div>
       </div>
