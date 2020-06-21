@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { loadUser } from "./redux/actions/userActions";
+import PaymentForm from "./components/paymentForm";
 
 function App() {
   const token = useSelector(state => state.user.token);
@@ -32,6 +33,7 @@ function App() {
       <Header></Header>
       <div className="container">
         <Switch>
+          <Route path="/paymentForm" component={PaymentForm}></Route>
           <Route path="/postForm" component={postForm}></Route>
           <Route path="/PostDetails/:id" component={PostDetails}></Route>
           <Route path="/kid/login" component={KidLogin}></Route>
