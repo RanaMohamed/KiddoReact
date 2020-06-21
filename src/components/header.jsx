@@ -57,12 +57,12 @@ const Header = () => {
                     <ul className="dropdown dropdown__list">
                       <li className="dropdown dropdown__item">
                         <Link to="/kid">
-                          <i className="fa fa-heart"></i> My Profile
+                          <i className="fa fa-user"></i> My Profile
                         </Link>
                       </li>
                       <li className="dropdown dropdown__item">
                         <a href="/">
-                          <i className="fa fa-heart"></i> Logout
+                          <i className="fas fa-sign-out-alt"></i> Logout
                         </a>
                       </li>
                     </ul>

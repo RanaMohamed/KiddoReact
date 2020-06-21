@@ -570,7 +570,8 @@ body {
   cursor: pointer; }
 
 .dropdown {
-  position: relative; }
+  position: relative;
+  z-index: 10; }
   .dropdown__image {
     margin-left: 72.5%; }
   .dropdown__menu {
@@ -587,10 +588,10 @@ body {
   .dropdown__list {
     background-color: #106d74;
     border-radius: 0.7rem;
-    min-width: 30rem;
+    min-width: 18rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px; }
   .dropdown__item {
-    padding: 1rem; }
+    padding: 1.5rem; }
     .dropdown__item > a {
       font-size: 1.8rem;
       color: #fbfbfa; }
