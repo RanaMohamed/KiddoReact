@@ -23,7 +23,7 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
               <a href="#f">
@@ -57,12 +57,12 @@ const Header = () => {
                     <ul className="dropdown dropdown__list">
                       <li className="dropdown dropdown__item">
                         <Link to="/kid">
-                          <i className="fa fa-heart"></i> My Profile
+                          <i className="fa fa-user"></i> My Profile
                         </Link>
                       </li>
                       <li className="dropdown dropdown__item">
                         <a href="/">
-                          <i className="fa fa-heart"></i> Logout
+                          <i className="fas fa-sign-out-alt"></i> Logout
                         </a>
                       </li>
                     </ul>

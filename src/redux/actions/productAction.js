@@ -60,3 +60,23 @@ export const rateProduct = (id, value) => {
     }
   };
 };
+
+export const getBoughtProducts = (id, page, size) => {
+  return async (dispatch) => {
+    try {
+      const data = await axios.get(`buyer/products/${id}`, {
+        params: { pageNum: page, size },
+      });
+      dispatch({
+        type: TYPES.GET_POSTS_SUCCESS,
+        payload: {
+          products: data.products,
+          totalNum: data.totalNumOfProducts,
+        },
+      });
+    } catch (errors) {
+      console.log(errors);
+      return errors;
+    }
+  };
+};

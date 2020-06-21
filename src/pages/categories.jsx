@@ -1,11 +1,15 @@
 import React from "react";
 import Category from "../components/category";
+import Pagination from "./../components/pagination";
+import PostsList from "./../components/postslist";
 
 const Categories = () => {
   return (
-    <React.Fragment>
+    <>
       <Category></Category>
-    </React.Fragment>
+      <PostsList></PostsList>
+      <Pagination reducer="post"></Pagination>
+    </>
   );
 };
 
