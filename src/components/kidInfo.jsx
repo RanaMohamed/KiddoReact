@@ -39,9 +39,11 @@ const KidInfo = ({ profile }) => {
 					<Link to="/postForm" className="btn btn--rect btn--1 btn--xs">
 						<i className="far fa-edit"></i> New Post
 					</Link>
-					<button className="btn btn--rect btn--1 btn--xs">
-						<i className="fas fa-coins"></i> Buy Coins
-					</button>
+					<div className="coming-soon">
+						<button className="btn btn--rect btn--1 btn--xs">
+							<i className="fas fa-coins"></i> Buy Coins
+						</button>
+					</div>
 				</div>
 			</div>
 			<div className="profile-card__edit  btn btn--circle btn--4">
