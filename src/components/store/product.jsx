@@ -4,24 +4,36 @@ import Rating from "react-rating";
 import { rateProduct } from "../../redux/actions/productAction";
 
 const Product = ({ product }) => {
+  // console.log(product);
+  const [showModal, setShowModal] = useState(false);
+  const [textReview, setTextReview] = useState("");
+
   const dispatch = useDispatch();
   let value = useSelector((state) => state.product.value);
 
   const feedback = useSelector((state) => state.product.feedback);
 
-  // const [initialVal, setInitialVal] = useState(0);
-
-  // useEffect(() => {
-  //   dispatch(rateProduct(product._id, ini));
-  // }, [value]);
-
   const handleRating = (val) => {
-    // setInitialVal({ initialVal: val });
     value = val;
-    console.log(value);
-    dispatch(rateProduct(product._id, value));
+
+    // dispatch(rateProduct(product._id, value));
   };
 
+  const handleChange = (e) => {
+    e.preventDefault();
+    setTextReview(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // console.log(textReview);
+    // console.log(value);
+    const error = await dispatch(rateProduct(product._id, value, textReview));
+    if (error) return;
+    alert("Thank you");
+    setShowModal(false);
+    setTextReview("");
+  };
   return (
     <>
       <div className="post-card post-card--bg post-card--bg--primary">
@@ -47,16 +59,41 @@ const Product = ({ product }) => {
           </div>
           <div className="post-card__overlay">
             <button className="btn btn--1 btn--rect">View Details</button>
-            <br></br>
+            <button
+              onClick={() => setShowModal(true)}
+              className="btn btn--1 btn--rect"
+            >
+              Rate
+            </button>
           </div>
         </div>
-        <Rating
-          emptySymbol="far fa-star"
-          fullSymbol="fas fa-star"
-          initialRating={product.feedbacks[0]?.value}
-          onChange={(rate) => handleRating(rate)}
-        />
       </div>
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal__body">
+            <form>
+              <label className="d-flex my-sm">Write A Review</label>
+              <textarea
+                className="input"
+                onChange={handleChange}
+                value={textReview}
+                placeholder="leave a review..."
+              />
+              <br></br>
+            </form>
+            <Rating
+              emptySymbol="far fa-star"
+              fullSymbol="fas fa-star"
+              initialRating={product.rating}
+              onChange={(rate) => handleRating(rate)}
+            />
+            <button onClick={handleSubmit} className="btn btn--1 btn--rect">
+              ok
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
