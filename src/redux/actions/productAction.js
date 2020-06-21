@@ -68,7 +68,7 @@ export const getBoughtProducts = (id, page, size) => {
 				params: { pageNum: page, size },
 			});
 			dispatch({
-				type: TYPES.GET_POSTS_SUCCESS,
+				type: TYPES.GET_PRODUCT_SUCCESS,
 				payload: {
 					products: data.products,
 					totalNum: data.totalNumOfProducts,
