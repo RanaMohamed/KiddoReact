@@ -335,13 +335,14 @@ body {
     color: #e55658; }
     .btn--circle:hover {
       background-color: transparent;
-      transition: 0.8s; }
+      transition: 0.8s;
+      cursor: pointer; }
     .btn--circle:hover::before {
       cursor: pointer;
       transition: 0.8s;
       height: 100%; }
     .btn--circle::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       width: 100%;
@@ -355,13 +356,14 @@ body {
     border-radius: 0.7rem; }
     .btn--rect:hover {
       background-color: transparent;
-      transition: 0.8s; }
+      transition: 0.8s;
+      cursor: pointer; }
     .btn--rect:hover::before {
       cursor: pointer;
       transition: 0.8s;
       height: 100%; }
     .btn--rect::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       width: 100%;

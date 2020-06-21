@@ -1,92 +1,94 @@
 .btn {
-	text-decoration: none;
-	border: none;
-	position: relative;
-	font-size: $font-size-sm;
-	padding: $spacing-sm 1.6rem;
-	margin: $spacing-sm;
-	opacity: 1;
-	box-sizing: content-box;
-	display: inline-block;
+  text-decoration: none;
+  border: none;
+  position: relative;
+  font-size: $font-size-sm;
+  padding: $spacing-sm 1.6rem;
+  margin: $spacing-sm;
+  opacity: 1;
+  box-sizing: content-box;
+  display: inline-block;
 
-	&--xs {
-		font-size: $font-size-xs;
-		padding: $spacing-xs;
-		margin: $spacing-xs;
-	}
-	&--circle {
-		border: 3px solid $color-2;
-		border-radius: 50%;
-		color: $color-1;
-		&:hover {
-			background-color: transparent;
-			transition: 0.8s;
-		}
-		&:hover::before {
-			cursor: pointer;
-			transition: 0.8s;
-			height: 100%;
-		}
+  &--xs {
+    font-size: $font-size-xs;
+    padding: $spacing-xs;
+    margin: $spacing-xs;
+  }
+  &--circle {
+    border: 3px solid $color-2;
+    border-radius: 50%;
+    color: $color-1;
+    &:hover {
+      background-color: transparent;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+    &:hover::before {
+      cursor: pointer;
+      transition: 0.8s;
+      height: 100%;
+    }
 
-		&::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 100%;
-			height: 0;
-			background: $color-2;
-			z-index: -1;
-			transition: 0.8s;
-			border-radius: 50%;
-			bottom: 0;
-		}
-	}
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: $color-2;
+      z-index: -1;
+      transition: 0.8s;
+      border-radius: 50%;
+      bottom: 0;
+    }
+  }
 
-	&--rect {
-		border-radius: $border-radius-md;
-		&:hover {
-			background-color: transparent;
-			transition: 0.8s;
-		}
-		&:hover::before {
-			cursor: pointer;
-			transition: 0.8s;
-			height: 100%;
-		}
+  &--rect {
+    border-radius: $border-radius-md;
+    &:hover {
+      background-color: transparent;
+      transition: 0.8s;
+      cursor: pointer;
+    }
+    &:hover::before {
+      cursor: pointer;
+      transition: 0.8s;
+      height: 100%;
+    }
 
-		&::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 100%;
-			height: 0;
-			background: $color-2;
-			z-index: -1;
-			transition: 0.8s;
-			border-radius: 50% 50% $border-radius-md $border-radius-md;
-			bottom: 0;
-		}
-	}
-	&--primary {
-		background-color: $primary-color;
-		color: $color-4;
-	}
-	&--light {
-		background-color: $light-color;
-		color: $color-1;
-	}
-	&--1 {
-		background-color: $color-1;
-		color: $color-4;
-	}
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: $color-2;
+      z-index: -1;
+      transition: 0.8s;
+      border-radius: 50% 50% $border-radius-md $border-radius-md;
+      bottom: 0;
+    }
+  }
+  &--primary {
+    background-color: $primary-color;
+    color: $color-4;
+  }
+  &--light {
+    background-color: $light-color;
+    color: $color-1;
+  }
+  &--1 {
+    background-color: $color-1;
+    color: $color-4;
+  }
 
-	&--2 {
-		background-color: $color-2;
-		color: $color-1;
-	}
+  &--2 {
+    background-color: $color-2;
+    color: $color-1;
+  }
 
-	&--4 {
-		background-color: $color-4;
-		color: $primary-color;
-	}
+  &--4 {
+    background-color: $color-4;
+    color: $primary-color;
+  }
 }
