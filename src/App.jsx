@@ -16,6 +16,8 @@ import Supporter from "./pages/supporter";
 import Categories from "./pages/categories";
 import Store from "./components/store/store";
 import Buyer from "./pages/buyer";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -23,7 +25,7 @@ import { loadUser } from "./redux/actions/userActions";
 import PaymentForm from "./components/paymentForm";
 
 function App() {
-  const token = useSelector(state => state.user.token);
+  const token = useSelector((state) => state.user.token);
   const dispatch = useDispatch();
   useEffect(() => {
     if (token) dispatch(loadUser());
@@ -43,6 +45,8 @@ function App() {
           <Route path="/buyer/login" component={BuyerLogin}></Route>
           <Route path="/buyer/:id" component={Buyer}></Route>
           <Route path="/store" component={Store}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/contact" component={Contact}></Route>
           <Route path="/testRedux" component={TestRedux}></Route>
           <Route path="/test" component={Test}></Route>
           <Route path="/categories" component={Categories}></Route>
