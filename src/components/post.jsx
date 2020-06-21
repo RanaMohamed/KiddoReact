@@ -1,7 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { selectCategory } from "../redux/actions/categoryActions";
+import { useSelector, useDispatch } from "react-redux";
+import { addLike, removeLike } from "../redux/actions/postActions";
+
 const Post = ({ post }) => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.user);
+  const addLikeHandler = async (e) => {
+    e.preventDefault();
+    if (post.likes.some((like) => like.user === user?._id)) {
+      dispatch(removeLike(post._id));
+    } else {
+      dispatch(addLike(post._id));
+    }
+  };
+
   return (
     <>
       <div className="post-card post-card--bg post-card--bg--primary">
@@ -32,7 +45,11 @@ const Post = ({ post }) => {
             >
               View Details
             </Link>
-            <button className="btn btn--1 btn--rect">Like</button>
+            <button onClick={addLikeHandler} className="btn btn--1 btn--rect">
+              {!post.likes?.some((like) => like.user === user?._id)
+                ? "Like"
+                : "Unlike"}
+            </button>
           </div>
         </div>
       </div>

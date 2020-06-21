@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import { addLike, removeLike } from "../redux/actions/postActions";
 
 const PostWithComments = ({ post }) => {
-  const user = useSelector(state => state.user.user);
+  const user = useSelector((state) => state.user.user);
   const [comment, setComment] = useState("");
   const dispatch = useDispatch();
-  const addCommentHandler = async e => {
+  const addCommentHandler = async (e) => {
     e.preventDefault();
     const error = await dispatch(addComment(post._id, comment));
 
@@ -20,9 +20,9 @@ const PostWithComments = ({ post }) => {
     setComment("");
   };
 
-  const addLikeHandler = async e => {
+  const addLikeHandler = async (e) => {
     e.preventDefault();
-    if (post.likes.some(like => like.user === user?._id)) {
+    if (post.likes.some((like) => like.user === user?._id)) {
       dispatch(removeLike(post._id));
     } else {
       dispatch(addLike(post._id));
@@ -60,7 +60,7 @@ const PostWithComments = ({ post }) => {
                 View Details
               </Link>
               <button onClick={addLikeHandler} className="btn btn--1 btn--rect">
-                {!post.likes.some(like => like.user === user?._id)
+                {!post.likes?.some((like) => like.user === user?._id)
                   ? "Like"
                   : "Unlike"}
               </button>
@@ -69,7 +69,7 @@ const PostWithComments = ({ post }) => {
         </div>
         <div className="comments w-50">
           <h2>Comments</h2>
-          {post.comments?.map(comment => (
+          {post.comments?.map((comment) => (
             <Comment key={comment._id} comment={comment}></Comment>
           ))}
           <form onSubmit={addCommentHandler}>
@@ -78,7 +78,7 @@ const PostWithComments = ({ post }) => {
               className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
               placeholder="Add a comment...."
               value={comment}
-              onChange={e => setComment(e.target.value)}
+              onChange={(e) => setComment(e.target.value)}
             />
           </form>
         </div>
