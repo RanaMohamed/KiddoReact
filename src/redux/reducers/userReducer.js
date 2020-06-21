@@ -5,6 +5,7 @@ const initialState = {
   profile: null,
   token: localStorage.getItem("token"),
   type: "",
+  supporters: [], //Basant to get category supporters
 };
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
