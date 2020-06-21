@@ -3,7 +3,7 @@ import TYPES from './types';
 const initialState = {
 	user: null,
 	profile: null,
-	token: '',
+	token: localStorage.getItem('token'),
 	type: '',
 };
 const userReducer = (state = initialState, action) => {
@@ -19,6 +19,14 @@ const userReducer = (state = initialState, action) => {
 				errors: {},
 			};
 		}
+		case TYPES.LOAD_USER:
+			return {
+				...state,
+				user: action.payload.user,
+				type: action.payload.type,
+				errors: {},
+			};
+
 		case TYPES.GET_PROFILE:
 			return {
 				...state,

@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import PostWithComments from '../postWithComments';
 import Pagination from '../pagination';
 import { getKidPosts } from '../../redux/actions/postActions';
+import { useParams } from 'react-router';
 
 const Posts = () => {
 	const posts = useSelector((state) => state.post.posts);
@@ -12,9 +13,10 @@ const Posts = () => {
 	const perPage = useSelector((state) => state.post.perPage);
 
 	const dispatch = useDispatch();
+	const params = useParams();
 
 	useEffect(() => {
-		dispatch(getKidPosts('5eedc5d158f6107e3811f359', currentPage, perPage));
+		dispatch(getKidPosts(params.id, currentPage, perPage));
 	}, [currentPage]);
 	return (
 		<>

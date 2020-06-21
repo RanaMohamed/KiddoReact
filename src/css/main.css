@@ -735,7 +735,8 @@ body {
     max-height: 3.5rem;
     max-width: 3.5rem;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
 
 .nav-ul {
   display: flex;
