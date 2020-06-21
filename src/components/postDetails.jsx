@@ -14,9 +14,11 @@ const PostDetails = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const [comment, setComment] = useState("");
+  const [like, setLike] = useState(false);
+  const [approve, setApprove] = useState(false);
   useEffect(() => {
     if (params.id) dispatch(getPostById(params.id));
-  }, [params.id, comment, post?.likes, post?.isApproved]);
+  }, [params.id, comment, like, approve]);
   const addCommentHandler = async e => {
     e.preventDefault();
     const error = await dispatch(addComment(post._id, comment));
@@ -27,9 +29,11 @@ const PostDetails = () => {
   const addLikeHandler = async e => {
     e.preventDefault();
     if (post.likes.some(like => like.user === user?._id)) {
-      dispatch(removeLike(post._id));
+      await dispatch(removeLike(post._id));
+      setLike(false);
     } else {
-      dispatch(addLike(post._id));
+      await dispatch(addLike(post._id));
+      setLike(true);
     }
   };
 
@@ -37,6 +41,7 @@ const PostDetails = () => {
     e.preventDefault();
     const error = await dispatch(approvePost(post._id));
     if (!isEmpty(error)) return;
+    setApprove(true);
   };
 
   return (
@@ -74,16 +79,16 @@ const PostDetails = () => {
               <div style={{ textAlign: "end" }}>
                 {!post.isApproved && (
                   <>
-                    <button
-                      onClick={approvePostHandler}
-                      className="btn btn--circle btn--4"
-                    >
+                    <button className="btn btn--circle btn--4">
                       {/* Approve button */}
                       <i className="fas fa-times"></i>
                     </button>
 
                     {/* unApproved button */}
-                    <button className="btn btn--circle">
+                    <button
+                      onClick={approvePostHandler}
+                      className="btn btn--circle"
+                    >
                       <i className="fas fa-check"></i>
                     </button>
                   </>
