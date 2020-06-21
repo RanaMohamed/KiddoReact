@@ -14,7 +14,6 @@ const PostDetails = () => {
   const params = useParams();
   const [comment, setComment] = useState("");
   useEffect(() => {
-    console.log("params.id", params.id);
     if (params.id) dispatch(getPostById(params.id));
   }, [params.id, comment, post?.likes]);
   const addCommentHandler = async e => {

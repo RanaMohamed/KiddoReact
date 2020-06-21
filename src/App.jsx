@@ -39,9 +39,9 @@ function App() {
           <Route path="/kid/login" component={KidLogin}></Route>
           <Route path="/kid/:id" component={Kid}></Route>
           <Route path="/supporter/login" component={SupporterLogin}></Route>
-          <Route path="/supporter" component={Supporter}></Route>
+          <Route path="/supporter/:id" component={Supporter}></Route>
           <Route path="/buyer/login" component={BuyerLogin}></Route>
-          <Route path="/buyer" component={Buyer}></Route>
+          <Route path="/buyer/:id" component={Buyer}></Route>
           <Route path="/store" component={Store}></Route>
           <Route path="/testRedux" component={TestRedux}></Route>
           <Route path="/test" component={Test}></Route>

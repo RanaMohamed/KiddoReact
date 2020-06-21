@@ -19,7 +19,7 @@ const SupporterInfo = ({ profile }) => {
             {profile?.categories?.map(c => (
               <div key={c._id} className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="category" />
+                  <img src="../img/avatar.svg" alt="category" />
                 </div>
               </div>
             ))}
