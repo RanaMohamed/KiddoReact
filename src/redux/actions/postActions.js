@@ -87,6 +87,20 @@ export const search = (page, size) => {
   };
 };
 
+export const getPostById = (postId) => {
+  return async (dispatch) => {
+    try {
+      const data = await axios.get(`/post/${postId}`);
+      dispatch({
+        type: TYPES.GET_POST_SUCCESS,
+        payload: { post: data.post },
+      });
+    } catch (errors) {
+      return errors;
+    }
+  };
+};
+
 export const addLike = (postId) => {
   return async (dispatch) => {
     try {
