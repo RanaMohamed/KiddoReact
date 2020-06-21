@@ -32,10 +32,19 @@ const productReducer = (state = initialState, action) => {
         totalNum: action.payload.totalNum,
       };
     case TYPES.RATE_PRODUCT_SUCCESS:
+      const products = state.products.map((post) => {
+        return post._id === action.payload.productId
+          ? {
+              ...post,
+              feedbacks: post.feedbacks.concat(action.payload.feedback),
+            }
+          : post;
+      });
       return {
         ...state,
-        value: action.payload.value,
-        feedback: action.payload.feedback,
+        value: action.payload.feedback.value,
+        feedback: action.payload.feedback.feedback,
+        products,
       };
 
     case TYPES.CHANGE_PAGE_PRODUCT:

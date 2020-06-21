@@ -21,6 +21,7 @@ const Supporter = () => {
     dispatch(getSupporterProfile(params.id));
     dispatch(getUnapprovedPosts(currentPage, perPage));
   }, [params.id, currentPage]);
+
   return (
     <>
       {profile && (

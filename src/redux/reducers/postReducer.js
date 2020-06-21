@@ -82,6 +82,12 @@ const postReducer = (state = initialState, action) => {
             : post
         )
       };
+    case TYPES.APPROVE_POST:
+      return {
+        ...state,
+        post: action.payload.post,
+        errors: {}
+      };
     default:
       return state;
   }

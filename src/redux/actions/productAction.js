@@ -43,15 +43,15 @@ export const searchProduct = (searchText) => {
   };
 };
 
-export const rateProduct = (id, value) => {
+export const rateProduct = (id, value, text) => {
   return async (dispatch) => {
     try {
-      const data = await axios.post(`product/rate/${id}`, { value });
+      const data = await axios.post(`product/rate/${id}`, { value, text });
       dispatch({
         type: TYPES.RATE_PRODUCT_SUCCESS,
         payload: {
-          value: data.feedbacks[0].value,
-          feedback: data.feedbacks[0].text,
+          feedback: data.feedback,
+          productId: id,
         },
       });
     } catch (errors) {
