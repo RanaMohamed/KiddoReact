@@ -6,6 +6,8 @@ const initialState = {
   currentPage: 1,
   perPage: 6,
   errors: {},
+  value: 0,
+  feedback: "",
 };
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -29,6 +31,13 @@ const productReducer = (state = initialState, action) => {
         products: action.payload.products,
         totalNum: action.payload.totalNum,
       };
+    case TYPES.RATE_PRODUCT_SUCCESS:
+      return {
+        ...state,
+        value: action.payload.value,
+        feedback: action.payload.feedback,
+      };
+
     case TYPES.CHANGE_PAGE_PRODUCT:
       return {
         ...state,
