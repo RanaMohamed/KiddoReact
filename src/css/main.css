@@ -209,6 +209,22 @@ body {
     margin-bottom: 1rem; }
   .post-card__description {
     word-break: break-word; }
+    .post-card__description > * {
+      display: none; }
+    .post-card__description h2:first-of-type {
+      display: block;
+      -webkit-line-clamp: 2; }
+    .post-card__description p:first-of-type {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2; }
+    .post-card__description__full {
+      max-height: none; }
+      .post-card__description__full > * {
+        display: block; }
   .post-card__info {
     display: flex;
     align-items: flex-start;
@@ -243,7 +259,7 @@ body {
     opacity: 1;
     pointer-events: all; }
   .post-card--bg::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 130%;
     height: 130%;

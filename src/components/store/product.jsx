@@ -4,6 +4,7 @@ import Rating from "react-rating";
 import { rateProduct } from "../../redux/actions/productAction";
 import PaymentForm from "../paymentForm";
 import { Link } from "react-router-dom";
+import renderPostBody from "../../helpers/renderPostBody";
 
 const Product = ({ product }) => {
 	const [showModal, setShowModal] = useState(false);
@@ -42,7 +43,9 @@ const Product = ({ product }) => {
 				</div>
 				<div className="post-card__body">
 					<p className="post-card__title">{product.post?.title}</p>
-					<p className="post-card__description">{product.post?.body}</p>
+					<div className="post-card__description">
+						{renderPostBody(product?.post?.body)}
+					</div>
 					<div className="post-card__info">
 						<img
 							className="post-card__avatar"

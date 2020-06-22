@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addLike, removeLike } from "../redux/actions/postActions";
+import renderPostBody from "../helpers/renderPostBody";
 
 const Post = ({ post }) => {
 	const dispatch = useDispatch();
@@ -23,7 +24,9 @@ const Post = ({ post }) => {
 				</div>
 				<div className="post-card__body">
 					<p className="post-card__title">{post?.title}</p>
-					<p className="post-card__description">{post?.body}</p>
+					<div className="post-card__description">
+						{renderPostBody(post?.body)}
+					</div>
 					<div className="post-card__info">
 						<img
 							className="post-card__avatar"
