@@ -404,7 +404,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="slide">
+        <section className="slide my-lg">
           <div className="home-section2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -638,11 +638,59 @@ const Home = () => {
             </svg>
           </div>
           <div className="home-section2__content">
-            <LatestPosts></LatestPosts>
-            <Category></Category>
+            <div className="container my-xl">
+              <LatestPosts></LatestPosts>
+              <Category></Category>
+            </div>
           </div>
         </section>
-        <section className="slide">infograph</section>
+        <section className="slide2">
+          <div className="home-section3">
+            <svg
+              className="home-section3__background"
+              xmlns="http://www.w3.org/2000/svg"
+              xlink="http://www.w3.org/1999/xlink"
+              width="1920"
+              height="2518"
+              viewBox="0 0 1920 2518"
+            >
+              <defs>
+                <filter
+                  id="BGWhite"
+                  x="-27.5"
+                  y="-22.5"
+                  width="1969.651"
+                  height="2554.855"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feOffset input="SourceAlpha" />
+                  <feGaussianBlur stdDeviation="7.5" result="blur" />
+                  <feFlood flood-opacity="0.161" />
+                  <feComposite operator="in" in2="blur" />
+                  <feComposite in="SourceGraphic" />
+                </filter>
+                <clipPath id="clip-white-background">
+                  <rect width="1920" height="2518" />
+                </clipPath>
+              </defs>
+              <g id="white-background" clip-path="url(#clip-white-background)">
+                <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#BGWhite)">
+                  <path
+                    id="BGWhite-2"
+                    data-name="BGWhite"
+                    d="M1114-1816V663.749s67.093-46.539,185.253-32.952c88.662,10.2,213.4,89.225,320.106,54.136,248.733-81.792,134.75-310.1,489.574-348.35S3038.651,531.94,3038.651,531.94V-1816Z"
+                    transform="translate(-1119 1816)"
+                    fill="#fff"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <h2 className="home-section3__content__title">
+            Know Interact Develop Do Offer
+          </h2>
+          <div className="home-section3__content__infograph"></div>
+        </section>
         <section className="slide">
           <ContactForm></ContactForm>
         </section>

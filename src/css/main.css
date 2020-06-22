@@ -823,14 +823,26 @@ body {
     width: 35vw; }
 
 .home-section2 {
+  position: absolute;
+  top: 47%;
+  z-index: -100;
+  overflow: hidden; }
+
+.home-section3 {
   position: relative;
-  top: -50%;
-  z-index: -100; }
+  top: -80%;
+  z-index: -100;
+  overflow: hidden; }
+  .home-section3__content__title {
+    position: absolute;
+    top: 230%;
+    text-align: center;
+    width: 100%; }
 
 .nav {
   display: flex;
   padding: 1.5rem;
-  color: #53bcc0;
+  color: #106d74;
   font-family: "Tajawal";
   font-weight: 700;
   align-items: center;
@@ -854,7 +866,7 @@ body {
   .nav-ul > li {
     padding: 3rem; }
   .nav-ul a:hover {
-    color: #106d74; }
+    color: #53bcc0; }
 
 header {
   position: relative;
@@ -921,6 +933,11 @@ header {
 .slide {
   height: 100vh;
   box-sizing: border-box; }
+
+.slide2 {
+  height: 200vh;
+  box-sizing: border-box;
+  overflow: hidden; }
 
 .form {
   padding: 1rem; }
