@@ -55,7 +55,6 @@ export const rateProduct = (id, value, text) => {
 				},
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};
@@ -75,7 +74,6 @@ export const getBoughtProducts = (id, page, size) => {
 				},
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};

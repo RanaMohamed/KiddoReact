@@ -25,37 +25,37 @@ import { loadUser } from "./redux/actions/userActions";
 import PaymentForm from "./components/paymentForm";
 
 function App() {
-  const token = useSelector((state) => state.user.token);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    if (token) dispatch(loadUser());
-  }, []);
-  return (
-    <React.Fragment>
-      {/* <Header></Header> */}
-      {/* <div className="container"> */}
-      <Switch>
-        <Route path="/paymentForm" component={PaymentForm}></Route>
-        <Route path="/postForm" component={postForm}></Route>
-        <Route path="/PostDetails/:id" component={PostDetails}></Route>
-        <Route path="/kid/login" component={KidLogin}></Route>
-        <Route path="/kid/:id" component={Kid}></Route>
-        <Route path="/supporter/login" component={SupporterLogin}></Route>
-        <Route path="/supporter/:id" component={Supporter}></Route>
-        <Route path="/buyer/login" component={BuyerLogin}></Route>
-        <Route path="/buyer/:id" component={Buyer}></Route>
-        <Route path="/store" component={Store}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/contact" component={Contact}></Route>
-        <Route path="/testRedux" component={TestRedux}></Route>
-        <Route path="/test" component={Test}></Route>
-        <Route path="/categories" component={Categories}></Route>
-        <Route path="/" component={Home}></Route>
-        <Route component={Error404}></Route>
-      </Switch>
-      {/* </div> */}
-      <Footer></Footer>
-    </React.Fragment>
-  );
+	const token = useSelector((state) => state.user.token);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		if (token) dispatch(loadUser());
+	}, []);
+	return (
+		<React.Fragment>
+			{/* <Header></Header> */}
+			{/* <div className="container"> */}
+			<Switch>
+				<Route path="/paymentForm" component={PaymentForm}></Route>
+				<Route path="/postForm" component={postForm}></Route>
+				<Route path="/PostDetails/:id" component={PostDetails}></Route>
+				<Route path="/kid/login" component={KidLogin}></Route>
+				<Route path="/kid/:id" component={Kid}></Route>
+				<Route path="/supporter/login" component={SupporterLogin}></Route>
+				<Route path="/supporter/:id" component={Supporter}></Route>
+				<Route path="/buyer/login" component={BuyerLogin}></Route>
+				<Route path="/buyer/:id" component={Buyer}></Route>
+				<Route path="/store" component={Store}></Route>
+				<Route path="/about" component={About}></Route>
+				<Route path="/contact" component={Contact}></Route>
+				<Route path="/testRedux" component={TestRedux}></Route>
+				<Route path="/test" component={Test}></Route>
+				<Route path="/categories" component={Categories}></Route>
+				<Route path="/" component={Home}></Route>
+				<Route component={Error404}></Route>
+			</Switch>
+			{/* </div> */}
+			<Footer></Footer>
+		</React.Fragment>
+	);
 }
 export default App;

@@ -1,0 +1,10 @@
+.step {
+	color: $color-1;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-md;
+	margin-bottom: $font-size-xs;
+	&-body {
+		margin-bottom: $font-size-md;
+		line-height: 1.5;
+	}
+}

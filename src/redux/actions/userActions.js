@@ -23,7 +23,6 @@ const login = (type, user) => async (dispatch) => {
 			payload: { user: data.user, token: data.token, type: data.type },
 		});
 	} catch (errors) {
-		console.log(errors);
 		return errors;
 	}
 };
@@ -36,7 +35,6 @@ const getProfile = (type, id) => async (dispatch) => {
 			payload: { profile: data.user },
 		});
 	} catch (errors) {
-		console.log(errors);
 		return errors;
 	}
 };
@@ -49,7 +47,6 @@ export const loadUser = (type, id) => async (dispatch) => {
 			payload: { user: data.user, type: data.type },
 		});
 	} catch (errors) {
-		console.log(errors);
 		return errors;
 	}
 };
@@ -119,9 +116,7 @@ export const getSupportersCategory = (id) => {
 				type: TYPES.GET_SUPPORTERS_CATEGORY,
 				payload: { supporters: data.supporters },
 			});
-			console.log("hello supporters" + data.supporters);
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};

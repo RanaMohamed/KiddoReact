@@ -24,11 +24,8 @@
 		& > * {
 			display: none;
 		}
-		h2:first-of-type {
-			display: block;
-			-webkit-line-clamp: 2;
-		}
-		p:first-of-type {
+		p:first-of-type,
+		p:nth-child(2) {
 			display: block;
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -38,6 +35,10 @@
 		}
 		&__full {
 			max-height: none;
+			p:first-of-type,
+			p:nth-child(2) {
+				-webkit-line-clamp: unset;
+			}
 			& > * {
 				display: block;
 			}

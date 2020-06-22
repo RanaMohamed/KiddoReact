@@ -5,8 +5,8 @@ const renderPostBody = (body) => {
 	return parseJson(body)?.steps ? (
 		Object.keys(parseJson(body).steps).map((key) => (
 			<React.Fragment key={key}>
-				<h2>{key}</h2>
-				<p>{parseJson(body).steps[key]}</p>
+				<p className="step">{key}</p>
+				<p className="step-body">{parseJson(body).steps[key]}</p>
 			</React.Fragment>
 		))
 	) : (

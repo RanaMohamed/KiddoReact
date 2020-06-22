@@ -21,9 +21,9 @@ const PostForm = () => {
 		price: 0,
 	});
 	const [steps, setSteps] = useState({
-		step1: "",
-		step2: "",
-		step3: "",
+		preparation: "",
+		implementation: "",
+		result: "",
 	});
 	const [checked, setChecked] = useState(false);
 	const [errors, setErrors] = useState({});
@@ -91,7 +91,7 @@ const PostForm = () => {
 							value={post.category}
 							onChange={(e) => setPost({ ...post, category: e.target.value })}
 						>
-							<option selected disabled value="">
+							<option disabled value="">
 								Select Category
 							</option>
 							{user?.categories?.map((cat) => (
@@ -123,24 +123,28 @@ const PostForm = () => {
 								type="text"
 								className="input form__input-2 input--text-color-info input--padding-sm input--border-radius-md input--border-info"
 								placeholder="What was your preperation step"
-								value={steps.step1}
-								onChange={(e) => setSteps({ ...steps, step1: e.target.value })}
+								value={steps.prepatation}
+								onChange={(e) =>
+									setSteps({ ...steps, preparation: e.target.value })
+								}
 							/>
 							{/* step2 */}
 							<input
 								type="text"
 								className="input form__input-2 input--text-color-info input--padding-sm input--border-radius-md input--border-info"
 								placeholder="What was your implementation step"
-								value={steps.step2}
-								onChange={(e) => setSteps({ ...steps, step2: e.target.value })}
+								value={steps.implementation}
+								onChange={(e) =>
+									setSteps({ ...steps, implementation: e.target.value })
+								}
 							/>
 							{/* step3 */}
 							<input
 								type="text"
 								className="input form__input-2 input--text-color-info input--padding-sm input--border-radius-md input--border-info"
-								placeholder="What was your Result step"
-								value={steps.step3}
-								onChange={(e) => setSteps({ ...steps, step3: e.target.value })}
+								placeholder="What was your result step"
+								value={steps.result}
+								onChange={(e) => setSteps({ ...steps, result: e.target.value })}
 							/>
 						</div>
 						{/* files */}

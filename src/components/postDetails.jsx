@@ -48,88 +48,111 @@ const PostDetails = () => {
 
 	return (
 		<>
-			{post && (
-				<div className="post-card post-card--lg">
-					<div className="post-card__post">
-						<div className="post-card__img">
-							<img alt="Post" src="../img/post1.png" />
-						</div>
-						<div className="post-card__body">
-							<p className="post-card__title">{post?.title}</p>
-							<div className="post-card__description post-card__description__full">
-								{renderPostBody(post?.body)}
+			<div className="container">
+				{post && (
+					<div className="post-card post-card--lg">
+						<div className="post-card__post">
+							<div className="post-card__img">
+								<img alt="Post" src="../img/post1.png" />
 							</div>
-							<div className="post-card__info">
-								<img
-									className="post-card__avatar"
-									alt="Avatar"
-									src="../img/avatar.svg"
-								/>
-								<div>
-									<p>{post?.authorKid?.username}</p>
-									<i className="fa fa-heart like-icon"></i>
-									<span>{post.likes?.length}</span>
-									<i className="fa fa-comment comment-icon"></i>
-									<span>{post.commentsTotal}</span>
+							<div className="post-card__body">
+								<p className="post-card__title">{post?.title}</p>
+								<div className="post-card__description post-card__description__full">
+									{renderPostBody(post?.body)}
 								</div>
-							</div>
-							<div className="category-card category-card--xs w-20">
-								<div className=" category-card--image">
-									<img src="../img/avatar.svg" alt="category" />
+								<div className="post-card__info">
+									<img
+										className="post-card__avatar"
+										alt="Avatar"
+										src="../img/avatar.svg"
+									/>
+									<div>
+										<p>{post?.authorKid?.username}</p>
+										<i className="fa fa-heart like-icon"></i>
+										<span>{post.likes?.length}</span>
+										<i className="fa fa-comment comment-icon"></i>
+										<span>{post.commentsTotal}</span>
+									</div>
 								</div>
-								<span>{post?.category?.title}</span>
-							</div>
+								<div className="category-card category-card--xs w-20">
+									<div className=" category-card--image">
+										<img src="../img/avatar.svg" alt="category" />
+									</div>
+									<span>{post?.category?.title}</span>
+								</div>
 
-							<div style={{ textAlign: "end" }}>
-								{!post.isApproved && type === "Supporter" && (
-									<>
-										<button className="btn btn--circle btn--4">
-											{/* Approve button */}
-											<i className="fas fa-times"></i>
-										</button>
+								<div style={{ textAlign: "end" }}>
+									{!post.isApproved && type === "Supporter" && (
+										<>
+											<button className="btn btn--circle btn--4">
+												{/* Approve button */}
+												<i className="fas fa-times"></i>
+											</button>
 
-										{/* unApproved button */}
+											{/* unApproved button */}
+											<button
+												onClick={approvePostHandler}
+												className="btn btn--circle"
+											>
+												<i className="fas fa-check"></i>
+											</button>
+										</>
+									)}
+									{/* Like button  */}
+									{post.isApproved && (
 										<button
-											onClick={approvePostHandler}
+											onClick={addLikeHandler}
 											className="btn btn--circle"
 										>
-											<i className="fas fa-check"></i>
+											{!post.likes?.some((like) => like.user === user?._id) ? (
+												<i className="fa fa-heart"></i>
+											) : (
+												<i className="far fa-thumbs-down"></i>
+											)}
 										</button>
-									</>
-								)}
-								{/* Like button  */}
-								{post.isApproved && (
-									<button onClick={addLikeHandler} className="btn btn--circle">
-										{!post.likes?.some((like) => like.user === user?._id) ? (
-											<i className="fa fa-heart"></i>
-										) : (
-											<i className="far fa-thumbs-down"></i>
-										)}
-									</button>
-								)}
+									)}
+								</div>
 							</div>
 						</div>
-					</div>
-					{post.isApproved && (
-						<div className="comments">
-							<h2>Comments</h2>
-							{post.comments?.map((comment) => (
-								<Comment key={comment._id} comment={comment}></Comment>
-							))}
+						{post.attachedFiles && post.attachedFiles.length > 0 && (
+							<div className="comments">
+								<h2>Files</h2>
+								<div
+									style={{
+										display: "grid",
+										gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+										gridGap: "12rem",
+									}}
+								>
+									{post.attachedFiles?.map((file) => (
+										<a key={file} href={file} download>
+											{file}
+										</a>
+									))}
+								</div>
+							</div>
+						)}
+						{post.isApproved && (
+							<div className="comments">
+								<h2>Comments</h2>
+								{post.comments?.map((comment) => (
+									<Comment key={comment._id} comment={comment}></Comment>
+								))}
 
-							<form onSubmit={addCommentHandler}>
-								<input
-									type="text"
-									className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
-									placeholder="Add a comment...."
-									value={comment}
-									onChange={(e) => setComment(e.target.value)}
-								/>
-							</form>
-						</div>
-					)}
-				</div>
-			)}
+								<form onSubmit={addCommentHandler}>
+									<input
+										type="text"
+										className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
+										placeholder="Add a comment...."
+										value={comment}
+										onChange={(e) => setComment(e.target.value)}
+									/>
+								</form>
+							</div>
+						)}
+					</div>
+				)}
+			</div>
 		</>
 	);
 };

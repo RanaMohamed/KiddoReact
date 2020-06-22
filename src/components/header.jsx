@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { logout } from '../redux/actions/userActions';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../redux/actions/userActions";
 
 const Header = () => {
 	const [active, setactive] = useState({ active: false });
@@ -18,25 +18,25 @@ const Header = () => {
 	return (
 		<>
 			<header>
-				<nav className='nav'>
+				<nav className="nav">
 					<h1>Kiddo</h1>
-					<ul className='nav-ul'>
+					<ul className="nav-ul">
 						<li>
-							<Link to='/'> Home</Link>
+							<Link to="/"> Home</Link>
 						</li>
 						<li>
-							<Link to='/categories'>Categories</Link>
+							<Link to="/categories">Categories</Link>
 						</li>
 						<li>
-							<Link to='/store'>Store</Link>
+							<Link to="/store">Store</Link>
 						</li>
 						<li>
-							<Link to='/about'>About</Link>
+							<Link to="/about">About</Link>
 						</li>
 						<li>
-							<Link to='/contact'>Contact</Link>
+							<Link to="/contact">Contact</Link>
 						</li>
-						<li>
+						{/* <li>
 							<a href='#f'>
 								<i className='fas fa-search'></i>
 							</a>
@@ -45,13 +45,13 @@ const Header = () => {
 							<a href='#noto'>
 								<i className='far fa-bell'></i>
 							</a>
-						</li>
+						</li> */}
 						<li>
 							{user ? (
-								<div className='dropdown dropdown--active'>
-									<span className='nav__img'>
+								<div className="dropdown dropdown--active">
+									<span className="nav__img">
 										<img
-											src='./img/avatar.svg'
+											src="./img/avatar.svg"
 											alt={type}
 											onClick={() =>
 												setactive({
@@ -63,25 +63,25 @@ const Header = () => {
 									{/* dropdown */}
 
 									{active.active && (
-										<div className='dropdown__menu'>
-											<div className='dropdown__arrowup'></div>
-											<ul className='dropdown dropdown__list'>
-												<li className='dropdown dropdown__item'>
+										<div className="dropdown__menu">
+											<div className="dropdown__arrowup"></div>
+											<ul className="dropdown dropdown__list">
+												<li className="dropdown dropdown__item">
 													<Link
 														to={
-															(type === 'Kid'
-																? '/kid'
-																: type === 'Supporter'
-																? '/supporter'
-																: 'buyer') + `/${user._id}`
+															(type === "Kid"
+																? "/kid"
+																: type === "Supporter"
+																? "/supporter"
+																: "buyer") + `/${user._id}`
 														}
 													>
-														<i className='fa fa-user'></i> My Profile
+														<i className="fa fa-user"></i> My Profile
 													</Link>
 												</li>
-												<li className='dropdown dropdown__item'>
-													<a href='/' onClick={logoutHandler}>
-														<i className='fas fa-sign-out-alt'></i> Logout
+												<li className="dropdown dropdown__item">
+													<a href="/" onClick={logoutHandler}>
+														<i className="fas fa-sign-out-alt"></i> Logout
 													</a>
 												</li>
 											</ul>
@@ -89,11 +89,11 @@ const Header = () => {
 									)}
 								</div>
 							) : (
-								<Link to='/kid/login'>Login</Link>
+								<Link to="/kid/login">Login</Link>
 							)}
 						</li>
 						<li>
-							<a href='#lang'>EN</a>
+							<a href="#lang">EN</a>
 						</li>
 					</ul>
 				</nav>

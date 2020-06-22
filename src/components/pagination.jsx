@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { changePage } from '../redux/actions/paginationActions';
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changePage } from "../redux/actions/paginationActions";
 
 const Pagination = ({ reducer }) => {
 	const currentPage = useSelector((state) => state[reducer].currentPage);
@@ -23,23 +23,29 @@ const Pagination = ({ reducer }) => {
 
 	return (
 		<>
-			<div className='pagination'>
+			<div className="pagination">
 				<i
-					className='fa fa-arrow-left arrow'
-					onClick={() => handlePageChange(currentPage - 1)}
+					className="fa fa-arrow-left arrow"
+					onClick={() =>
+						handlePageChange(currentPage === 1 ? 1 : currentPage - 1)
+					}
 				></i>
 				{pages.map((page) => (
 					<span
 						key={page}
-						className={'page' + (page === currentPage ? ' active' : '')}
+						className={"page" + (page === currentPage ? " active" : "")}
 						onClick={() => handlePageChange(page)}
 					>
 						{page}
 					</span>
 				))}
 				<i
-					className='fa fa-arrow-right arrow'
-					onClick={() => handlePageChange(currentPage + 1)}
+					className="fa fa-arrow-right arrow"
+					onClick={() =>
+						handlePageChange(
+							currentPage === pages.length ? pages.length : currentPage + 1
+						)
+					}
 				></i>
 			</div>
 		</>

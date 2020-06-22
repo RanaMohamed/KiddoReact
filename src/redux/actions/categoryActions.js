@@ -9,7 +9,6 @@ export const getCategories = () => {
 				type: TYPES.GET_CATEGORIES_SUCCESS,
 				payload: { categories: data.categories },
 			});
-			console.log(data.categories);
 		} catch (errors) {
 			dispatch({
 				type: TYPES.GET_CATEGORIES_ERROR,

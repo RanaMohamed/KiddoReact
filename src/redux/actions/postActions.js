@@ -31,7 +31,6 @@ export const getKidPosts = (id, page, size) => {
 				payload: { posts: data.kidPosts, total: data.totalNumOfPosts },
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};
@@ -48,7 +47,6 @@ export const getUnapprovedPosts = (page, size) => {
 				payload: { posts: data.posts, total: data.totalNumOfPosts },
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};
@@ -65,7 +63,6 @@ export const getApprovedPosts = (page, size, category) => {
 				payload: { posts: data.posts, total: data.totalNumOfPosts },
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};
@@ -82,7 +79,6 @@ export const search = (page, size) => {
 				payload: { posts: data.posts, total: data.totalNumOfPosts },
 			});
 		} catch (errors) {
-			console.log(errors);
 			return errors;
 		}
 	};

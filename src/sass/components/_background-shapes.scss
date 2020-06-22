@@ -6,14 +6,14 @@
 	position: relative;
 
 	&:before {
-		content: '';
+		content: "";
 		position: absolute;
-		height: 120%;
-		width: 120%;
-		top: -10%;
-		left: -10%;
+		height: 150%;
+		width: 150%;
+		top: -30%;
+		left: -23%;
 		z-index: -1;
-		background: url('#{bg-shape($color-2)}') center no-repeat;
-		background-size: cover;
+		background: url("#{bg-shape($color-2)}") center no-repeat;
+		background-size: contain;
 	}
 }
