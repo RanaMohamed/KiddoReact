@@ -26,7 +26,7 @@ const Categories = () => {
         className="btn btn--rect btn--primary"
         onClick={() => setShowModal(true)}
       >
-        <i class="fas fa-headset"></i>
+        <i className="fas fa-headset"></i>
         --Supporter
       </button>
       {showModal && (
@@ -37,12 +37,12 @@ const Categories = () => {
                 Choose a Supporter to Help you
               </label>
               <div className="user-card">
-                {/* {supporters?.map((supporter) => (
+                {supporters?.map((supporter) => (
                   <p key={supporter._id}>
                     <div>---Supportter img---</div>
                     <div>{supporter.name}</div>
                   </p>
-                ))} */}
+                ))}
               </div>
             </form>
           </div>

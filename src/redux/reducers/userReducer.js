@@ -49,7 +49,7 @@ const userReducer = (state = initialState, action) => {
     case TYPES.GET_SUPPORTERS_CATEGORY:
       return {
         ...state,
-        user: { ...state.user, id: action.payload },
+        supporters: { supporters: action.payload.supporters },
       };
     default:
       return state;
