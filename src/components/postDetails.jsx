@@ -11,6 +11,7 @@ import renderPostBody from "../helpers/renderPostBody";
 
 const PostDetails = () => {
 	const user = useSelector((state) => state.user.user);
+	const type = useSelector((state) => state.user.type);
 	const post = useSelector((state) => state.post.post);
 	const dispatch = useDispatch();
 	const params = useParams();
@@ -80,7 +81,7 @@ const PostDetails = () => {
 							</div>
 
 							<div style={{ textAlign: "end" }}>
-								{!post.isApproved && (
+								{!post.isApproved && type === "Supporter" && (
 									<>
 										<button className="btn btn--circle btn--4">
 											{/* Approve button */}
