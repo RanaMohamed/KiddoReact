@@ -854,7 +854,11 @@ body {
   .nav-ul > li {
     padding: 3rem; }
   .nav-ul a:hover {
-    color: #fdd343; }
+    color: #106d74; }
+
+header {
+  position: relative;
+  z-index: 10000; }
 
 .footer {
   width: 100vw;
