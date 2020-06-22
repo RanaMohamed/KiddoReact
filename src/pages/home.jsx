@@ -9,6 +9,7 @@ const Home = () => {
     <>
       <div>
         <section className="slide heroheader">
+          <div className="heroheader__gradient"></div>
           <Header></Header>
           <div className="heroheader__container">
             <div className="heroheader__container__background">
@@ -393,16 +394,253 @@ const Home = () => {
                 </p>
               </div>
             </div>
-          </div>
-          <div className="heroheader__content__images">
-            <div className="heroheader__content__images__image"></div>
+            <div className="heroheader__content__images">
+              <img
+                className="heroheader__content__images__image"
+                src="../img/heroheaderImage.png"
+              />
 
-            <div />
+              <div />
+            </div>
           </div>
         </section>
-        <section>
-          <LatestPosts></LatestPosts>
-          <Category></Category>
+        <section className="slide">
+          <div className="home-section2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xlink="http://www.w3.org/1999/xlink"
+              width="1920"
+              height="1490"
+              viewBox="0 0 1920 1490"
+            >
+              <defs>
+                <filter
+                  id="BGBlue"
+                  x="-7.337"
+                  y="19.684"
+                  width="1940.989"
+                  height="1470.316"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feOffset dy="-10" input="SourceAlpha" />
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feFlood flood-opacity="0.161" />
+                  <feComposite operator="in" in2="blur" />
+                  <feComposite in="SourceGraphic" />
+                </filter>
+                <clipPath id="clip-blue-background">
+                  <rect width="1920" height="1490" />
+                </clipPath>
+              </defs>
+              <g id="blue-background" clip-path="url(#clip-blue-background)">
+                <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#BGBlue)">
+                  <path
+                    id="BGBlue-2"
+                    data-name="BGBlue"
+                    d="M225.324,39.632S-39.96,724.06,10.521,970.531s242.5,234.014,314.382,416.155-29.994,221.248-14.83,364.644,75.484,208.939,75.484,208.939H1455.45V37.281Z"
+                    transform="translate(1961.93 34.55) rotate(90)"
+                    fill="#53bcc0"
+                  />
+                </g>
+                <g id="BGShapes" transform="translate(0 -670)">
+                  <g id="BGShape">
+                    <path
+                      id="Path_87"
+                      data-name="Path 87"
+                      stroke="#fdd343"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-347 825)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_88"
+                      data-name="Path 88"
+                      stroke="#e55658"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-281 836)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_89"
+                      data-name="Path 89"
+                      stroke="#fbfbfa"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-322 893)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                  </g>
+                  <g id="BGShape-2" data-name="BGShape">
+                    <path
+                      id="Path_90"
+                      data-name="Path 90"
+                      stroke="#fdd343"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(549 1057)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_91"
+                      data-name="Path 91"
+                      stroke="#e55658"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(615 1068)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_92"
+                      data-name="Path 92"
+                      stroke="#fbfbfa"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(574 1125)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                  </g>
+                  <g id="BGShape-3" data-name="BGShape">
+                    <path
+                      id="Path_93"
+                      data-name="Path 93"
+                      stroke="#fdd343"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-1301 1230)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_94"
+                      data-name="Path 94"
+                      stroke="#e55658"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-1235 1241)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_95"
+                      data-name="Path 95"
+                      stroke="#fbfbfa"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-1276 1298)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                  </g>
+                  <g id="BGShape-4" data-name="BGShape">
+                    <path
+                      id="Path_96"
+                      data-name="Path 96"
+                      stroke="#fdd343"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-654 1057)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_97"
+                      data-name="Path 97"
+                      stroke="#e55658"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-588 1068)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_98"
+                      data-name="Path 98"
+                      stroke="#fbfbfa"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-629 1125)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                  </g>
+                  <g id="BGShape-5" data-name="BGShape">
+                    <path
+                      id="Path_99"
+                      data-name="Path 99"
+                      stroke="#fdd343"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-72 1057)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_100"
+                      data-name="Path 100"
+                      stroke="#e55658"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-6 1068)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                    <path
+                      id="Path_101"
+                      data-name="Path 101"
+                      stroke="#fbfbfa"
+                      d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39"
+                      fill="none"
+                      transform="translate(-47 1125)"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      opacity="0.15"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div className="home-section2__content">
+            <LatestPosts></LatestPosts>
+            <Category></Category>
+          </div>
         </section>
         <section className="slide">infograph</section>
         <section className="slide">

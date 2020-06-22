@@ -768,53 +768,64 @@ body {
     align-items: center;
     justify-content: center; }
 
-.heroheader {
-  z-index: 200; }
-  .heroheader__container {
+.heroheader__gradient {
+  background-image: linear-gradient(#fdd343, #e55658);
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  position: fixed; }
+
+.heroheader__container {
+  position: absolute;
+  top: -45%;
+  left: 0%;
+  width: 100%;
+  height: 100%; }
+  .heroheader__container__background {
     position: absolute;
-    top: -60%;
-    left: 0%;
-    width: 100%;
-    height: 100%; }
-    .heroheader__container__background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      min-width: 50%;
-      min-height: 50%;
-      z-index: -122; }
-  .heroheader__content {
-    position: absolute;
-    height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
     top: 0;
-    justify-content: space-evenly; }
-    .heroheader__content__text {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center; }
-    .heroheader__content__socialMedia {
-      display: flex;
-      flex-direction: column;
-      color: #106d74; }
-      .heroheader__content__socialMedia__icon {
-        padding: 5px; }
-    .heroheader__content__title {
-      top: 50%;
-      width: 50%; }
-    .heroheader__content__slogan {
-      color: #106d74; }
-    .heroheader__content__callToAction {
-      color: #fbfbfa;
-      font-size: 1.8rem;
-      font-weight: 700; }
-    .heroheader__content__images__image {
-      border-radius: 50%; }
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+    z-index: -100; }
+
+.heroheader__content {
+  position: absolute;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  top: 0;
+  justify-content: space-evenly; }
+  .heroheader__content__text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+  .heroheader__content__socialMedia {
+    display: flex;
+    flex-direction: column;
+    color: #106d74; }
+    .heroheader__content__socialMedia__icon {
+      padding: 5px; }
+  .heroheader__content__title {
+    top: 50%;
+    width: 50%; }
+  .heroheader__content__slogan {
+    color: #106d74; }
+  .heroheader__content__callToAction {
+    color: #fbfbfa;
+    font-size: 1.8rem;
+    font-weight: 700; }
+  .heroheader__content__images__image {
+    width: 35vw; }
+
+.home-section2 {
+  position: relative;
+  top: -50%;
+  z-index: -100; }
 
 .nav {
   display: flex;
