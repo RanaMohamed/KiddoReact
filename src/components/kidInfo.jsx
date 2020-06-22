@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const KidInfo = ({ profile }) => {
+	const user = useSelector((state) => state.user.user);
+	const params = useParams();
 	return (
 		<div className="profile-card profile-card--display-flex">
 			<div className="profile-card__part-lg ">
@@ -31,24 +34,28 @@ const KidInfo = ({ profile }) => {
 					<i className="fas fa-certificate badge badge--2"></i>
 					<i className="fas fa-certificate badge badge--1"></i>
 				</div>
-				<div
-					style={{
-						marginTop: "6rem",
-					}}
-				>
-					<Link to="/postForm" className="btn btn--rect btn--1 btn--xs">
-						<i className="far fa-edit"></i> New Post
-					</Link>
-					<div className="coming-soon">
-						<button className="btn btn--rect btn--1 btn--xs">
-							<i className="fas fa-coins"></i> Buy Coins
-						</button>
+				{user?._id === params.id && (
+					<div
+						style={{
+							marginTop: "6rem",
+						}}
+					>
+						<Link to="/postForm" className="btn btn--rect btn--1 btn--xs">
+							<i className="far fa-edit"></i> New Post
+						</Link>
+						<div className="coming-soon">
+							<button className="btn btn--rect btn--1 btn--xs">
+								<i className="fas fa-coins"></i> Buy Coins
+							</button>
+						</div>
 					</div>
+				)}
+			</div>
+			{user?._id === params.id && (
+				<div className="profile-card__edit  btn btn--circle btn--4">
+					<i className="fas fa-pen"></i>
 				</div>
-			</div>
-			<div className="profile-card__edit  btn btn--circle btn--4">
-				<i className="fas fa-pen"></i>
-			</div>
+			)}
 		</div>
 	);
 };
