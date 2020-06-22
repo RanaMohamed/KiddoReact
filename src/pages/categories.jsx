@@ -13,14 +13,15 @@ const Categories = () => {
 	const [showModal, setShowModal] = useState(false);
 	const supporters = useSelector((state) => state.user.supporters);
 	const user = useSelector((state) => state.user.user);
+	const type = useSelector((state) => state.user.type);
 	const [selectedCategory] = useSelector(
 		(state) => state.categories.selectedCategory
 	);
 
 	const joinCategoryHandler = () => {
 		user?.categories.indexOf(selectedCategory) === -1
-			? dispatch(followCategory(selectedCategory))
-			: dispatch(unfollowCategory(selectedCategory));
+			? dispatch(followCategory(type, selectedCategory))
+			: dispatch(unfollowCategory(type, selectedCategory));
 	};
 
 	const dispatch = useDispatch();
@@ -59,6 +60,7 @@ const Categories = () => {
 							</div>
 						</div>
 					)}
+
 					<button
 						className="btn btn--rect btn--primary"
 						onClick={() => joinCategoryHandler()}

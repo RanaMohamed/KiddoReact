@@ -27,10 +27,10 @@ export const selectCategory = (id) => {
 	};
 };
 
-export const followCategory = (id) => {
+export const followCategory = (type, id) => {
 	return async (dispatch) => {
 		try {
-			await axios.post(`/kid/followCategory/${id}`);
+			await axios.post(`/${type}/followCategory/${id}`);
 			dispatch({
 				type: TYPES.FOLLOW_CATEGORY,
 				payload: { category: id },
@@ -41,10 +41,10 @@ export const followCategory = (id) => {
 	};
 };
 
-export const unfollowCategory = (id) => {
+export const unfollowCategory = (type, id) => {
 	return async (dispatch) => {
 		try {
-			await axios.post(`/kid/unfollowCategory/${id}`);
+			await axios.post(`/${type}/unfollowCategory/${id}`);
 			dispatch({
 				type: TYPES.UNFOLLOW_CATEGORY,
 				payload: { category: id },
