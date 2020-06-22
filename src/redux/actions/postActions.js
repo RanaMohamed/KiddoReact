@@ -15,6 +15,7 @@ export const addPost = (post) => {
 				type: TYPES.ADD_POST_ERROR,
 				payload: errors,
 			});
+			return errors;
 		}
 	};
 };
