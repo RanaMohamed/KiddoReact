@@ -32,7 +32,7 @@ function App() {
 	}, []);
 	return (
 		<React.Fragment>
-			{/* <Header></Header> */}
+			<Header></Header>
 			{/* <div className="container"> */}
 			<Switch>
 				<Route path="/paymentForm" component={PaymentForm}></Route>

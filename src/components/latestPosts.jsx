@@ -18,20 +18,18 @@ const LatestPosts = () => {
 
   return (
     <>
-      <section className="my-lg">
-        <div className="container my-xl">
-          <h2>LatestPosts</h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto auto auto",
-              gap: "12rem",
-            }}
-          >
-            {posts?.slice(Math.max(posts.length - 3, 0)).map((post) => (
-              <Post key={post._id} post={post} />
-            ))}
-          </div>
+      <section>
+        <h2>LatestPosts</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "auto auto auto",
+            gap: "12rem",
+          }}
+        >
+          {posts?.slice(Math.max(posts.length - 3, 0)).map((post) => (
+            <Post key={post._id} post={post} />
+          ))}
         </div>
       </section>
     </>

@@ -3,3 +3,11 @@
   box-sizing: border-box;
   // overflow: hidden;
 }
+
+.slide2 {
+  min-height: 200vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url(../imgs/white-background.svg) bottom no-repeat;
+  background-size: cover;
+}
