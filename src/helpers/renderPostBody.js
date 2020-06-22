@@ -2,7 +2,7 @@ import React from "react";
 import parseJson from "./parseJson";
 
 const renderPostBody = (body) => {
-	return parseJson(body).steps ? (
+	return parseJson(body)?.steps ? (
 		Object.keys(parseJson(body).steps).map((key) => (
 			<React.Fragment key={key}>
 				<h2>{key}</h2>
