@@ -21,7 +21,10 @@ const KidInfo = ({ profile }) => {
 					{profile?.categories?.map((cat) => (
 						<div key={cat._id} className="category-card category-card--xs">
 							<div className=" category-card--image">
-								<img src="./img/avatar.svg" alt="kid" />
+								<img
+									src={process.env.PUBLIC_URL + "/img/avatar.svg"}
+									alt="kid"
+								/>
 							</div>
 						</div>
 					))}
