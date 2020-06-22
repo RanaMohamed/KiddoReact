@@ -11,6 +11,7 @@ const Product = ({ product }) => {
 	const [showModalBuy, setShowModalBuy] = useState(false);
 	const [textReview, setTextReview] = useState("");
 	let user = useSelector((state) => state.user.user);
+	let type = useSelector((state) => state.user.type);
 
 	const dispatch = useDispatch();
 	let value = useSelector((state) => state.product.value);
@@ -75,14 +76,16 @@ const Product = ({ product }) => {
 								Rate
 							</button>
 						)}
-						{product?.buyer?.indexOf(user?._id) === -1 && (
-							<button
-								onClick={() => setShowModalBuy(true)}
-								className="btn btn--1 btn--rect"
-							>
-								Buy
-							</button>
-						)}
+						{user &&
+							type === "buyer" &&
+							product?.buyer?.indexOf(user?._id) === -1 && (
+								<button
+									onClick={() => setShowModalBuy(true)}
+									className="btn btn--1 btn--rect"
+								>
+									Buy
+								</button>
+							)}
 					</div>
 				</div>
 			</div>

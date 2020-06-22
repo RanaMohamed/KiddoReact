@@ -7,22 +7,26 @@ import Filter from "../filter";
 
 const Store = () => {
 	const products = useSelector((state) => state.product.products);
-
 	const loading = useSelector((state) => state.request.pending);
+	const selectedCategories = useSelector(
+		(state) => state.categories.selectedCategory
+	);
 
 	const currentPage = useSelector((state) => state.product.currentPage);
 	const perPage = useSelector((state) => state.product.perPage);
+	const [search, setSearch] = useState("");
 	const [searchText, setsearchText] = useState({ searchText: "" });
 
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		if (searchText.searchText) dispatch(searchProduct(searchText.searchText));
-		else dispatch(getProducts(currentPage, perPage));
-	}, [currentPage, searchText]);
+		if (search) dispatch(searchProduct(search, selectedCategories));
+		else dispatch(getProducts(currentPage, perPage, selectedCategories));
+	}, [currentPage, dispatch, perPage, search, selectedCategories]);
 
 	const handleChange = (e) => {
 		e.preventDefault();
+		if (e.target.value === "") setSearch("");
 		setsearchText({ searchText: e.target.value });
 	};
 
@@ -37,28 +41,33 @@ const Store = () => {
 						placeholder="search ..."
 						value={searchText.searchText}
 						onChange={handleChange}
+						onBlur={(e) => setSearch(e.target.value)}
 					/>
 				</div>
-				{loading && (
-					<div className="text-center">
-						<span className="btn btn--1 btn--rect loading"></span>
-					</div>
-				)}
 				<div className="d-flex">
 					<div className="w-20">
 						<Filter></Filter>
 					</div>
-					<div
-						style={{
-							display: "grid",
-							gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-							gap: "12rem",
-							flex: 1,
-						}}
-					>
-						{products.map((prod) => (
-							<Product key={prod._id} product={prod}></Product>
-						))}
+					<div className="" style={{ flex: 1 }}>
+						{!loading && products.length === 0 && (
+							<h2>No products available</h2>
+						)}
+						{loading && (
+							<div className="text-center">
+								<span className="btn btn--1 btn--rect loading"></span>
+							</div>
+						)}
+						<div
+							style={{
+								display: "grid",
+								gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+								gap: "12rem",
+							}}
+						>
+							{products.map((prod) => (
+								<Product key={prod._id} product={prod}></Product>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>

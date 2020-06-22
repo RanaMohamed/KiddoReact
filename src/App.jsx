@@ -20,9 +20,9 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import ProtectedRoute from "./components/protectedRoute";
 
 import { loadUser } from "./redux/actions/userActions";
-import PaymentForm from "./components/paymentForm";
 
 function App() {
 	const token = useSelector((state) => state.user.token);
@@ -35,8 +35,7 @@ function App() {
 			<Header></Header>
 			{/* <div className="container"> */}
 			<Switch>
-				<Route path="/paymentForm" component={PaymentForm}></Route>
-				<Route path="/postForm" component={postForm}></Route>
+				<ProtectedRoute userType="Kid" path="/postForm" component={postForm} />
 				<Route path="/PostDetails/:id" component={PostDetails}></Route>
 				<Route path="/kid/login" component={KidLogin}></Route>
 				<Route path="/kid/:id" component={Kid}></Route>

@@ -28,16 +28,16 @@ const Categories = () => {
 
 	return (
 		<>
-			<Category></Category>
 			<div className="container">
+				<Category></Category>
 				{selectedCategory && (
 					<>
 						<button
 							className="btn btn--rect btn--primary"
 							onClick={() => setShowModal(true)}
 						>
-							<i className="fas fa-headset"></i>
-							--Supporter
+							<i className="btn__icon fas fa-headset"></i>
+							Supporter
 						</button>
 						{showModal && (
 							<SupportersList
@@ -49,10 +49,10 @@ const Categories = () => {
 							className="btn btn--rect btn--primary"
 							onClick={() => joinCategoryHandler()}
 						>
-							<i className="fas fa-users"></i>
+							<i className="btn__icon fas fa-users"></i>
 							{user?.categories?.indexOf(selectedCategory) !== -1
-								? "--Unfollow Category"
-								: "--Join Category"}
+								? "Unfollow Category"
+								: "Join Category"}
 						</button>
 					</>
 				)}

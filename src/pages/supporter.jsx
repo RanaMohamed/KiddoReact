@@ -8,6 +8,7 @@ import { getUnapprovedPosts } from "../redux/actions/postActions";
 import Post from "../components/post";
 import Pagination from "../components/pagination";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 const Supporter = () => {
 	const profile = useSelector((state) => state.user.profile);

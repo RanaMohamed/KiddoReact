@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
@@ -20,6 +21,7 @@ const stripePromise = loadStripe(
 ReactDOM.render(
 	<React.StrictMode>
 		<BrowserRouter>
+			<ScrollToTop />
 			<Provider store={store}>
 				<Elements stripe={stripePromise}>
 					<App />

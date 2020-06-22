@@ -23,31 +23,33 @@ const Pagination = ({ reducer }) => {
 
 	return (
 		<>
-			<div className="pagination">
-				<i
-					className="fa fa-arrow-left arrow"
-					onClick={() =>
-						handlePageChange(currentPage === 1 ? 1 : currentPage - 1)
-					}
-				></i>
-				{pages.map((page) => (
-					<span
-						key={page}
-						className={"page" + (page === currentPage ? " active" : "")}
-						onClick={() => handlePageChange(page)}
-					>
-						{page}
-					</span>
-				))}
-				<i
-					className="fa fa-arrow-right arrow"
-					onClick={() =>
-						handlePageChange(
-							currentPage === pages.length ? pages.length : currentPage + 1
-						)
-					}
-				></i>
-			</div>
+			{pages.length > 0 && (
+				<div className="pagination">
+					<i
+						className="fa fa-arrow-left arrow"
+						onClick={() =>
+							handlePageChange(currentPage === 1 ? 1 : currentPage - 1)
+						}
+					></i>
+					{pages.map((page) => (
+						<span
+							key={page}
+							className={"page" + (page === currentPage ? " active" : "")}
+							onClick={() => handlePageChange(page)}
+						>
+							{page}
+						</span>
+					))}
+					<i
+						className="fa fa-arrow-right arrow"
+						onClick={() =>
+							handlePageChange(
+								currentPage === pages.length ? pages.length : currentPage + 1
+							)
+						}
+					></i>
+				</div>
+			)}
 		</>
 	);
 };

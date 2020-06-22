@@ -1,27 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	getCategories,
+	selectCategory,
+	clearSelectCategory,
+} from "../redux/actions/categoryActions";
 
 const Filter = () => {
-  return (
-    <>
-      <ul className="filter">
-        <li className="filter-item">All Categories</li>
-        <li className="filter-item filter-item--selected filter-item--before ">
-          Gardening
-        </li>
-        <li className="filter-item ">Arts & Crafts</li>
-        <li className="filter-item ">Cooking</li>
-        <li className="filter-item  filter-item--selected filter-item--before ">
-          Writing
-        </li>
-        <li className="filter-item  filter-item--selected filter-item--before ">
-          Drawing
-        </li>
-        <li className="filter-item ">Photography</li>
-        <li className="filter-item ">Singing</li>
-        <li className="filter-item ">Knitting</li>
-      </ul>
-    </>
-  );
+	const categories = useSelector((state) => state.categories.categories);
+	const selectedCategories = useSelector(
+		(state) => state.categories.selectedCategory
+	);
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(getCategories());
+		return () => {
+			dispatch(clearSelectCategory());
+		};
+	}, [dispatch]);
+
+	const selectCategoryHandler = (id) => {
+		dispatch(
+			selectCategory(
+				id,
+				true,
+				selectedCategories.some((cat) => cat === id)
+			)
+		);
+	};
+
+	const clearSelectCategoryHandler = () => {
+		dispatch(clearSelectCategory());
+	};
+
+	return (
+		<>
+			<ul className="filter">
+				<li
+					onClick={clearSelectCategoryHandler}
+					className={
+						"filter-item" +
+						(selectedCategories.length === 0
+							? " filter-item--selected filter-item--before "
+							: "")
+					}
+				>
+					All Categories
+				</li>
+				{categories.map((category) => (
+					<li
+						key={category._id}
+						onClick={() => selectCategoryHandler(category._id)}
+						className={
+							"filter-item" +
+							(selectedCategories.some((cat) => cat === category._id)
+								? " filter-item--selected filter-item--before "
+								: "")
+						}
+					>
+						{category.title}
+					</li>
+				))}
+			</ul>
+		</>
+	);
 };
 
 export default Filter;

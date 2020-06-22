@@ -8,6 +8,7 @@ import { getPostById } from "../redux/actions/postActions";
 import { addComment } from "../redux/actions/commentActions";
 import { addLike, removeLike, approvePost } from "../redux/actions/postActions";
 import renderPostBody from "../helpers/renderPostBody";
+import { Link } from "react-router-dom";
 
 const PostDetails = () => {
 	const user = useSelector((state) => state.user.user);
@@ -20,7 +21,7 @@ const PostDetails = () => {
 	const [approve, setApprove] = useState(false);
 	useEffect(() => {
 		if (params.id) dispatch(getPostById(params.id));
-	}, [params.id, comment, like, approve]);
+	}, [params.id, comment, like, approve, dispatch]);
 	const addCommentHandler = async (e) => {
 		e.preventDefault();
 		const error = await dispatch(addComment(post._id, comment));
@@ -67,7 +68,11 @@ const PostDetails = () => {
 										src="../img/avatar.svg"
 									/>
 									<div>
-										<p>{post?.authorKid?.username}</p>
+										<p>
+											<Link to={`/kid/${post?.authorKid?._id}`}>
+												{post?.authorKid?.username}
+											</Link>
+										</p>
 										<i className="fa fa-heart like-icon"></i>
 										<span>{post.likes?.length}</span>
 										<i className="fa fa-comment comment-icon"></i>
@@ -121,7 +126,7 @@ const PostDetails = () => {
 									style={{
 										display: "grid",
 										gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-										gridGap: "12rem",
+										gridGap: "2rem 12rem",
 									}}
 								>
 									{post.attachedFiles?.map((file) => (

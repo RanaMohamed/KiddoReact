@@ -1,11 +1,11 @@
 import axios from "../../axios";
 import TYPES from "../reducers/types";
 
-export const getProducts = (page, size) => {
+export const getProducts = (page, size, categories) => {
 	return async (dispatch) => {
 		try {
 			const data = await axios.get("/product", {
-				params: { pageNum: page, size },
+				params: { pageNum: page, size, categoriesArray: categories },
 			});
 			dispatch({
 				type: TYPES.GET_PRODUCT_SUCCESS,
@@ -23,10 +23,12 @@ export const getProducts = (page, size) => {
 	};
 };
 
-export const searchProduct = (searchText) => {
+export const searchProduct = (searchText, categories) => {
 	return async (dispatch) => {
 		try {
-			const data = await axios.get(`product?searchText=${searchText}`);
+			const data = await axios.get(`product?searchText=${searchText}`, {
+				params: { categoriesArray: categories },
+			});
 			dispatch({
 				type: TYPES.SEARCH_PRODUCT_SUCCESS,
 				payload: {

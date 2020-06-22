@@ -17,11 +17,19 @@ export const getCategories = () => {
 	};
 };
 
-export const selectCategory = (id) => {
+export const selectCategory = (id, multi, deselect) => {
 	return (dispatch) => {
 		dispatch({
 			type: TYPES.SELECT_CATEGORY,
-			payload: { id },
+			payload: { id, multi, deselect },
+		});
+	};
+};
+
+export const clearSelectCategory = () => {
+	return (dispatch) => {
+		dispatch({
+			type: TYPES.CLEAR_SELECT_CATEGORY,
 		});
 	};
 };
