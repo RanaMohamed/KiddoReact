@@ -5,7 +5,9 @@
 }
 
 .slide2 {
-  height: 200vh;
+  min-height: 200vh;
   box-sizing: border-box;
   overflow: hidden;
+  background: url(../imgs/white-background.svg) bottom no-repeat;
+  background-size: cover;
 }
