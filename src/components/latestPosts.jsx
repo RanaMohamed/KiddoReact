@@ -28,8 +28,8 @@ const LatestPosts = () => {
               gap: "12rem",
             }}
           >
-            {posts?.map((post) => (
-              <Post key={post._id} post={post}></Post>
+            {posts?.slice(Math.max(posts.length - 3, 0)).map((post) => (
+              <Post key={post._id} post={post} />
             ))}
           </div>
         </div>
