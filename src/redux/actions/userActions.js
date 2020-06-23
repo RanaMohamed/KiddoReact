@@ -7,7 +7,7 @@ const signup = (type, user) => async (dispatch) => {
 		axios.defaults.headers.common["authorization"] = data.token;
 		dispatch({
 			type: TYPES.SIGNUP_KID,
-			payload: { user: data[type], token: data.token },
+			payload: { user: data[type], token: data.token, type: data.type },
 		});
 	} catch (errors) {
 		return errors;
