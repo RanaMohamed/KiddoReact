@@ -7,7 +7,7 @@ const ContactForm = () => {
         <div className="container my-xl">
           <h1>Contact Us</h1>
           <form className="form">
-            <label htmlFor="title" className="form__subtitle">
+            <label htmlFor="title" className="form__subtitle color-primary">
               Name
             </label>
             <input
@@ -16,7 +16,7 @@ const ContactForm = () => {
               placeholder="Write your Name"
             />
             <span className="error-message"></span>
-            <label htmlFor="title" className="form__subtitle">
+            <label htmlFor="title" className="form__subtitle color-primary">
               Email
             </label>
             <input
@@ -25,7 +25,7 @@ const ContactForm = () => {
               placeholder="Write Your Email"
             />
             <span className="error-message"></span>
-            <label htmlFor="title" className="form__subtitle">
+            <label htmlFor="title" className="form__subtitle color-primary ">
               Your Message
             </label>
             <textarea

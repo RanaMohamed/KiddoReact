@@ -172,7 +172,7 @@ b {
   font-weight: 700; }
 
 .color-primary {
-  color: #106d74; }
+  color: #106d74 !important; }
 
 .color-dark {
   color: #33312c; }
