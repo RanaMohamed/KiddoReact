@@ -5,7 +5,7 @@ export const addPost = (post) => {
 	return async (dispatch) => {
 		dispatch({ type: TYPES.ADD_POST });
 		try {
-			const data = await axios.post("post/", post);
+			const data = await axios.post("post", post);
 			dispatch({
 				type: TYPES.ADD_POST_SUCCESS,
 				payload: data.post,

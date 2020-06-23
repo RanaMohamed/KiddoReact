@@ -9,8 +9,7 @@ const Post = ({ post }) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user.user);
   const history = useHistory();
-  const addLikeHandler = async e => {
-    e.preventDefault();
+  const addLikeHandler = async () => {
     if (post.likes.some(like => like.user === user?._id)) {
       dispatch(removeLike(post._id));
     } else {
@@ -22,7 +21,14 @@ const Post = ({ post }) => {
     <>
       <div className="post-card post-card--bg post-card--bg--primary">
         <div className="post-card__img">
-          <img alt="Post" src="../imgs/post1.png" />
+          <img
+            alt="Post"
+            src={
+              post && post.attachedFiles && post.attachedFiles.length > 0
+                ? post.attachedFiles[0]
+                : process.env.PUBLIC_URL + "/imgs/post1.png"
+            }
+          />
         </div>
         <div className="post-card__body">
           <p className="post-card__title">{post?.title}</p>
@@ -33,7 +39,7 @@ const Post = ({ post }) => {
             <img
               className="post-card__avatar"
               alt="Avatar"
-              src="../imgs/avatar.svg"
+              src={process.env.PUBLIC_URL + "/imgs/avatar.svg"}
             />
             <div>
               <p>{post?.authorKid?.username}</p>

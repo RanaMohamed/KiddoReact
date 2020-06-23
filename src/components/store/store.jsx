@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getProducts, searchProduct } from "../../redux/actions/productAction";
 import Pagination from "../pagination";
 import Filter from "../filter";
+import Advert from "../advet";
 
 const Store = () => {
 	const products = useSelector((state) => state.product.products);
@@ -33,6 +34,7 @@ const Store = () => {
 	return (
 		<>
 			<div className="container">
+				<Advert></Advert>
 				<div className="d-flex justify-content-between align-items-center my-lg">
 					<h2 className="color-1">Store</h2>
 					<input
