@@ -12,7 +12,8 @@ import { Link } from "react-router-dom";
 
 const Supporter = () => {
 	const profile = useSelector((state) => state.user.profile);
-	const Posts = useSelector((state) => state.post.posts);
+	const user = useSelector((state) => state.user.user);
+	const posts = useSelector((state) => state.post.posts);
 	const currentPage = useSelector((state) => state.post.currentPage);
 	const perPage = useSelector((state) => state.post.perPage);
 	const dispatch = useDispatch();
@@ -26,7 +27,7 @@ const Supporter = () => {
 	return (
 		<>
 			{profile && (
-				<div className="container">
+				<div className="container my-lg">
 					<div className="d-flex justify-content-between">
 						<ProfilePicture></ProfilePicture>
 						<div className="w-70">
@@ -34,25 +35,29 @@ const Supporter = () => {
 							<SupporterInfo profile={profile}></SupporterInfo>
 						</div>
 					</div>
-					<section className="my-lg">
-						<h2>Latest Posts To approve</h2>
-						<div className="my-xl">
-							<div
-								style={{
-									display: "grid",
-									gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-									gap: "12rem",
-								}}
-							>
-								{Posts?.map((post) => (
-									<Post key={post._id} post={post}></Post>
-								))}
-							</div>
-						</div>
-					</section>
-					<section className="pagination">
-						<Pagination reducer="post"></Pagination>
-					</section>
+					{params.id === user?._id && (
+						<>
+							<section className="my-lg">
+								<h2>Latest Posts To approve</h2>
+								<div className="my-xl">
+									<div
+										style={{
+											display: "grid",
+											gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+											gap: "12rem",
+										}}
+									>
+										{posts?.map((post) => (
+											<Post key={post._id} post={post}></Post>
+										))}
+									</div>
+								</div>
+							</section>
+							<section className="pagination">
+								<Pagination reducer="post"></Pagination>
+							</section>
+						</>
+					)}
 				</div>
 			)}
 		</>

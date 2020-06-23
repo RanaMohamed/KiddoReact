@@ -9,6 +9,7 @@ import {
 	unfollowCategory,
 } from "../redux/actions/categoryActions";
 import SupportersList from "../components/supportersList";
+import { useHistory } from "react-router";
 
 const Categories = () => {
 	const [showModal, setShowModal] = useState(false);
@@ -17,14 +18,14 @@ const Categories = () => {
 	const [selectedCategory] = useSelector(
 		(state) => state.categories.selectedCategory
 	);
+	const dispatch = useDispatch();
+	const history = useHistory();
 
 	const joinCategoryHandler = () => {
 		user?.categories.indexOf(selectedCategory) === -1
 			? dispatch(followCategory(type, selectedCategory))
 			: dispatch(unfollowCategory(type, selectedCategory));
 	};
-
-	const dispatch = useDispatch();
 
 	return (
 		<>
@@ -44,16 +45,19 @@ const Categories = () => {
 								closeModal={() => setShowModal(false)}
 							></SupportersList>
 						)}
-
-						<button
-							className="btn btn--rect btn--primary"
-							onClick={() => joinCategoryHandler()}
-						>
-							<i className="btn__icon fas fa-users"></i>
-							{user?.categories?.indexOf(selectedCategory) !== -1
-								? "Unfollow Category"
-								: "Join Category"}
-						</button>
+						{type !== "Buyer" && (
+							<button
+								className="btn btn--rect btn--primary"
+								onClick={() => {
+									user ? joinCategoryHandler() : history.push("/kid/login");
+								}}
+							>
+								<i className="btn__icon fas fa-users"></i>
+								{user && user?.categories?.indexOf(selectedCategory) !== -1
+									? "Unfollow Category"
+									: "Join Category"}
+							</button>
+						)}
 					</>
 				)}
 			</div>

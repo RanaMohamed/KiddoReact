@@ -34,11 +34,12 @@ const Category = ({ home }) => {
 			<section className="category-section my-md">
 				<h2>Categories</h2>
 				<div className="d-flex justify-content-between align-items-center">
-					<i className="fa fa-arrow-left"></i>
-					<div
+					{/* <i className="fa fa-arrow-left"></i> */}
+					<Link
+						to="/categories"
 						className={
 							"category-card category-card--lg" +
-							(!selectedCategory ? " category-card--primary" : "")
+							(!selectedCategory && !home ? " category-card--primary" : "")
 						}
 						onClick={() => clearSelectCategoryHandler()}
 					>
@@ -49,12 +50,12 @@ const Category = ({ home }) => {
 							/>
 						</div>
 						<div className="category-card--title">All Categories</div>
-					</div>
+					</Link>
 					{categories?.map((category) => (
 						<Link
 							to="/categories"
 							className={
-								"category-card category-card--sm" +
+								"category-card category-card--lg" +
 								(selectedCategory === category._id
 									? " category-card--primary"
 									: "")
@@ -68,7 +69,7 @@ const Category = ({ home }) => {
 							<div className="category-card--title">{category.title}</div>
 						</Link>
 					))}
-					<i className="fa fa-arrow-right"></i>
+					{/* <i className="fa fa-arrow-right"></i> */}
 				</div>
 			</section>
 		</>
