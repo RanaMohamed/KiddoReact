@@ -40,7 +40,7 @@ const Product = ({ product }) => {
 		<>
 			<div className="post-card post-card--bg post-card--bg--primary">
 				<div className="post-card__img">
-					<img alt="Post" src="../img/post1.png" />
+					<img alt="Post" src="../imgs/post1.png" />
 				</div>
 				<div className="post-card__body">
 					<p className="post-card__title">{product.post?.title}</p>
@@ -51,7 +51,7 @@ const Product = ({ product }) => {
 						<img
 							className="post-card__avatar"
 							alt="Avatar"
-							src="../img/avatar.svg"
+							src={process.env.PUBLIC_URL + "/imgs/avatar.svg"}
 						/>
 						<div>
 							<p>{product?.post?.authorKid?.username}</p>

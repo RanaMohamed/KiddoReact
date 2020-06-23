@@ -34,7 +34,7 @@ const Test = () => {
             </li>
             <li>
               <a href="#profile" className="nav__img">
-                <img src="./img/avatar.svg" alt="kid"></img>
+                <img src="./imgs/avatar.svg" alt="kid"></img>
               </a>
             </li>
 
@@ -51,27 +51,27 @@ const Test = () => {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="number-card">
             <h3 className="number-card__title">Your Level</h3>
-            <img src="./img/level.svg" alt="c"></img>
+            <img src="./imgs/level.svg" alt="c"></img>
             <p className="number-card__number">Expert</p>
           </div>
           <div className="number-card">
             <h3 className="number-card__title">Interested Categories</h3>
-            <img src="./img/008-create.svg" alt="c"></img>
+            <img src="./imgs/008-create.svg" alt="c"></img>
             <p className="number-card__number">4</p>
           </div>
           <div className="number-card">
             <h3 className="number-card__title">Your Points</h3>
-            <img src="./img/034-game-6.svg" alt="c"></img>
+            <img src="./imgs/034-game-6.svg" alt="c"></img>
             <p className="number-card__number">8092</p>
           </div>
           <div className="number-card">
             <h3 className="number-card__title">Your Coins</h3>
-            <img src="./img/067-treasure-1.svg" alt="c"></img>
+            <img src="./imgs/067-treasure-1.svg" alt="c"></img>
             <p className="number-card__number">4000</p>
           </div>
           <div className="number-card">
             <h3 className="number-card__title">Finished Courses</h3>
-            <img src="./img/068-trophy.svg" alt="c"></img>
+            <img src="./imgs/068-trophy.svg" alt="c"></img>
             <p className="number-card__number">6</p>
           </div>
         </div>
@@ -79,9 +79,9 @@ const Test = () => {
       {/* Profile pic */}
       <section className="profile-pic">
         <div>
-          <img id="pic" src="./img/kid.svg" alt="kid"></img>
+          <img id="pic" src="./imgs/kid.svg" alt="kid"></img>
           <section className="profile-pic_inner">
-            <img src="./img/Icon awesome-camera.svg" alt=""></img>
+            <img src="./imgs/Icon awesome-camera.svg" alt=""></img>
           </section>
         </div>
       </section>
@@ -173,12 +173,12 @@ const Test = () => {
             <div className="categories" style={{ display: "flex" }}>
               <div className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="kid" />
+                  <img src="./imgs/avatar.svg" alt="kid" />
                 </div>
               </div>
               <div className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="kid" />
+                  <img src="./imgs/avatar.svg" alt="kid" />
                 </div>
               </div>
             </div>
@@ -211,12 +211,12 @@ const Test = () => {
             <div className="categories" style={{ display: "flex" }}>
               <div className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="kid" />
+                  <img src="./imgs/avatar.svg" alt="kid" />
                 </div>
               </div>
               <div className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="./img/avatar.svg" alt="kid" />
+                  <img src="./imgs/avatar.svg" alt="kid" />
                 </div>
               </div>
             </div>
@@ -306,7 +306,7 @@ const Test = () => {
         >
           <div className="post-card post-card--bg post-card--bg--primary">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -321,7 +321,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -339,7 +339,7 @@ const Test = () => {
           </div>
           <div className="post-card post-card--bg post-card--bg--1">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -354,7 +354,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -372,7 +372,7 @@ const Test = () => {
           </div>
           <div className="post-card post-card--bg post-card--bg--2">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -387,7 +387,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -405,7 +405,7 @@ const Test = () => {
           </div>
           <div className="post-card post-card--bg post-card--bg--3">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -420,7 +420,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -438,7 +438,7 @@ const Test = () => {
           </div>
           <div className="post-card post-card--bg post-card--bg--4">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -453,7 +453,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -475,7 +475,7 @@ const Test = () => {
         <div className="post-card post-card--md">
           <div className="post-card__post">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -490,7 +490,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -510,7 +510,7 @@ const Test = () => {
             <h2>Comments</h2>
             <div className="comment">
               <div className="comment__user">
-                <img alt="Avatar" src="../img/avatar.svg" />
+                <img alt="Avatar" src="../imgs/avatar.svg" />
               </div>
               <p className="comment__text">
                 Lorem ipsum dolor sit amet, vel id nusquam repudiandae
@@ -522,7 +522,7 @@ const Test = () => {
             </div>
             <div className="comment">
               <div className="comment__user">
-                <img alt="Avatar" src="../img/avatar.svg" />
+                <img alt="Avatar" src="../imgs/avatar.svg" />
               </div>
               <p className="comment__text">
                 Lorem ipsum dolor sit amet, vel id nusquam repudiandae
@@ -546,7 +546,7 @@ const Test = () => {
         <div className="post-card post-card--lg">
           <div className="post-card__post">
             <div className="post-card__img">
-              <img alt="Post" src="../img/post1.png" />
+              <img alt="Post" src="../imgs/post1.png" />
             </div>
             <div className="post-card__body">
               <p className="post-card__title">Post 1</p>
@@ -570,7 +570,7 @@ const Test = () => {
                 <img
                   className="post-card__avatar"
                   alt="Avatar"
-                  src="../img/avatar.svg"
+                  src="../imgs/avatar.svg"
                 />
                 <div>
                   <p>Full name</p>
@@ -586,7 +586,7 @@ const Test = () => {
             <h2>Comments</h2>
             <div className="comment">
               <div className="comment__user">
-                <img alt="Avatar" src="../img/avatar.svg" />
+                <img alt="Avatar" src="../imgs/avatar.svg" />
               </div>
               <p className="comment__text">
                 Lorem ipsum dolor sit amet, vel id nusquam repudiandae
@@ -598,7 +598,7 @@ const Test = () => {
             </div>
             <div className="comment">
               <div className="comment__user">
-                <img alt="Avatar" src="../img/avatar.svg" />
+                <img alt="Avatar" src="../imgs/avatar.svg" />
               </div>
               <p className="comment__text">
                 Lorem ipsum dolor sit amet, vel id nusquam repudiandae
@@ -667,7 +667,7 @@ const Test = () => {
       >
         <div className="dropdown dropdown--active">
           <a href="#" className="dropdown__image">
-            <img src="./img/avatar.svg" alt="kid" />
+            <img src="./imgs/avatar.svg" alt="kid" />
           </a>
           <div className="dropdown__menu">
             <div className="dropdown__arrowup"></div>
@@ -693,13 +693,13 @@ const Test = () => {
       >
         <div className="category-card category-card--sm">
           <div className=" category-card--image">
-            <img src="./img/avatar.svg" alt="kid" />
+            <img src="./imgs/avatar.svg" alt="kid" />
           </div>
           <div className="category-card--title">Arts & Crafts</div>
         </div>
         <div className="category-card category-card--sm category-card--primary">
           <div className=" category-card--image">
-            <img src="./img/avatar.svg" alt="kid" />
+            <img src="./imgs/avatar.svg" alt="kid" />
           </div>
           <div className="category-card--title">Arts & Crafts</div>
         </div>

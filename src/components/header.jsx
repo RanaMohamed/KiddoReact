@@ -66,7 +66,7 @@ const Header = () => {
 										<div className="dropdown dropdown--active">
 											<span className="nav__img">
 												<img
-													src="./img/avatar.svg"
+													src={process.env.PUBLIC_URL + "/imgs/avatar.svg"}
 													alt={type}
 													onClick={() =>
 														setactive({

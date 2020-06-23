@@ -1,7 +1,19 @@
 .slide {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   // overflow: hidden;
+}
+
+.slide1 {
+  margin-top: -12.5rem;
+  min-height: 200vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $color-3;
+  background-image: url(../imgs/upper-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top -10rem left;
 }
 
 .slide2 {

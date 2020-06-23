@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="2160" viewBox="0 0 1920 2160">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-upper-background);
+      }
+
+      .cls-2 {
+        stroke: #707070;
+        fill: url(#linear-gradient);
+      }
+
+      .cls-3 {
+        fill: #fdd343;
+      }
+
+      .cls-10, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #53bcc0;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        opacity: 0.15;
+      }
+
+      .cls-5 {
+        stroke: #e55658;
+      }
+
+      .cls-6 {
+        stroke: #fbfbfa;
+      }
+
+      .cls-7 {
+        stroke: #fdd343;
+      }
+
+      .cls-8 {
+        fill: #53bcc0;
+      }
+
+      .cls-9 {
+        stroke: none;
+      }
+
+      .cls-11 {
+        filter: url(#BGBlue);
+      }
+
+      .cls-12 {
+        filter: url(#BGYellow);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.504" y1="0.91" x2="0.5" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fdd343"/>
+      <stop offset="1" stop-color="#e55658"/>
+    </linearGradient>
+    <filter id="BGYellow" x="-14" y="-4" width="1942.651" height="1002.855" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="BGBlue" x="-7.337" y="689.684" width="1940.989" height="1470.316" filterUnits="userSpaceOnUse">
+      <feOffset dy="-10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-upper-background">
+      <rect width="1920" height="2160"/>
+    </clipPath>
+  </defs>
+  <g id="upper-background" class="cls-1">
+    <g id="BGPink" class="cls-2">
+      <rect class="cls-9" width="1920" height="1469"/>
+      <rect class="cls-10" x="0.5" y="0.5" width="1919" height="1468"/>
+    </g>
+    <g class="cls-12" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="BGYellow-2" data-name="BGYellow" class="cls-3" d="M1114-291V663.749s67.093-46.539,185.253-32.952c88.662,10.2,213.4,89.225,320.106,54.136,248.733-81.792,134.75-310.1,489.574-348.35S3038.651,531.94,3038.651,531.94V-291Z" transform="translate(-1119 291)"/>
+    </g>
+    <g id="BGShapes">
+      <g id="BGShape">
+        <path id="Path_10" data-name="Path 10" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1301 169)"/>
+        <path id="Path_11" data-name="Path 11" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1235 180)"/>
+        <path id="Path_12" data-name="Path 12" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1276 237)"/>
+      </g>
+      <g id="BGShape-2" data-name="BGShape">
+        <path id="Path_13" data-name="Path 13" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1301 899)"/>
+        <path id="Path_14" data-name="Path 14" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1235 910)"/>
+        <path id="Path_15" data-name="Path 15" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1276 957)"/>
+      </g>
+      <g id="BGShape-3" data-name="BGShape">
+        <path id="Path_16" data-name="Path 16" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(549 42)"/>
+        <path id="Path_17" data-name="Path 17" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(615 53)"/>
+        <path id="Path_18" data-name="Path 18" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(574 110)"/>
+      </g>
+      <g id="BGShape-4" data-name="BGShape">
+        <path id="Path_19" data-name="Path 19" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(524 731)"/>
+        <path id="Path_20" data-name="Path 20" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(590 742)"/>
+        <path id="Path_21" data-name="Path 21" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(549 799)"/>
+      </g>
+      <g id="BGShape-5" data-name="BGShape">
+        <path id="Path_22" data-name="Path 22" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-881 759)"/>
+        <path id="Path_23" data-name="Path 23" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-815 770)"/>
+        <path id="Path_24" data-name="Path 24" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-856 827)"/>
+      </g>
+      <g id="BGShape-6" data-name="BGShape">
+        <path id="Path_25" data-name="Path 25" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-382 401)"/>
+        <path id="Path_26" data-name="Path 26" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-316 412)"/>
+        <path id="Path_27" data-name="Path 27" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-357 469)"/>
+      </g>
+      <g id="BGShape-7" data-name="BGShape">
+        <path id="Path_28" data-name="Path 28" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(207 350)"/>
+        <path id="Path_29" data-name="Path 29" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(273 361)"/>
+        <path id="Path_30" data-name="Path 30" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(232 418)"/>
+      </g>
+      <g id="BGShape-8" data-name="BGShape">
+        <path id="Path_31" data-name="Path 31" class="cls-4" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-246 15)"/>
+        <path id="Path_32" data-name="Path 32" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-180 26)"/>
+        <path id="Path_33" data-name="Path 33" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-221 83)"/>
+      </g>
+    </g>
+    <g class="cls-11" transform="matrix(1, 0, 0, 1, 0, 0)">
+      <path id="BGBlue-2" data-name="BGBlue" class="cls-8" d="M225.324,39.632S-39.96,724.06,10.521,970.531s242.5,234.014,314.382,416.155-29.994,221.248-14.83,364.644,75.484,208.939,75.484,208.939H1455.45V37.281Z" transform="translate(1961.93 704.55) rotate(90)"/>
+    </g>
+    <g id="BGShapes-2" data-name="BGShapes">
+      <g id="BGShape-9" data-name="BGShape">
+        <path id="Path_87" data-name="Path 87" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-347 825)"/>
+        <path id="Path_88" data-name="Path 88" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-281 836)"/>
+        <path id="Path_89" data-name="Path 89" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-322 893)"/>
+      </g>
+      <g id="BGShape-10" data-name="BGShape">
+        <path id="Path_90" data-name="Path 90" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(549 1057)"/>
+        <path id="Path_91" data-name="Path 91" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(615 1068)"/>
+        <path id="Path_92" data-name="Path 92" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(574 1125)"/>
+      </g>
+      <g id="BGShape-11" data-name="BGShape">
+        <path id="Path_93" data-name="Path 93" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1301 1230)"/>
+        <path id="Path_94" data-name="Path 94" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1235 1241)"/>
+        <path id="Path_95" data-name="Path 95" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-1276 1298)"/>
+      </g>
+      <g id="BGShape-12" data-name="BGShape">
+        <path id="Path_96" data-name="Path 96" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-654 1057)"/>
+        <path id="Path_97" data-name="Path 97" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-588 1068)"/>
+        <path id="Path_98" data-name="Path 98" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-629 1125)"/>
+      </g>
+      <g id="BGShape-13" data-name="BGShape">
+        <path id="Path_99" data-name="Path 99" class="cls-7" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-72 1057)"/>
+        <path id="Path_100" data-name="Path 100" class="cls-5" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-6 1068)"/>
+        <path id="Path_101" data-name="Path 101" class="cls-6" d="M1310.218-43.537S1286.144-14.854,1297.071-14s1.878-40.806-5.8-34.147,25.781,31.586,27.318,20.488-33.635-2.39-33.635-2.39" transform="translate(-47 1125)"/>
+      </g>
+    </g>
+  </g>
+</svg>

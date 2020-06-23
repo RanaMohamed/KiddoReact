@@ -11,155 +11,155 @@ import renderPostBody from "../helpers/renderPostBody";
 import { Link } from "react-router-dom";
 
 const PostDetails = () => {
-	const user = useSelector((state) => state.user.user);
-	const type = useSelector((state) => state.user.type);
-	const post = useSelector((state) => state.post.post);
-	const dispatch = useDispatch();
-	const params = useParams();
-	const [comment, setComment] = useState("");
-	const [like, setLike] = useState(false);
-	const [approve, setApprove] = useState(false);
-	useEffect(() => {
-		if (params.id) dispatch(getPostById(params.id));
-	}, [params.id, comment, like, approve, dispatch]);
-	const addCommentHandler = async (e) => {
-		e.preventDefault();
-		const error = await dispatch(addComment(post._id, comment));
-		if (!isEmpty(error)) return;
-		setComment("");
-	};
+  const user = useSelector((state) => state.user.user);
+  const type = useSelector((state) => state.user.type);
+  const post = useSelector((state) => state.post.post);
+  const dispatch = useDispatch();
+  const params = useParams();
+  const [comment, setComment] = useState("");
+  const [like, setLike] = useState(false);
+  const [approve, setApprove] = useState(false);
+  useEffect(() => {
+    if (params.id) dispatch(getPostById(params.id));
+  }, [params.id, comment, like, approve, dispatch]);
+  const addCommentHandler = async (e) => {
+    e.preventDefault();
+    const error = await dispatch(addComment(post._id, comment));
+    if (!isEmpty(error)) return;
+    setComment("");
+  };
 
-	const addLikeHandler = async (e) => {
-		e.preventDefault();
-		if (post.likes.some((like) => like.user === user?._id)) {
-			await dispatch(removeLike(post._id));
-			setLike(false);
-		} else {
-			await dispatch(addLike(post._id));
-			setLike(true);
-		}
-	};
+  const addLikeHandler = async (e) => {
+    e.preventDefault();
+    if (post.likes.some((like) => like.user === user?._id)) {
+      await dispatch(removeLike(post._id));
+      setLike(false);
+    } else {
+      await dispatch(addLike(post._id));
+      setLike(true);
+    }
+  };
 
-	const approvePostHandler = async (e) => {
-		e.preventDefault();
-		const error = await dispatch(approvePost(post._id));
-		if (!isEmpty(error)) return;
-		setApprove(true);
-	};
+  const approvePostHandler = async (e) => {
+    e.preventDefault();
+    const error = await dispatch(approvePost(post._id));
+    if (!isEmpty(error)) return;
+    setApprove(true);
+  };
 
-	return (
-		<>
-			<div className="container">
-				{post && (
-					<div className="post-card post-card--lg">
-						<div className="post-card__post">
-							<div className="post-card__img">
-								<img alt="Post" src="../img/post1.png" />
-							</div>
-							<div className="post-card__body">
-								<p className="post-card__title">{post?.title}</p>
-								<div className="post-card__description post-card__description__full">
-									{renderPostBody(post?.body)}
-								</div>
-								<div className="post-card__info">
-									<img
-										className="post-card__avatar"
-										alt="Avatar"
-										src="../img/avatar.svg"
-									/>
-									<div>
-										<p>
-											<Link to={`/kid/${post?.authorKid?._id}`}>
-												{post?.authorKid?.username}
-											</Link>
-										</p>
-										<i className="fa fa-heart like-icon"></i>
-										<span>{post.likes?.length}</span>
-										<i className="fa fa-comment comment-icon"></i>
-										<span>{post.commentsTotal}</span>
-									</div>
-								</div>
-								<div className="category-card category-card--xs w-20">
-									<div className=" category-card--image">
-										<img src="../img/avatar.svg" alt="category" />
-									</div>
-									<span>{post?.category?.title}</span>
-								</div>
+  return (
+    <>
+      <div className="container">
+        {post && (
+          <div className="post-card post-card--lg">
+            <div className="post-card__post">
+              <div className="post-card__img">
+                <img alt="Post" src="../imgs/post1.png" />
+              </div>
+              <div className="post-card__body">
+                <p className="post-card__title">{post?.title}</p>
+                <div className="post-card__description post-card__description__full">
+                  {renderPostBody(post?.body)}
+                </div>
+                <div className="post-card__info">
+                  <img
+                    className="post-card__avatar"
+                    alt="Avatar"
+                    src="../imgs/avatar.svg"
+                  />
+                  <div>
+                    <p>
+                      <Link to={`/kid/${post?.authorKid?._id}`}>
+                        {post?.authorKid?.username}
+                      </Link>
+                    </p>
+                    <i className="fa fa-heart like-icon"></i>
+                    <span>{post.likes?.length}</span>
+                    <i className="fa fa-comment comment-icon"></i>
+                    <span>{post.commentsTotal}</span>
+                  </div>
+                </div>
+                <div className="category-card category-card--xs w-20">
+                  <div className=" category-card--image">
+                    <img src="../imgs/avatar.svg" alt="category" />
+                  </div>
+                  <span>{post?.category?.title}</span>
+                </div>
 
-								<div style={{ textAlign: "end" }}>
-									{!post.isApproved && type === "Supporter" && (
-										<>
-											<button className="btn btn--circle btn--4">
-												{/* Approve button */}
-												<i className="fas fa-times"></i>
-											</button>
+                <div style={{ textAlign: "end" }}>
+                  {!post.isApproved && type === "Supporter" && (
+                    <>
+                      <button className="btn btn--circle btn--4">
+                        {/* Approve button */}
+                        <i className="fas fa-times"></i>
+                      </button>
 
-											{/* unApproved button */}
-											<button
-												onClick={approvePostHandler}
-												className="btn btn--circle"
-											>
-												<i className="fas fa-check"></i>
-											</button>
-										</>
-									)}
-									{/* Like button  */}
-									{post.isApproved && (
-										<button
-											onClick={addLikeHandler}
-											className="btn btn--circle"
-										>
-											{!post.likes?.some((like) => like.user === user?._id) ? (
-												<i className="fa fa-heart"></i>
-											) : (
-												<i className="far fa-thumbs-down"></i>
-											)}
-										</button>
-									)}
-								</div>
-							</div>
-						</div>
-						{post.attachedFiles && post.attachedFiles.length > 0 && (
-							<div className="comments">
-								<h2>Files</h2>
-								<div
-									style={{
-										display: "grid",
-										gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-										gridGap: "2rem 12rem",
-									}}
-								>
-									{post.attachedFiles?.map((file) => (
-										<a key={file} href={file} download>
-											{file}
-										</a>
-									))}
-								</div>
-							</div>
-						)}
-						{post.isApproved && (
-							<div className="comments">
-								<h2>Comments</h2>
-								{post.comments?.map((comment) => (
-									<Comment key={comment._id} comment={comment}></Comment>
-								))}
+                      {/* unApproved button */}
+                      <button
+                        onClick={approvePostHandler}
+                        className="btn btn--circle"
+                      >
+                        <i className="fas fa-check"></i>
+                      </button>
+                    </>
+                  )}
+                  {/* Like button  */}
+                  {post.isApproved && (
+                    <button
+                      onClick={addLikeHandler}
+                      className="btn btn--circle"
+                    >
+                      {!post.likes?.some((like) => like.user === user?._id) ? (
+                        <i className="fa fa-heart"></i>
+                      ) : (
+                        <i className="far fa-thumbs-down"></i>
+                      )}
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+            {post.attachedFiles && post.attachedFiles.length > 0 && (
+              <div className="comments">
+                <h2>Files</h2>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                    gridGap: "2rem 12rem",
+                  }}
+                >
+                  {post.attachedFiles?.map((file) => (
+                    <a key={file} href={file} download>
+                      {file}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {post.isApproved && (
+              <div className="comments">
+                <h2>Comments</h2>
+                {post.comments?.map((comment) => (
+                  <Comment key={comment._id} comment={comment}></Comment>
+                ))}
 
-								<form onSubmit={addCommentHandler}>
-									<input
-										type="text"
-										className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
-										placeholder="Add a comment...."
-										value={comment}
-										onChange={(e) => setComment(e.target.value)}
-									/>
-								</form>
-							</div>
-						)}
-					</div>
-				)}
-			</div>
-		</>
-	);
+                <form onSubmit={addCommentHandler}>
+                  <input
+                    type="text"
+                    className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
+                    placeholder="Add a comment...."
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                  />
+                </form>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </>
+  );
 };
 
 export default PostDetails;
