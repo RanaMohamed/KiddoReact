@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addLike, removeLike } from "../redux/actions/postActions";
 import renderPostBody from "../helpers/renderPostBody";
+import { useHistory } from "react-router";
 
 const Post = ({ post }) => {
 	const dispatch = useDispatch();
 	const user = useSelector((state) => state.user.user);
+	const history = useHistory();
 	const addLikeHandler = async (e) => {
 		e.preventDefault();
 		if (post.likes.some((like) => like.user === user?._id)) {
@@ -55,7 +57,12 @@ const Post = ({ post }) => {
 						>
 							View Details
 						</Link>
-						<button onClick={addLikeHandler} className="btn btn--1 btn--rect">
+						<button
+							onClick={() => {
+								user ? addLikeHandler() : history.push("/kid/login");
+							}}
+							className="btn btn--1 btn--rect"
+						>
 							{!post.likes?.some((like) => like.user === user?._id)
 								? "Like"
 								: "Unlike"}

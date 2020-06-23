@@ -198,6 +198,9 @@ b {
 .color-6 {
   color: #edf8f9; }
 
+.font-size-md {
+  font-size: 2rem; }
+
 body {
   overflow-x: hidden; }
 
@@ -1032,6 +1035,9 @@ header {
 .w-50 {
   width: 50%; }
 
+.w-30 {
+  width: 30%; }
+
 .w-70 {
   width: 70%; }
 
@@ -1041,6 +1047,9 @@ header {
 .justify-content-between {
   justify-content: space-between; }
 
+.justify-content-evenly {
+  justify-content: space-evenly; }
+
 .h-100-vh {
   min-height: 100vh; }
 
@@ -1049,6 +1058,12 @@ header {
 
 .p-xl {
   padding: 10rem; }
+
+.p-sm {
+  padding: 1.5rem; }
+
+.p-md {
+  padding: 3rem; }
 
 .my-xl {
   margin-top: 10rem;

@@ -9,11 +9,13 @@ import { addComment } from "../redux/actions/commentActions";
 import { addLike, removeLike, approvePost } from "../redux/actions/postActions";
 import renderPostBody from "../helpers/renderPostBody";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 
 const PostDetails = () => {
 	const user = useSelector((state) => state.user.user);
 	const type = useSelector((state) => state.user.type);
 	const post = useSelector((state) => state.post.post);
+	const history = useHistory();
 	const dispatch = useDispatch();
 	const params = useParams();
 	const [comment, setComment] = useState("");
@@ -113,7 +115,9 @@ const PostDetails = () => {
 									{/* Like button  */}
 									{post.isApproved && (
 										<button
-											onClick={addLikeHandler}
+											onClick={() => {
+												user ? addLikeHandler() : history.push("/kid/login");
+											}}
 											className="btn btn--circle"
 										>
 											{!post.likes?.some((like) => like.user === user?._id) ? (
@@ -151,7 +155,11 @@ const PostDetails = () => {
 									<Comment key={comment._id} comment={comment}></Comment>
 								))}
 
-								<form onSubmit={addCommentHandler}>
+								<form
+									onSubmit={() => {
+										user ? addCommentHandler() : history.push("/kid/login");
+									}}
+								>
 									<input
 										type="text"
 										className="input input--text-color-primary input--comment input--border-dark input--padding-xs input--border-radius-xl"
