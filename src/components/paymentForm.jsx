@@ -33,38 +33,41 @@ const PaymentForm = ({ product, closeForm }) => {
 		event.preventDefault();
 		setLoading(true);
 
-		const { client_secret } = await axios.get(
-			`/secret?productId=${product?._id}`
-		);
+		try {
+			const { client_secret } = await axios.get(
+				`/secret?productId=${product?._id}`
+			);
 
-		if (!stripe || !elements || !client_secret) {
-			setLoading(false);
-			return;
-		}
-
-		const result = await stripe.confirmCardPayment(client_secret, {
-			payment_method: {
-				card: elements.getElement(CardElement),
-				billing_details: {
-					name: user?.username,
-				},
-			},
-		});
-
-		if (result.error) {
-			// Show error to your customer (e.g., insufficient funds)
-			setError(result.error.message);
-			setLoading(false);
-		} else {
-			// The payment has been processed!
-			if (result.paymentIntent.status === "succeeded") {
-				console.log(result.paymentIntent);
-				await axios.post(`/product/buy/${product._id}`, {
-					payment: result.paymentIntent,
-				});
+			if (!stripe || !elements || !client_secret) {
 				setLoading(false);
-				closeForm();
+				return;
 			}
+
+			const result = await stripe.confirmCardPayment(client_secret, {
+				payment_method: {
+					card: elements.getElement(CardElement),
+					billing_details: {
+						name: user?.username,
+					},
+				},
+			});
+
+			if (result.error) {
+				// Show error to your customer (e.g., insufficient funds)
+				setError(result.error.message);
+			} else {
+				// The payment has been processed!
+				if (result.paymentIntent.status === "succeeded") {
+					console.log(result.paymentIntent);
+					await axios.post(`/product/buy/${product._id}`, {
+						payment: result.paymentIntent,
+					});
+					closeForm();
+				}
+			}
+			setLoading(false);
+		} catch (err) {
+			setLoading(false);
 		}
 	};
 
