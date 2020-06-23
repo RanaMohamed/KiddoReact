@@ -54,7 +54,14 @@ const PostDetails = () => {
 					<div className="post-card post-card--lg">
 						<div className="post-card__post">
 							<div className="post-card__img">
-								<img alt="Post" src="../imgs/post1.png" />
+								<img
+									alt="Post"
+									src={
+										post && post.attachedFiles && post.attachedFiles.length > 0
+											? post.attachedFiles[0]
+											: process.env.PUBLIC_URL + "/imgs/post1.png"
+									}
+								/>
 							</div>
 							<div className="post-card__body">
 								<p className="post-card__title">{post?.title}</p>
@@ -81,10 +88,7 @@ const PostDetails = () => {
 								</div>
 								<div className="category-card category-card--xs w-20">
 									<div className=" category-card--image">
-										<img
-											src={process.env.PUBLIC_URL + "/imgs/avatar.svg"}
-											alt="category"
-										/>
+										<img src={post?.category?.image} alt="category" />
 									</div>
 									<span>{post?.category?.title}</span>
 								</div>

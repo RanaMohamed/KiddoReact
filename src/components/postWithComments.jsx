@@ -34,7 +34,14 @@ const PostWithComments = ({ post }) => {
 			<div className="post-card post-card--md my-md">
 				<div className="post-card__post w-50">
 					<div className="post-card__img">
-						<img alt="Post" src="../imgs/post1.png" />
+						<img
+							alt="Post"
+							src={
+								post && post.attachedFiles && post.attachedFiles.length > 0
+									? post.attachedFiles[0]
+									: process.env.PUBLIC_URL + "/imgs/post1.png"
+							}
+						/>
 					</div>
 					<div className="post-card__body">
 						<p className="post-card__title">{post.title}</p>
@@ -46,7 +53,7 @@ const PostWithComments = ({ post }) => {
 							<img
 								className="post-card__avatar"
 								alt="Avatar"
-								src="../imgs/avatar.svg"
+								src={process.env.PUBLIC_URL + "/imgs/avatar.svg"}
 							/>
 							<div>
 								<p>{post.authorKid?.username}</p>

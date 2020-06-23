@@ -35,8 +35,9 @@ const Home = () => {
 						</div>
 						<div className="heroheader__content__images">
 							<img
+								alt="Kids"
 								className="heroheader__content__images__image"
-								src="../imgs/heroheaderImage.png"
+								src={process.env.PUBLIC_URL + "/imgs/heroheaderImage.png"}
 							/>
 							<div />
 						</div>
