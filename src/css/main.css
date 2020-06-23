@@ -241,14 +241,19 @@ body {
   .post-card__title {
     color: #106d74;
     font-size: 2rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; }
   .post-card__description {
     word-break: break-word; }
     .post-card__description > * {
       display: none; }
     .post-card__description p:first-of-type,
     .post-card__description p:nth-child(2) {
-      display: block;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
@@ -319,13 +324,20 @@ body {
       border-radius: 1rem 0 0 1rem; }
     .post-card--md .post-card__img {
       border-radius: 1rem 0 0 1rem; }
+    .post-card--md .post-card__title {
+      -webkit-line-clamp: unset; }
   .post-card--lg .post-card__post {
     display: flex; }
   .post-card--lg .post-card__img {
-    max-height: none;
-    width: 50%; }
+    height: auto;
+    width: 50%;
+    border-radius: 1rem 0 0 0; }
+    .post-card--lg .post-card__img img {
+      height: auto;
+      width: 100%; }
   .post-card--lg .post-card__title {
-    font-size: 4rem; }
+    font-size: 4rem;
+    -webkit-line-clamp: unset; }
   .post-card--lg .post-card__description {
     font-size: 2rem; }
   .post-card__post {
@@ -1014,7 +1026,8 @@ header {
     margin-bottom: 1rem; }
   .form .error-message {
     margin-bottom: 1.5rem;
-    display: block; }
+    display: block;
+    color: #e55658; }
   .form__title {
     font-family: "PermanentMarker";
     font-size: 2rem;
