@@ -16,10 +16,10 @@ const SupporterInfo = ({ profile }) => {
           </p>
           <p className="profile-card__title">categories</p>
           <div className="categories d-flex ">
-            {profile?.categories?.map(c => (
+            {profile?.categories?.map((c) => (
               <div key={c._id} className="category-card category-card--xs">
                 <div className=" category-card--image">
-                  <img src="../img/avatar.svg" alt="category" />
+                  <img src="../imgs/avatar.svg" alt="category" />
                 </div>
               </div>
             ))}

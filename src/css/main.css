@@ -776,58 +776,41 @@ body {
     align-items: center;
     justify-content: center; }
 
-.heroheader {
-  margin-top: -12.5rem; }
-  .heroheader__gradient {
-    background-image: linear-gradient(#fdd343, #e55658);
-    width: 100%;
-    height: 100%;
-    z-index: -1000;
-    position: fixed;
-    top: 0; }
-  .heroheader__container {
-    position: absolute;
-    top: -45%;
-    left: 0%;
-    width: 100%;
-    height: 100%; }
-    .heroheader__container__background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      min-width: 50%;
-      min-height: 50%;
-      z-index: -100; }
-  .heroheader__content {
-    position: absolute;
-    height: 100vh;
-    box-sizing: border-box;
+.heroheader__gradient {
+  background-image: linear-gradient(#fdd343, #e55658);
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  position: fixed;
+  top: 0; }
+
+.heroheader__content {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .heroheader__content__text {
     display: flex;
-    align-items: center;
-    top: 0;
-    justify-content: space-evenly; }
-    .heroheader__content__text {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center; }
-    .heroheader__content__socialMedia {
-      display: flex;
-      flex-direction: column;
-      color: #106d74; }
-      .heroheader__content__socialMedia__icon {
-        padding: 5px; }
-    .heroheader__content__title {
-      top: 50%;
-      width: 50%; }
-    .heroheader__content__slogan {
-      color: #106d74; }
-    .heroheader__content__callToAction {
-      color: #fbfbfa;
-      font-size: 1.8rem;
-      font-weight: 700; }
+    justify-content: space-evenly;
+    align-items: center; }
+  .heroheader__content__socialMedia {
+    display: flex;
+    flex-direction: column;
+    color: #106d74; }
+    .heroheader__content__socialMedia__icon {
+      padding: 1rem; }
+  .heroheader__content__title {
+    padding: 3rem;
+    line-height: 1.5; }
+  .heroheader__content__slogan {
+    color: #106d74; }
+  .heroheader__content__callToAction {
+    color: #fbfbfa;
+    font-size: 1.8rem;
+    font-weight: 700; }
+  .heroheader__content__images {
+    margin-top: 8rem; }
     .heroheader__content__images__image {
       width: 35vw; }
 
@@ -940,8 +923,19 @@ header {
   margin: 0 auto; }
 
 .slide {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box; }
+
+.slide1 {
+  margin-top: -12.5rem;
+  min-height: 200vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #53bcc0;
+  background-image: url(../imgs/upper-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top -10rem left; }
 
 .slide2 {
   min-height: 200vh;
