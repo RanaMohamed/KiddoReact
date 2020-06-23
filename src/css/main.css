@@ -1024,7 +1024,8 @@ header {
     margin-bottom: 1rem; }
   .form .error-message {
     margin-bottom: 1.5rem;
-    display: block; }
+    display: block;
+    color: #e55658; }
   .form__title {
     font-family: "PermanentMarker";
     font-size: 2rem;

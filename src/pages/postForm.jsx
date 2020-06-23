@@ -29,7 +29,6 @@ const PostForm = () => {
 	});
 	const [checked, setChecked] = useState(false);
 	const [errors, setErrors] = useState({});
-	// const [mainImgUrl, setImgUrl] = useState("");
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(getCategories());
@@ -71,12 +70,6 @@ const PostForm = () => {
 			...post,
 			attachedFiles: attachedFiles,
 		});
-		//   let reader = new FileReader();
-		//   reader.onload = function(event) {
-		//     setImgUrl(event.target.result);
-		//   };
-		//   reader.readAsDataURL(e.target.files[0]);
-		// };
 	};
 
 	return (
@@ -103,7 +96,7 @@ const PostForm = () => {
 							))}
 						</select>
 						{errors.category && (
-							<span className="">{errors.category.message}</span>
+							<span className="error-message">{errors.category.message}</span>
 						)}
 						{/* title */}
 						<label htmlFor="title" className="form__subtitle">
@@ -116,7 +109,9 @@ const PostForm = () => {
 							value={post.title}
 							onChange={(e) => setPost({ ...post, title: e.target.value })}
 						/>
-						{errors.title && <span className="">{errors.title.message}</span>}
+						{errors.title && (
+							<span className="error-message">{errors.title.message}</span>
+						)}
 						{/* body */}
 						<label className="form__subtitle">Your steps</label>
 						<div style={{ paddingLeft: "2rem" }}>
@@ -163,7 +158,9 @@ const PostForm = () => {
 							accept="image/*"
 						/>
 						{errors.attachedFiles && (
-							<span className="">{errors.attachedFiles.message}</span>
+							<span className="error-message">
+								{errors.attachedFiles.message}
+							</span>
 						)}
 						{/* Add to store */}
 						<label htmlFor="attachedFiles" className="form__subtitle">
