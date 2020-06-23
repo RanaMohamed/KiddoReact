@@ -6,7 +6,7 @@ const About = () => {
       <section className=" d-flex justify-content-evenly my-lg">
         <img
           //   className="heroheader__content__images__image"
-          src="../imgs/heroheaderImage.png"
+          src={process.env.PUBLIC_URL + "/imgs/heroheaderImage.png"}
           style={{ width: "20vw" }}
           alt="kids"
         />
@@ -25,15 +25,34 @@ const About = () => {
       <section>
         <h2 className="color-1 text-center">What Do We Do?</h2>
         <ul className="d-flex justify-content-evenly font-size-md color-5">
-          <li className="p-md w-20">
+          <li className="p-md w-50 d-flex align-items-center">
+            <img
+              //   className="heroheader__content__images__image"
+              src={process.env.PUBLIC_URL + "/imgs/social-platform.svg"}
+              style={{ width: "5vw", marginRight: 20 }}
+              alt="kids"
+            />
             We offer a social platform for kids to learn and share their
             knowledge with other kids
           </li>
-          <li className="p-md w-20">
+          <li className="p-md w-50 d-flex align-items-center">
+            <img
+              //   className="heroheader__content__images__image"
+              src={process.env.PUBLIC_URL + "/imgs/fun-user-experience.svg"}
+              style={{ width: "5vw", marginRight: 20 }}
+              alt="kids"
+            />
             We are creating a fun user experience to keep kids involved,
             excited, and engaged in the learning process
           </li>
-          <li className="p-md w-20">
+
+          <li className="p-md w-50 d-flex align-items-center">
+            <img
+              //   className="heroheader__content__images__image"
+              src={process.env.PUBLIC_URL + "/imgs/safe-environment.svg"}
+              style={{ width: "5vw", marginRight: 20 }}
+              alt="kids"
+            />
             We have a community for kids who have the same interests and skills
             Offer a safe environment for kids to sell their products
           </li>
