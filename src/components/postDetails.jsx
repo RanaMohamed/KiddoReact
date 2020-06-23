@@ -155,8 +155,8 @@ const PostDetails = () => {
 								))}
 
 								<form
-									onSubmit={() => {
-										user ? addCommentHandler() : history.push("/kid/login");
+									onSubmit={(e) => {
+										user ? addCommentHandler(e) : history.push("/kid/login");
 									}}
 								>
 									<input
