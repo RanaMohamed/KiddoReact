@@ -12,7 +12,7 @@ const Comment = ({ comment }) => {
 					<p className="comment__username">
 						<Link
 							to={
-								(comment.user.email ? "/supporter" : "/kid") +
+								(comment.user?.email ? "/supporter" : "/kid") +
 								`/${comment.user?._id}`
 							}
 						>
