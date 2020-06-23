@@ -67,7 +67,7 @@ const Home = () => {
 					</h2>
 				</div>
 			</section>
-			<section className="slide">
+			<section>
 				<ContactForm></ContactForm>
 			</section>
 		</>
