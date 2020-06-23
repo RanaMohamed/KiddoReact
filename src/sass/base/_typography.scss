@@ -57,7 +57,7 @@ b {
 }
 
 .color-primary {
-  color: $primary-color;
+  color: $primary-color !important;
 }
 .color-dark {
   color: $dark-color;
