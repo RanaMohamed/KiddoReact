@@ -11,8 +11,8 @@ const About = () => {
           alt="kids"
         />
 
-        <p className="color-3 w-50 font-size-md">
-          <h2 className="color-2">Who are we?</h2>
+        <p className="color-3 w-50 font-size-md line-height">
+          <h2 className="color-2 ">Who are we?</h2>
           We are platform for kids where they can share anything they do for
           other kids to learn from, guided by supervisors for each category.
           Kids can also sign up for courses offered by supporters in different
