@@ -330,8 +330,10 @@ body {
     display: flex; }
   .post-card--lg .post-card__img {
     height: auto;
-    width: 50%; }
+    width: 50%;
+    border-radius: 1rem 0 0 0; }
     .post-card--lg .post-card__img img {
+      height: auto;
       width: 100%; }
   .post-card--lg .post-card__title {
     font-size: 4rem;

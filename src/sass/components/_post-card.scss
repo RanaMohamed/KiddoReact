@@ -152,7 +152,9 @@
 		.post-card__img {
 			height: auto;
 			width: 50%;
+			border-radius: $border-radius-lg 0 0 0;
 			img {
+				height: auto;
 				width: 100%;
 			}
 		}
