@@ -11,6 +11,8 @@ import { getCategories } from "../redux/actions/categoryActions";
 const PostForm = () => {
 	const user = useSelector((state) => state.user.user);
 	const categories = useSelector((state) => state.categories.categories);
+	const loading = useSelector((state) => state.request.pending);
+
 	const history = useHistory();
 	const [post, setPost] = useState({
 		title: "",
@@ -190,12 +192,14 @@ const PostForm = () => {
 								/>
 							</div>
 						)}
-
 						<button
 							type="submit"
-							className="btn btn--rect btn--primary form__btn"
+							className={
+								"btn btn--primary btn--rect form__btn" +
+								(loading ? " loading" : "")
+							}
 						>
-							Save
+							{!loading && "Save"}
 						</button>
 					</form>
 				</div>

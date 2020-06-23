@@ -55,7 +55,7 @@ const userReducer = (state = initialState, action) => {
 		case TYPES.FOLLOW_CATEGORY: {
 			const user = {
 				...state.user,
-				categories: [state.user.categories, action.payload.category],
+				categories: state.user.categories.concat(action.payload.category),
 			};
 			return {
 				...state,
