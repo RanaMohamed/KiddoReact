@@ -864,6 +864,11 @@ body {
     margin-bottom: 2rem;
     line-height: 1.5; }
 
+.advert {
+  border-radius: 2rem;
+  border: 5px solid #ececec;
+  overflow: hidden; }
+
 .nav {
   display: flex;
   padding: 1.5rem;

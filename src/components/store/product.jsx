@@ -41,7 +41,17 @@ const Product = ({ product }) => {
 		<>
 			<div className="post-card post-card--bg post-card--bg--primary">
 				<div className="post-card__img">
-					<img alt="Post" src="../imgs/post1.png" />
+					<img
+						alt="Post"
+						src={
+							product &&
+							product.post &&
+							product.post.attachedFiles &&
+							product.post.attachedFiles.length > 0
+								? product.post.attachedFiles[0]
+								: process.env.PUBLIC_URL + "/imgs/post1.png"
+						}
+					/>
 				</div>
 				<div className="post-card__body">
 					<p className="post-card__title">{product.post?.title}</p>
