@@ -976,6 +976,13 @@ header {
   background: url(../imgs/white-background.svg) bottom no-repeat;
   background-size: cover; }
 
+.category-section {
+  background-color: #fdd343;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.05rem;
+  border-radius: 1rem; }
+
 .form {
   padding: 1rem; }
   .form .btn {

@@ -30,7 +30,9 @@ const Categories = () => {
 	return (
 		<>
 			<div className="container">
-				<Category></Category>
+				<div className="category-section">
+					<Category></Category>
+				</div>
 				{selectedCategory && (
 					<>
 						<button
