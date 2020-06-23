@@ -75,6 +75,16 @@ const Product = ({ product }) => {
             </div>
           </div>
           <p className="p-sm color-1">{product?.price}LE</p>
+          {product.rating === null ? (
+            <p className="color-3">No Ratings Yet</p>
+          ) : (
+            <Rating
+              emptySymbol="far fa-star"
+              fullSymbol="fas fa-star"
+              initialRating={product.rating}
+              readonly
+            />
+          )}
           <div className="post-card__overlay">
             <Link
               to={`/post-details/${product?.post?._id}`}
