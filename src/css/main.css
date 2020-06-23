@@ -229,10 +229,12 @@ body {
   position: relative;
   font-size: 1.8rem; }
   .post-card__img {
-    max-height: 250px;
-    overflow: hidden; }
+    height: 250px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0 0; }
     .post-card__img img {
-      width: 100%; }
+      height: 100%; }
   .post-card__body {
     padding: 1.5rem;
     flex: 1; }
@@ -314,6 +316,8 @@ body {
   .post-card--md {
     display: flex; }
     .post-card--md .post-card__overlay {
+      border-radius: 1rem 0 0 1rem; }
+    .post-card--md .post-card__img {
       border-radius: 1rem 0 0 1rem; }
   .post-card--lg .post-card__post {
     display: flex; }
@@ -461,6 +465,10 @@ body {
     padding: 1rem;
     font-size: 2rem;
     min-height: 8rem; }
+  .comment__username {
+    color: #106d74;
+    font-weight: 700;
+    margin-bottom: 1.5rem; }
 
 .comments {
   padding: 1.5rem; }

@@ -4,10 +4,12 @@
 	position: relative;
 	font-size: $font-size-sm;
 	&__img {
-		max-height: 250px;
+		height: 250px;
+		text-align: center;
 		overflow: hidden;
+		border-radius: $border-radius-lg $border-radius-lg 0 0;
 		img {
-			width: 100%;
+			height: 100%;
 		}
 	}
 	&__body {
@@ -128,6 +130,9 @@
 	&--md {
 		display: flex;
 		.post-card__overlay {
+			border-radius: $border-radius-lg 0 0 $border-radius-lg;
+		}
+		.post-card__img {
 			border-radius: $border-radius-lg 0 0 $border-radius-lg;
 		}
 	}

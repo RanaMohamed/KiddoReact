@@ -21,6 +21,11 @@
 		font-size: $font-size-md;
 		min-height: 8rem;
 	}
+	&__username {
+		color: $primary-color;
+		font-weight: $font-weight-bold;
+		margin-bottom: $spacing-sm;
+	}
 }
 
 .comments {
