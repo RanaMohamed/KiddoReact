@@ -158,6 +158,7 @@ const PostForm = () => {
 							name="attachedFiles"
 							onChange={handelFilesUploaded}
 							multiple
+							accept="image/*"
 						/>
 						{errors.attachedFiles && (
 							<span className="">{errors.attachedFiles.message}</span>
