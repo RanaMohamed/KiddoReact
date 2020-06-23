@@ -1,18 +1,18 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import * as _ from 'lodash';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import * as _ from "lodash";
 
-import { kidSignupSchema } from '../../helpers/schemas';
-import { signupKid } from '../../redux/actions/userActions';
+import { kidSignupSchema } from "../../helpers/schemas";
+import { signupKid } from "../../redux/actions/userActions";
 
 const SignupKid = () => {
 	const [user, setUser] = useState({
-		username: '',
-		password: '',
-		parentEmail: '',
-		dateOfBirth: '',
+		username: "",
+		password: "",
+		parentEmail: "",
+		dateOfBirth: "",
 	});
 	const [errors, setErrors] = useState({});
 
@@ -36,60 +36,60 @@ const SignupKid = () => {
 			return;
 		}
 
-		history.replace('/');
+		history.goBack();
 	};
 	return (
 		<>
-			<form action='' className='form p-xl' onSubmit={submitHandler}>
-				<label htmlFor='username'>Username</label>
+			<form action="" className="form p-xl" onSubmit={submitHandler}>
+				<label htmlFor="username">Username</label>
 				<input
-					id='username'
-					type='text'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Username'
+					id="username"
+					type="text"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Username"
 					value={user.username}
 					onChange={(e) => setUser({ ...user, username: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.username?.message}</span>
+				<span className="error-message">{errors.username?.message}</span>
 
-				<label htmlFor='password'>Password</label>
+				<label htmlFor="password">Password</label>
 				<input
-					id='password'
-					type='password'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Password'
+					id="password"
+					type="password"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Password"
 					value={user.password}
 					onChange={(e) => setUser({ ...user, password: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.password?.message}</span>
+				<span className="error-message">{errors.password?.message}</span>
 
-				<label htmlFor='dateOfBirth'>Date of birth</label>
+				<label htmlFor="dateOfBirth">Date of birth</label>
 				<input
-					id='dateOfBirth'
-					type='date'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Date of birth'
+					id="dateOfBirth"
+					type="date"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Date of birth"
 					value={user.dateOfBirth}
 					onChange={(e) => setUser({ ...user, dateOfBirth: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.dateOfBirth?.message}</span>
+				<span className="error-message">{errors.dateOfBirth?.message}</span>
 
-				<label htmlFor='parentEmail'>Parents Email</label>
+				<label htmlFor="parentEmail">Parents Email</label>
 				<input
-					id='paretnEmail'
-					type='text'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Parent Email'
+					id="paretnEmail"
+					type="text"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Parent Email"
 					value={user.parentEmail}
 					onChange={(e) => setUser({ ...user, parentEmail: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.parentEmail?.message}</span>
+				<span className="error-message">{errors.parentEmail?.message}</span>
 
 				<button
-					type='submit'
-					className={'btn btn--primary btn--rect' + (loading ? ' loading' : '')}
+					type="submit"
+					className={"btn btn--primary btn--rect" + (loading ? " loading" : "")}
 				>
-					{!loading && 'Join'}
+					{!loading && "Join"}
 				</button>
 			</form>
 		</>

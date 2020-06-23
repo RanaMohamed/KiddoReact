@@ -648,7 +648,7 @@ body {
     transition: 0.8s;
     height: 100%; }
   .category-card::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     width: 100%;
@@ -676,8 +676,8 @@ body {
     margin: 3rem;
     border-radius: 0.7rem; }
   .category-card--lg {
-    padding: 5rem;
-    margin: 5rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
     border-radius: 1rem; }
   .category-card:first-of-type {
     margin-left: 0; }

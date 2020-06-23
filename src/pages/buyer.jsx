@@ -34,7 +34,7 @@ const Buyer = () => {
 					</div>
 					<section className="my-lg">
 						<h2>Latest purchases</h2>
-						<div className="container my-xl">
+						<div className="my-xl">
 							<div
 								style={{
 									display: "grid",

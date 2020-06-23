@@ -88,7 +88,7 @@ const Header = () => {
 																		? "/kid"
 																		: type === "Supporter"
 																		? "/supporter"
-																		: "buyer") + `/${user._id}`
+																		: "/buyer") + `/${user._id}`
 																}
 															>
 																<i className="fa fa-user"></i> My Profile

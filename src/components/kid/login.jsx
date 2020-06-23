@@ -1,16 +1,16 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
-import { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import * as _ from 'lodash';
+import React from "react";
+import { useHistory } from "react-router-dom";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import * as _ from "lodash";
 
-import { loginSchema } from '../../helpers/schemas';
-import { loginKid } from '../../redux/actions/userActions';
+import { loginSchema } from "../../helpers/schemas";
+import { loginKid } from "../../redux/actions/userActions";
 
 const LoginKid = () => {
 	const [user, setUser] = useState({
-		username: '',
-		password: '',
+		username: "",
+		password: "",
 	});
 	const [errors, setErrors] = useState({});
 
@@ -34,38 +34,38 @@ const LoginKid = () => {
 			return;
 		}
 
-		history.replace('/');
+		history.goBack();
 	};
 	return (
 		<>
-			<form action='' className='form p-xl' onSubmit={submitHandler}>
-				<label htmlFor='username'>Username</label>
+			<form action="" className="form p-xl" onSubmit={submitHandler}>
+				<label htmlFor="username">Username</label>
 				<input
-					id='username'
-					type='text'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Username'
+					id="username"
+					type="text"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Username"
 					value={user.username}
 					onChange={(e) => setUser({ ...user, username: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.username?.message}</span>
+				<span className="error-message">{errors.username?.message}</span>
 
-				<label htmlFor='password'>Password</label>
+				<label htmlFor="password">Password</label>
 				<input
-					id='password'
-					type='password'
-					className='input --text-color-primary input--padding-sm input--border-radius-md'
-					placeholder='Password'
+					id="password"
+					type="password"
+					className="input --text-color-primary input--padding-sm input--border-radius-md"
+					placeholder="Password"
 					value={user.password}
 					onChange={(e) => setUser({ ...user, password: e.target.value })}
 				></input>
-				<span className='error-message'>{errors.password?.message}</span>
+				<span className="error-message">{errors.password?.message}</span>
 
 				<button
-					type='submit'
-					className={'btn btn--primary btn--rect' + (loading ? ' loading' : '')}
+					type="submit"
+					className={"btn btn--primary btn--rect" + (loading ? " loading" : "")}
 				>
-					{!loading && 'Join'}
+					{!loading && "Join"}
 				</button>
 			</form>
 		</>

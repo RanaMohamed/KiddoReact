@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Rating from "react-rating";
 import { rateProduct } from "../../redux/actions/productAction";
 import PaymentForm from "../paymentForm";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import renderPostBody from "../../helpers/renderPostBody";
 
 const Product = ({ product }) => {
@@ -13,6 +13,7 @@ const Product = ({ product }) => {
 	let user = useSelector((state) => state.user.user);
 	let type = useSelector((state) => state.user.type);
 
+	const history = useHistory();
 	const dispatch = useDispatch();
 	let value = useSelector((state) => state.product.value);
 
@@ -63,7 +64,7 @@ const Product = ({ product }) => {
 					</div>
 					<div className="post-card__overlay">
 						<Link
-							to={`/PostDetails/${product?.post?._id}`}
+							to={`/post-details/${product?.post?._id}`}
 							className="btn btn--1 btn--rect"
 						>
 							View Details
@@ -76,10 +77,12 @@ const Product = ({ product }) => {
 								Rate
 							</button>
 						)}
-						{(!user || type === "buyer") &&
+						{(!user || type === "Buyer") &&
 							product?.buyer?.indexOf(user?._id) === -1 && (
 								<button
-									onClick={() => setShowModalBuy(true)}
+									onClick={() => {
+										user ? setShowModalBuy(true) : history.push("/buyer/login");
+									}}
 									className="btn btn--1 btn--rect"
 								>
 									Buy
