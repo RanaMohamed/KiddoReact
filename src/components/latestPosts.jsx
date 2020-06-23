@@ -20,7 +20,7 @@ const LatestPosts = () => {
 				<div
 					style={{
 						display: "grid",
-						gridTemplateColumns: "auto auto auto",
+						gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
 						gap: "12rem",
 					}}
 				>
