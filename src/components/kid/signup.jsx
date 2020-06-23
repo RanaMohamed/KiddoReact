@@ -6,6 +6,7 @@ import * as _ from "lodash";
 
 import { kidSignupSchema } from "../../helpers/schemas";
 import { signupKid } from "../../redux/actions/userActions";
+import { dateAt } from "../../helpers/date";
 
 const SignupKid = () => {
 	const [user, setUser] = useState({
@@ -67,6 +68,8 @@ const SignupKid = () => {
 				<input
 					id="dateOfBirth"
 					type="date"
+					min={dateAt(14)}
+					max={dateAt(6)}
 					className="input --text-color-primary input--padding-sm input--border-radius-md"
 					placeholder="Date of birth"
 					value={user.dateOfBirth}
