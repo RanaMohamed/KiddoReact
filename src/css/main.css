@@ -171,8 +171,32 @@ h2,
 b {
   font-weight: 700; }
 
+.color-primary {
+  color: #106d74; }
+
+.color-dark {
+  color: #33312c; }
+
+.color-light {
+  color: #ececec; }
+
 .color-1 {
   color: #e55658; }
+
+.color-2 {
+  color: #fdd343; }
+
+.color-3 {
+  color: #53bcc0; }
+
+.color-4 {
+  color: #fbfbfa; }
+
+.color-5 {
+  color: #707070; }
+
+.color-6 {
+  color: #edf8f9; }
 
 body {
   overflow-x: hidden; }
@@ -777,7 +801,7 @@ body {
     justify-content: center; }
 
 .heroheader__gradient {
-  background-image: linear-gradient(#fdd343, #e55658);
+  background-image: linear-gradient(#fdd343, #e55658 70%);
   width: 100%;
   height: 100%;
   z-index: -1000;
@@ -819,6 +843,14 @@ body {
   top: 47%;
   z-index: -100;
   overflow: hidden; }
+
+.home-section3__content {
+  padding-bottom: 25rem;
+  text-align: center; }
+  .home-section3__content__title {
+    color: #106d74; }
+    .home-section3__content__title--dark {
+      color: #33312c; }
 
 .step {
   color: #e55658;

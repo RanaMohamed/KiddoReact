@@ -1,48 +1,48 @@
 @font-face {
-	font-family: "Tajawal";
-	src: url(../fonts/Tajawal/Tajawal-Regular.ttf) format("truetype");
-	font-weight: 400;
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal/Tajawal-Regular.ttf) format("truetype");
+  font-weight: 400;
 }
 
 @font-face {
-	font-family: "Tajawal";
-	src: url(../fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
-	font-weight: 500;
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal/Tajawal-Medium.ttf) format("truetype");
+  font-weight: 500;
 }
 
 @font-face {
-	font-family: "Tajawal";
-	src: url(../fonts/Tajawal/Tajawal-Bold.ttf) format("truetype");
-	font-weight: 700;
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal/Tajawal-Bold.ttf) format("truetype");
+  font-weight: 700;
 }
 
 @font-face {
-	font-family: "PermanentMarker";
-	src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf)
-		format("truetype");
+  font-family: "PermanentMarker";
+  src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf)
+    format("truetype");
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font-size: 1.6rem;
-	font-family: $primary-font;
+  font-size: 1.6rem;
+  font-family: $primary-font;
 }
 
 h1,
 .h1 {
-	font-family: $secondary-font;
-	font-size: $font-size-xl;
-	margin-bottom: $spacing-lg;
+  font-family: $secondary-font;
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-lg;
 }
 
 h2,
 .h2 {
-	font-family: $secondary-font;
-	font-size: $font-size-lg;
-	margin-bottom: $spacing-md;
+  font-family: $secondary-font;
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-md;
 }
 
 // h3,
@@ -53,9 +53,35 @@ h2,
 // }
 
 b {
-	font-weight: $font-weight-bold;
+  font-weight: $font-weight-bold;
 }
 
+.color-primary {
+  color: $primary-color;
+}
+.color-dark {
+  color: $dark-color;
+}
+.color-light {
+  color: $light-color;
+}
 .color-1 {
-	color: $color-1;
+  color: $color-1;
+}
+
+.color-2 {
+  color: $color-2;
+}
+
+.color-3 {
+  color: $color-3;
+}
+.color-4 {
+  color: $color-4;
+}
+.color-5 {
+  color: $color-5;
+}
+.color-6 {
+  color: $color-6;
 }
