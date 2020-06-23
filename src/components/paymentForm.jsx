@@ -34,7 +34,7 @@ const PaymentForm = ({ product, closeForm }) => {
 		setLoading(true);
 
 		const { client_secret } = await axios.get(
-			`/secret?amount=${product?.price * 10}`
+			`/secret?productId=${product?._id}`
 		);
 
 		if (!stripe || !elements || !client_secret) {

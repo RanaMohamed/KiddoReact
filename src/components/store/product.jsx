@@ -76,8 +76,7 @@ const Product = ({ product }) => {
 								Rate
 							</button>
 						)}
-						{user &&
-							type === "buyer" &&
+						{(!user || type === "buyer") &&
 							product?.buyer?.indexOf(user?._id) === -1 && (
 								<button
 									onClick={() => setShowModalBuy(true)}
