@@ -42,8 +42,7 @@ const PostDetails = () => {
     }
   };
 
-  const approvePostHandler = async e => {
-    e.preventDefault();
+  const approvePostHandler = async () => {
     const error = await dispatch(approvePost(post._id));
     if (!isEmpty(error)) return;
     setApprove(true);

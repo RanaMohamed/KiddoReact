@@ -9,8 +9,7 @@ const Post = ({ post }) => {
   const dispatch = useDispatch();
   const user = useSelector(state => state.user.user);
   const history = useHistory();
-  const addLikeHandler = async e => {
-    e.preventDefault();
+  const addLikeHandler = async () => {
     if (post.likes.some(like => like.user === user?._id)) {
       dispatch(removeLike(post._id));
     } else {
