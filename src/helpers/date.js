@@ -14,3 +14,17 @@ export const dateDiff = (dateold, datenew) => {
 	}
 	return diff;
 };
+
+export const dateAt = (years) => {
+	var d = new Date();
+	var year = d.getFullYear();
+	var month = d.getMonth();
+	var day = d.getDate();
+	var c = new Date(year - years, month, day);
+
+	return [
+		c.getFullYear(),
+		c.getMonth().toString().padStart(2, "0"),
+		c.getDate().toString().padStart(2, "0"),
+	].join("-");
+};
