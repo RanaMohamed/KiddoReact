@@ -31,7 +31,7 @@ const Category = ({ home }) => {
 
 	return (
 		<>
-			<section className="category-section my-md">
+			<section className="my-md">
 				<h2>Categories</h2>
 				<div className="d-flex justify-content-between align-items-center">
 					{/* <i className="fa fa-arrow-left"></i> */}
