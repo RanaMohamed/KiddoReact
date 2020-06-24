@@ -385,6 +385,7 @@ body {
   text-decoration: none;
   border: none;
   position: relative;
+  z-index: 1;
   font-size: 1.8rem;
   padding: 1.5rem 1.6rem;
   margin: 1.5rem;
